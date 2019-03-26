@@ -1,0 +1,144 @@
+@media screen  /*Pour les ordinateurs*/
+{
+	html, body
+	{
+	margin:0;
+	padding: 0;
+	}
+	body
+	{
+	width: 100%;
+	height: 55em;
+  	background: linear-gradient(to bottom right, rgba(242,246,248,0.7) 0%,rgba(216,225,231,0.7) 50%,rgba(181,198,208,0) 51%,rgba(224,239,249,0) 100%),url(fond1.jpg) no-repeat center fixed; 
+ 	-webkit-background-size: cover; /* pour Chrome et Safari */
+    -moz-background-size: cover; /* pour Firefox */
+    -o-background-size: cover; /* pour Opera */
+    background-size: cover; /* version standardisée */
+	}
+	#logo{
+		width:15%;
+		margin:0px 0px 0px 0px;
+	}
+	#slogan{
+		width:76%;
+		margin-left: 1em;
+	}
+	#conteneur_principal{ /*Organisation div */
+		display: flex;
+		justify-content: center;
+		color:black;
+	}
+	.bloc_colonne1{ /*Deux blocs principaux (1 : logo,slogan,ratings,news; 2 : se connecter,mpd oulié, nous contacter)*/
+		width: 65%;
+		height: 100%;
+		margin : 2%;
+		margin-right: 2.5%;
+	}
+	.nouvelle1{
+		width:90%;
+		padding:5em 1em;
+		background-color: white;
+		margin-top: 6em;
+	}
+	.nouvelle2{
+		width:90%;
+		padding:5em 1em;
+		background-color: white;
+		margin-top: 3em;
+	}
+	.bloc_colonne2{
+		display: flex;
+    	flex-direction: column;
+		width: 20%;
+		height: 50%;
+		margin:5% 0% 2% 0%;
+	}
+	.bloc_contact{
+		width: 100%;
+		height: 50%;
+		background-color: white;
+		margin:5em 0 ;
+	}
+	.input_connexion[type=text]{
+		width: 100%;
+		padding: 12px 0px;
+		margin : 8px 0;
+	}
+	.input_connexion[type=text]:focus{
+		border: none;
+  		border-bottom: 3px solid blue;
+	}
+	.input_connexion[type=password]{
+		width: 100%;
+		padding: 12px 0px;
+		margin : 8px 0;
+	}
+	.input_connexion[type=password]:focus{
+		border: none;
+  		border-bottom: 3px solid blue;
+	}
+	.input_connexion[type=button], .input_connexion[type=submit], input[type=reset]{
+  		background-color: #160992;
+  		width:100%;
+  		border: none;
+  		border-radius : 0px;
+  		color: white;
+  		padding: 10px 0px;
+  		margin: 5px 0;
+  		cursor: pointer;
+	}
+	.input_contact[type=text]{
+		width: 90%;
+		padding: 12px 0px;
+		margin : 8px 0;
+		margin-left: 1em;
+		border:1px solid black;
+	}
+	.input_contact[type=text]:focus{
+		border: none;
+  		border-bottom: 3px solid blue;
+	}
+	.input_contact[type=password]{
+		width: 90%;
+		padding: 12px 0px;
+		margin : 8px 0;
+		margin-left: 1em;
+		border:1px solid black;
+	}
+	.input_contact[type=textarea]{
+		width: 100%;
+		padding: 40px 0px;
+		margin : 8px 0;
+		border:none;
+	}
+	.input_contact[type=password]:focus{
+		border: none;
+  		border-bottom: 3px solid blue;
+	}
+	.input_contact[type=button], .input_contact[type=submit], input[type=reset]{
+  		background-color: #160992;
+  		width:50%;
+  		border: none;
+  		border-radius : 0px;
+  		color: white;
+  		padding: 10px 0px;
+  		margin: 5px 0;
+  		cursor: pointer;
+  		margin-left: 6.5em;
+	}
+	.input_compte[type=button], .input_compte[type=submit], input[type=reset]{
+  		background-color: #160992;
+  		width:100%;
+  		border: none;
+  		border-radius : 0px;
+  		color: white;
+  		padding: 10px 0px;
+  		margin: 5px 0;
+  		cursor: pointer;
+	}
+
+	textarea{
+		padding:4em;
+		margin-left: 1em;
+	}
+}
