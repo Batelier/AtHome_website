@@ -1,0 +1,55 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+#header
+{
+	width: 100%;
+	height: 100px;
+}
+
+#logo
+{
+	float: left;
+	
+}
+#touxiang
+{
+	float: right;
+}
+.naviga ul
+{
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+	
+}
+.naviga li {
+    float: left;
+}
+
+.naviga li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 40px;
+    text-decoration: none;
+}
+
+.naviga li a:hover {
+    background-color: #111;
+}
+#bg
+{
+ width: 100%;
+	height: 800px;
+	background-image: url("fond2.jpg");
+		
+}
+
+
+
+
+
