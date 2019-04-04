@@ -9,13 +9,13 @@ function dbConnect()
 	/*Fonction connexion à la database --> changer le nom de la db*/
 	try {
 		/*tester connexion Windows*/
-		$db = new PDO('mysql:host='.$host.';dbname='.$dbname.';charset=utf8', $login, $passwordWindows);
+		$db = new PDO('mysql:host='.$host.';dbname='.$dbname.';charset=utf8', $login, $passwordWindows, array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
 		
 	}catch (Exception $e) {
 
 		try{
 			/*tester connexion MAC*/
-			$db = new PDO('mysql:host='.$host.';dbname='.$dbname.';charset=utf8', $login, $passwordMAC);
+			$db = new PDO('mysql:host='.$host.';dbname='.$dbname.';charset=utf8', $login, $passwordMAC, array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
 		}catch(Exception $e){
 			die('Erreur : ' .$e->getMesage());
 		}

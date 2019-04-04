@@ -1,0 +1,14 @@
+Rooteur : 
+routeur est le fichier à lancer au démarage
+par défaut rooteur lance la page de connexion
+
+Model : 
+fonction sql
+
+controller : 
+appel fonctions
+variables pour la view
+
+view : 
+seulement l'affichage
+affichage (html + variables php (boucles si besoin))

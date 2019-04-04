@@ -52,7 +52,7 @@
 					<input type="submit" value="Envoyer le formulaire" name="register">
 				</p>
 				
-				<?= htmlspecialchars($yomek) ?>
+				<?= $yomek ?>
 			</fieldset>
 		</form>
 	</body>
