@@ -1,5 +1,7 @@
 <?php
 
+require('model\model_connexion_db.php');
+
 //fonction vérifier que l'identifiant et mdp correspond à qqn dans la base de donnée
 
 //fonction get les infos du jour

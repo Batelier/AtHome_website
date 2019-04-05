@@ -2,7 +2,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Page d'accueil</title>
-	<link rel="stylesheet" media="screen"  href="css\accueil_css.css">
+	<link rel="stylesheet" media="screen"  href="css\css_accueil.css">
 </head>
 <body>
 	<!-- Logo , Espace texte Slogan, Se connecter, Inscription, mot de passe oublié
@@ -22,7 +22,7 @@
    						<input class="input_connexion" type="submit" value="Se connecter">
 					</form>
 				</div>
-				<form method="post" action="inscription.php">
+				<form method="post" action="controller\controller_Page_Inscription.php">
    					<input class="input_compte" type="submit" value="Créer un compte">
 				</form>
 				<div class="bloc_contact">

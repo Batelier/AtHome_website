@@ -1,3 +1,4 @@
+FONCTIONNEMENT GLOBAL 
 Rooteur : 
 routeur est le fichier à lancer au démarage
 par défaut rooteur lance la page de connexion
@@ -7,8 +8,13 @@ fonction sql
 
 controller : 
 appel fonctions
-variables pour la view
+il set les variables à envoyer à la view
 
 view : 
 seulement l'affichage
 affichage (html + variables php (boucles si besoin))
+
+NORME
+nommage : view_nomDuBordel / controller_nomDuBordel / model_... / css_...
+le fichier contenant les pages css se trouvent dans le view
+! --> Toutes les pages en .php, même celles ne contenant que du html (très rare d'ailleurs)

@@ -1,11 +1,12 @@
 <?php
 /*---------------------------------------*/
 //require('C:\wamp64\www\AtHome\model\model_connexion_db.php');
-require('C:\wamp64\www\AtHome\model\model_Page_Inscription.php');
+//require('C:\wamp64\www\AtHome\model\model_Page_Inscription.php');
 
 
 $yomek = 17;
-require('C:\wamp64\www\AtHome\vues\view_Page_Inscription.php');
+include('view\view_header.php');
+require('C:\wamp64\www\AtHome\view\view_Page_Inscription.php');
 //require('model/model_Page_Inscription.php');
 /*---------------------------------------*/
 //dbConnect();
