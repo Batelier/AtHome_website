@@ -5,7 +5,8 @@
 
 
 $yomek = 17;
-include('view\view_header.php');
+include('C:\wamp64\www\AtHome\view\view_header.php');
+
 require('C:\wamp64\www\AtHome\view\view_Page_Inscription.php');
 //require('model/model_Page_Inscription.php');
 /*---------------------------------------*/

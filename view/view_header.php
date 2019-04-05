@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Untitled Document</title>
-<link href="css\css_header.css" rel="stylesheet" type="text/css">
+<link href="view\css\css_header.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -45,13 +45,6 @@
 	
 	</ul>
 	</div>
-	
-	
-
-	
-
-
-
 
 </body>
 </html>
