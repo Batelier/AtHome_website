@@ -12,7 +12,7 @@
 			<div class="bloc_colonne1"> <!--  -->
 				<img src="res/logo_png.png" id="logo"> <img src="res/slogan.jpeg" id="slogan"> 
 				<p class="nouvelle1"> AtHome arrive bientôt chez vous</p>
-				<p class="nouvelle2"> Pour niquer des mères </p>
+				<p class="nouvelle2"> Nouveau capteur disponible ! </p>
 			</div><!--  -->
 			<div class="bloc_colonne2"> 
 				<div class="bloc_connexion">
