@@ -1,7 +1,11 @@
 @media screen{
 	body {
 		background-image: white;
+<<<<<<< HEAD
 		background-image: url("/AtHome/res/fond1.jpg");
+=======
+		background-image: url("res/fond2.jpg");
+>>>>>>> c05e1cba2fe4774aa6178986566d4440b823a9d8
 	}
 
 	#main_div{

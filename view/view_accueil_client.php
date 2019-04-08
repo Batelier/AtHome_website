@@ -2,7 +2,11 @@
 <head>
 	<meta charset="utf-8">
 	<title>Page maison utilisateur principal ou secondaire</title>
+<<<<<<< HEAD
 	<link rel="stylesheet" type="text/css" href="/AtHome/view/css/css_accueil_client.css">
+=======
+	<link rel="stylesheet" type="text/css" href="css_accueil_client.css">
+>>>>>>> c05e1cba2fe4774aa6178986566d4440b823a9d8
 </head>
 <body>
 	<!-- Insérer ici le code factorisé de l'entête et du menu --> 
