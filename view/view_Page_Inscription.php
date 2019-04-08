@@ -3,11 +3,11 @@
 	<head>
 		<meta charset="utf-8">
 		<title>page d'inscription</title>
-		<link rel="stylesheet" type="text/css" href="css_view_Page_Inscription.css">
+		<link rel="stylesheet" type="text/css" href="css\css_view_Page_Inscription.css">
 	</head>
 	<body>
 		<!-- balise de formulaire, method='post/get', action = adresse de la page qui va récupérer les données -->
-		<form method="post" action="control_Page_Incription.php">
+		<form method="post" action="C:\wamp64\www\AtHome\controller\control_Page_Inscription.php">
 
 			<fieldset>
 				<legend>Formulaire d'inscription</legend>
@@ -49,8 +49,10 @@
 					</select>
 				</p>
 				<p>
-					<input type="submit" value="Envoyer le formulaire">
+					<input type="submit" value="Envoyer le formulaire" name="register">
 				</p>
+				
+				<?= $yomek ?>
 			</fieldset>
 		</form>
 	</body>
