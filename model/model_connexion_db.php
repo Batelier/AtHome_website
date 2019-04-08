@@ -1,25 +1,21 @@
 <?php
-function dbConnect()
-{
-	$login = 'root';
-	$passwordWindows = '';
-	$passwordMAC = 'root';
-	$host = 'localhost';
-	$dbname = 'athome_db';
-	/*Fonction connexion à la database --> changer le nom de la db*/
-	try {
-		/*tester connexion Windows*/
-		$db = new PDO('mysql:host='.$host.';dbname='.$dbname.';charset=utf8', $login, $passwordWindows, array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
-		
-	}catch (Exception $e) {
-
-		try{
-			/*tester connexion MAC*/
-			$db = new PDO('mysql:host='.$host.';dbname='.$dbname.';charset=utf8', $login, $passwordMAC, array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
-		}catch(Exception $e){
-			die('Erreur : ' .$e->getMesage());
-		}
-		
-	}
+//fonction pour se connecter à la database
+function db_windows(){
+  global $db;
+  if (!isset($db)) {
+    $db = get_db_windows();
+  }
+}
+function db_mac(){
+  global $db;
+  if (!isset($db)) {
+    $db = get_db_mac();
+  }
+}
+function get_db_mac() {
+  return new PDO('mysql:host=localhost; dbname=athome_db', 'root', 'root', [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
+}
+function get_db_windows() {
+  return new PDO('mysql:host=localhost; dbname=athome_db', 'root', '', [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
 }
 

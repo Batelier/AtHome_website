@@ -7,13 +7,14 @@
 	</head>
 	<body>
 		<!-- balise de formulaire, method='post/get', action = adresse de la page qui va récupérer les données -->
-		<form method="post" action="C:\wamp64\www\AtHome\controller\control_Page_Inscription.php">
+		<form method="post" action="">
 
 			<fieldset>
 				<legend>Formulaire d'inscription</legend>
 				<p>
 					<label for="prenom">Prénom</label>
-					<input type="text" name="prenom" id="prenom" maxlength="20" placeholder="Joe" autofocus required>
+					<input type="text" name="prenom" id="prenom" maxlength="20" placeholder="Joe" autofocus required
+						value="<?php if(isset($prenom)) {echo($prenom);} ?>">
 				</p>
 				<p>
 					<label for="nom">Nom</label>
@@ -21,7 +22,7 @@
 				</p>
 				<p>
 					<label for="email">Mail</label>
-					<input type="email" name="email" id="email" placeholder="GigaBaiseurDu93@gmail.com" required>
+					<input type="email" name="email" id="email" placeholder="DabDu93@gmail.com" required>
 				</p>
 				<p>
 					<label for="password">Mot de passe</label>
@@ -41,18 +42,17 @@
 				</p>
 				<p>
 					<label for="date">Type d'utilisateur</label>
-					<select required>
+					<select required name='type'>
 						<option value="utilisateur_principal">Utilisateur Principal</option>
 						<option value="gestionnaire">Gestionnaire d'immeuble</option>
 						<option value="administrateur">Administrateur</option>
 						<option value="technicien">Technicien</option>
 					</select>
 				</p>
-				<p>
+				<p> 
 					<input type="submit" value="Envoyer le formulaire" name="register">
 				</p>
 				
-				<?= $yomek ?>
 			</fieldset>
 		</form>
 	</body>
