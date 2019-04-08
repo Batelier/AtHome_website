@@ -2,7 +2,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Page d'accueil</title>
-	<link rel="stylesheet" media="screen"  href="css\css_accueil.css">
+	<link rel="stylesheet" media="screen"  href="view\css\css_accueil.css">
 </head>
 <body>
 	<!-- Logo , Espace texte Slogan, Se connecter, Inscription, mot de passe oublié

@@ -18,3 +18,4 @@ NORME
 nommage : view_nomDuBordel / controller_nomDuBordel / model_... / css_...
 le fichier contenant les pages css se trouvent dans le view
 ! --> Toutes les pages en .php, même celles ne contenant que du html (très rare d'ailleurs)
+!!! --> les indentations et nom de variables corrects + commentaires
