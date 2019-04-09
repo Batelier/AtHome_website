@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<link rel="stylesheet" href="css/css_header.css" />
+		<link rel="stylesheet" href="/AtHome/view/css/css_header.css" />
 	</head>
 	<body>
 	<div class="header">

@@ -2,11 +2,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Page maison utilisateur principal ou secondaire</title>
-<<<<<<< HEAD
-	<link rel="stylesheet" type="text/css" href="/AtHome/view/css/css_accueil_client.css">
-=======
-	<link rel="stylesheet" type="text/css" href="css_accueil_client.css">
->>>>>>> c05e1cba2fe4774aa6178986566d4440b823a9d8
+	<link rel="stylesheet" href="/AtHome/view/css/css_accueil_client.css" />
 </head>
 <body>
 	<!-- Insérer ici le code factorisé de l'entête et du menu --> 
@@ -14,7 +10,7 @@
 	<div id= "main_div">
 		<div id = "leftSide"> <!-- contient : menu et favoris -->
 			<div id="menu">
-				<ul>
+				<ul class="menul">
 					<span id="titleMenu" class="notLastLi"> Menu </span>
 					<li class="notLastLi"><a href="">Modifier pièce</a></li>
 					<li class="notLastLi"><a href="">Ajouter pièce</a></li>
@@ -32,7 +28,17 @@
 				ici barre de navigation et de recherche
 			</div>
 			<div id="listeMaison">
-				ICI LISTE DES DIFFERENTES PIECES
+				<div class="piece">
+					<div class="infos_principales">
+						<div class="nom_piece">
+							<p>Cuisine <p>
+						</div>
+						<div class="pb">
+							<img class="pb_img" src="/AtHome/res/pb_jpg.jpg" width="20em" height="20em">
+							<a href="lienpbs">Problèmes</a>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
