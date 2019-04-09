@@ -16,13 +16,13 @@
 			</div><!--  -->
 			<div class="bloc_colonne2"> 
 				<div class="bloc_connexion">
-					<form method="post" action="connexion.php">
-   						<input class="input_connexion" type="text" name="pseudo" placeholder="Email" />
-   						<input class="input_connexion" type="password" name="pass" placeholder="Mot de passe" />
+					<form method="post" action="" name="login">
+   						<input class="input_connexion" type="mail" name="email" placeholder="Email" />
+   						<input class="input_connexion" type="password" name="password" placeholder="Mot de passe" />
    						<input class="input_connexion" type="submit" value="Se connecter">
 					</form>
 				</div>
-				<form method="post" action="controller\controller_Page_Inscription.php">
+				<form method="post" action="routeur.php?cible=controller_Page_Inscription">
    					<input class="input_compte" type="submit" value="Créer un compte">
 				</form>
 				<div class="bloc_contact">
