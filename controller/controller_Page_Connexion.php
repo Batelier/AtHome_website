@@ -9,9 +9,11 @@ require('model\model_Page_Connexion.php');
 if (isset($_POST['email'])) {
 	$values = login($_POST['email']);
 	if ($values[1] == $_POST['password']) {
-		echo("Vous êtes bien connecté");
+		echo ($_POST['password']);
+		echo ($values[1]);
+		//echo("Vous êtes bien connecté");
 
-		//header('Location:routeur?cible=controller_Page_Inscription');
+		//header('Location:routeur');
 	}
 }
 

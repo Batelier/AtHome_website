@@ -16,7 +16,7 @@
 			</div><!--  -->
 			<div class="bloc_colonne2"> 
 				<div class="bloc_connexion">
-					<form method="post" action="" name="login">
+					<form method="post" action="routeur.php" name="login">
    						<input class="input_connexion" type="mail" name="email" placeholder="Email" />
    						<input class="input_connexion" type="password" name="password" placeholder="Mot de passe" />
    						<input class="input_connexion" type="submit" value="connexion">
