@@ -19,7 +19,7 @@
 					<form method="post" action="" name="login">
    						<input class="input_connexion" type="mail" name="email" placeholder="Email" />
    						<input class="input_connexion" type="password" name="password" placeholder="Mot de passe" />
-   						<input class="input_connexion" type="submit" value="Se connecter">
+   						<input class="input_connexion" type="submit" value="connexion">
 					</form>
 				</div>
 				<form method="post" action="routeur.php?cible=controller_Page_Inscription">

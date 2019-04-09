@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>page d'inscription</title>
-		<link rel="stylesheet" type="text/css" href="css\css_view_Page_Inscription.css">
+		<link rel="stylesheet" href="view\css\css_Page_Inscription.css">
 	</head>
 	<body>
 		<!-- balise de formulaire, method='post/get', action = adresse de la page qui va récupérer les données -->

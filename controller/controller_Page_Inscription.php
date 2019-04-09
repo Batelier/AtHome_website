@@ -10,6 +10,7 @@ A RAJOUTER
 - un header adapté à la situation
 - mot de passe chiffré
 - bdd : registration --> registration_date
+- cette adresse mail est déjà utilisée
 ---------------------------------------*/
 //require le model
 require('model\model_Page_Inscription.php');
