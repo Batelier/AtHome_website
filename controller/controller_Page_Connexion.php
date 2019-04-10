@@ -11,6 +11,7 @@ if (isset($_POST['email'])) {
 	if ($values[1] == $_POST['password']) {
 		echo ($_POST['password']);
 		echo ($values[1]);
+		//popup
 		//echo("Vous êtes bien connecté");
 
 		//header('Location:routeur');
