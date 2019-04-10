@@ -1,3 +1,6 @@
+GIT : 
+Toujours pull avant de fuck everything up
+
 FONCTIONNEMENT GLOBAL 
 Rooteur : 
 routeur est le fichier à lancer au démarage
