@@ -1,21 +1,39 @@
 <?php
+session_start();
+
 /*------------------------------------
-- popup javascript
-- changement de page selon le type d'utilisateur
-- sécurité du changement de page --> à théorie craft
+- popup javascript -> DONE
+- changement de page selon le type d'utilisateur -> DONE
+- sécurité du changement de page --> à théorie craft  --> FINISHED
 ------------------------------------*/
 require('model\model_Page_Connexion.php');
 
 if (isset($_POST['email'])) {
 	$values = login($_POST['email']);
 	//if password is set and password is correct
-	if (!empty($_POST['password']) AND ($values[1] == $_POST['password'])) {
-		echo ($_POST['password']);
-		echo ($values[1]);
-		
-		//popup Connexion établie
+	//values est un tableau contenant -> mail, password, user_type
+	if (!empty($_POST['password']) AND (password_verify($_POST['password'], $values[1]))) {
 
-		header('Location:routeur?cible=controller_accueil_admin');
+		//tester quel type d'utilisateur est connecté pour renvoyer sur la bonne page
+		//sécurité des pages -> si un random fait routeur?cible=admin.php alors qu'il n'est pas admin
+		if ($values[2] == 'utilisateur_principal') {
+			$_SESSION['isUserConnected'] = true;
+			header('Location:routeur?cible=controller_Page_Accueil_Client');
+		}
+		else if ($values[2] == 'administrateur') {
+			$_SESSION['isAdminConnected'] = true;
+			//popup_connected();
+			header('Location:routeur?cible=controller_accueil_admin');
+		}
+		else if ($values[2] == 'gestionnaire') {
+			//page_unavailable();
+		}
+		else if ($values[2] == 'technicien') {
+			//page_unavailable();
+		}
+	}
+	else {
+		//popup mdp ou login incorrect
 	}
 }
 

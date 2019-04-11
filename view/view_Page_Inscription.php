@@ -29,6 +29,10 @@
 					<input type="password" name="password" id="password" required>
 				</p>
 				<p>
+					<label for="password_check">Vérification du mot de passe</label>
+					<input type="password" name="password_check" id="password" required>
+				</p>
+				<p>
 					<label for="telFixe">Téléphone fixe</label>
 					<input type="tel" name="telFixe" id="telFixe" maxlength="10" required>
 				</p>
