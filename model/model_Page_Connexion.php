@@ -8,8 +8,8 @@ function login($mail){
 	global $db;
 	
 	$req = $db -> prepare('SELECT mail, password, user_type FROM user WHERE mail = ?');
-	$req -> execute(array($mail));
-	$values = $req -> fetch();
+	$req -> execute([$mail]);
+	$values = $req -> fetch(); //découpe les valeurs en tableau il me semble
 	return $values;
 }
 
