@@ -39,14 +39,48 @@
 							<p>Cuisine <p>
 						</div>
 						<div class="pb">
-							<img class="pb_img" src="/AtHome/res/pb_jpg.jpg" width="20em" height="20em">
-							<a href="lienpbs">Problèmes</a>
+							<div class="pb_img">
+								<img  src="/AtHome/res/pb_jpg.jpg" width="20em" height="20em">
+							</div>
+							<div class="pb_lien">
+								<a href="lienpbs">Problèmes</a>
+							</div>
+						</div>
+						<div class="routine">
+							<p>Routine : Eco</p>
+						</div>
+					</div>
+					<div class="infos_supplementaires">
+						<div class="bloc1">
+							<div class="piece_img">
+								<img src="/AtHome/res/cuisine.jpg" width="70em" height="70em"> 
+							</div>
+							<div class="gestion_piece">
+								<a href="">Gérer pièce</a>
+							</div>
+						</div>
+						<div class="liste_capteurs">
+						<?php 
+						$c=0;
+						while ($donnees = $reponse->fetch()){
+						?>
+							<div class="capteur">
+								<p> <?php echo ($donnees['model'])?> </p>
+								<label class="switch">
+									<input type="checkbox">
+									<span class="slider round"></span>
+								</label>
+							</div>
+						<?php $c=$c+1;}?>
+							
+						</div>
+						<div class="ajouter_capteur">
+							<a href="">Ajouter Capteur</a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 
 
 	<!-- Insérer ici le code factorisé du menu et du footer --> 
