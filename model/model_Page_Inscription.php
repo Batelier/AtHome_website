@@ -1,5 +1,5 @@
 <?php
-require('C:\wamp64\www\AtHome\model\model_connexion_db.php');
+require('model/model_connexion_db.php');
 
 function register($name, $first_name, $mail, $password, $phone, $mobile, $registration, $user_type)
 {
