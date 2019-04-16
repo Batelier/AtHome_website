@@ -19,11 +19,9 @@
 		</div>
 		<div class="naviguer">
 			<ul>
-				<li><a href="#home">Home</a></li>
-				<li><a href="#compte">Compte</a></li>
-				<li><a href="#consommation">Consommation de l'habitat</a></li>
-				<li><a href="#aide">Aide</a></li>
-				<li><a href="#contact">Contact support</a></li>
+				<li><a href="#Liste utilisateurs">Liste utilisateurs</a></li>
+				<li><a href="#Definir disponibilités">Definir disponibilités</a></li>
+				<li><a href="#Gestion des pages">Gestion des pages</a></li>
 				<li><a href="#messagerie">Messagerie</a></li>
 				<li><a href="#FAQ">FAQ</a></li>
 				<li><a href="#Forum">Forum</a></li>

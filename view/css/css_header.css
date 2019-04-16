@@ -1,36 +1,58 @@
-@charset "UTF-8";
-/* CSS Document */
-
-
-#header
-{
-	width: 100%;
-	height: 100px;
+.header{
+	display:flex;
+	flex-direction: column;
+	width:100%;
+	height:30%;
 }
-
-#logo
-{
-	float: left;
+.bandeau{
+	display:flex;
+	background-color:white;
+	border:solid black;
+}
+.logo{
+	width:20%;
+	height:10%;
+	background-color:white;
+}
+.logo_png{
+	margin:0 0 0 2em;;
+}
+.slogan{
+	width:60%;
+	
+	background-color:white;
+}
+.slogan_txt{
+	text-align:center;
+	border:solid black;
+	padding:2em;
 	
 }
-#touxiang
-{
-	float: right;
+.profil{
+	width:20%;
+	background-color:white;
 }
-.naviga ul
+.profil_png{
+	margin:0 0 0 7em;
+	
+}
+.naviguer{
+	background-color:yellow;
+}
+.naviguer ul
 {
 	list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: #A4A4A4;
 	
 }
-.naviga li {
+.naviguer li {
     float: left;
 }
 
-.naviga li a {
+.naviguer li a {
     display: block;
     color: white;
     text-align: center;
@@ -38,18 +60,6 @@
     text-decoration: none;
 }
 
-.naviga li a:hover {
-    background-color: #111;
+.naviguer li a:hover {
+    background-color: #7F7F7A;
 }
-#bg
-{
- width: 100%;
-	height: 800px;
-	background-image: url("fond2.jpg");
-		
-}
-
-
-
-
-

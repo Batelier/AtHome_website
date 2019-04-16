@@ -1,0 +1,12 @@
+@media screen {
+	#main_div{
+		padding: 3%;
+	}
+	body{
+		background: url(/AtHome/res/fond1.jpg) no-repeat center fixed;
+	}
+	table{
+		background-color: #0047ab;
+		color : white;
+	}
+}

@@ -1,5 +1,7 @@
 <?php
 
+//Le routeur va par défaut sur la page de connexion, lors du premier appel
+
 ini_set('display_errors', 1); //Modifie la valeur d'une option de configuration : passage à 1 pour activation
 
 if (isset($_GET['cible']) && !empty($_GET['cible'])) {
