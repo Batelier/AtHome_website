@@ -2,7 +2,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Page maison utilisateur principal ou secondaire</title>
-	<link rel="stylesheet" href="/AtHome/view/css/css_accueil_client.css" />
+	<link rel="stylesheet" href="css/css_accueil_client.css" />
 </head>
 <body>
 	<!-- Insérer ici le code factorisé de l'entête et du menu --> 
@@ -13,7 +13,7 @@
 				<ul class="menul">
 					<span id="titleMenu" class="notLastLi"> Menu </span>
 					<li class="notLastLi"><a href="">Modifier pièce</a></li>
-					<li class="notLastLi"><a href="">Ajouter pièce</a></li>
+					<li class="notLastLi"><a href="view_ajouter_piece.php">Ajouter pièce</a></li>
 					<li class="notLastLi"><a href="">Supprimer pièce</a></li>
 					<li><a href="">Gestion routines</a></li>
 					
@@ -25,7 +25,12 @@
 		</div>
 		<div id = "rightSide"> <!-- contient barre de recherche, navigation et les différentes habitations -->	
 			<div id="barreSearchNav">
-				ici barre de navigation et de recherche
+                <form action="" method="post">
+                    <div class="search">
+                        <input type="text" class="search_key" placeholder="rechercher"  />
+                        <input type="submit" class="submit" value="rechercher">
+                    </div>
+                </form>
 			</div>
 			<div id="listeMaison">
 				<div class="piece">

@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>page d'inscription</title>
-		<link rel="stylesheet" href="view\css\css_Page_Inscription.css">
+		<link rel="stylesheet" href="css/css_Page_Inscription.css">
 	</head>
 	<body>
 		<div id="main_div">

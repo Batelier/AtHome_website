@@ -2,7 +2,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Page d'accueil</title>
-	<link rel="stylesheet" media="screen"  href="view\css\css_accueil.css">
+	<link rel="stylesheet" media="screen"  href="/view/css/css_accueil.css">
 </head>
 <body>
 	<!-- Logo , Espace texte Slogan, Se connecter, Inscription, mot de passe oublié
@@ -100,7 +100,8 @@
 			</div><!-- Se connecter, mdp oublié, inscription, Nous contacter -->
 		</div>
 		<footer>
-			
+            <center>Designe by: AtHome </center>
+            <center>Contact information: <a href="AtHome@isep.fr">AtHome@isep.fr</a></center>
 		</footer>
 	</div>
 </body>

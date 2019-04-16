@@ -13,7 +13,7 @@ if (isset($_SESSION['isAdminConnected']) and $_SESSION['isAdminConnected'] == tr
 }
 else {
 	echo "YOU ARE NOT LOGGED IN !";
-	echo "<br> <a href=\"routeur.php\"> retour </a>";
+	echo "<br> <a href=\"/routeur.php\"> retour </a>";
 }
 /*
 

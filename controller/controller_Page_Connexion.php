@@ -6,7 +6,7 @@ session_start();
 - changement de page selon le type d'utilisateur -> DONE
 - sécurité du changement de page --> à théorie craft  --> FINISHED
 ------------------------------------*/
-require('model\model_Page_Connexion.php');
+require('model/model_Page_Connexion.php');
 
 if (isset($_POST['email'])) {
 	$values = login($_POST['email']);
@@ -37,5 +37,5 @@ if (isset($_POST['email'])) {
 	}
 }
 
-require('view\view_connexion.php');
+require('view/view_connexion.php');
 
