@@ -1,5 +1,5 @@
 <?php
-require('model\model_connexion_db.php');
+require('model/model_connexion_db.php');
 
 //se connete, puis récupère mail, password et userType -> pour rediriger sur la bonne page
 function login($mail){
