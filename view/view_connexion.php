@@ -100,8 +100,7 @@
 			</div><!-- Se connecter, mdp oublié, inscription, Nous contacter -->
 		</div>
 		<footer>
-            <center>Designe by: AtHome </center>
-            <center>Contact information: <a href="AtHome@isep.fr">AtHome@isep.fr</a></center>
+			
 		</footer>
 	</div>
 </body>

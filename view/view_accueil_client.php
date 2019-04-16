@@ -13,7 +13,7 @@
 				<ul class="menul">
 					<span id="titleMenu" class="notLastLi"> Menu </span>
 					<li class="notLastLi"><a href="">Modifier pièce</a></li>
-					<li class="notLastLi"><a href="view_ajouter_piece.php">Ajouter pièce</a></li>
+					<li class="notLastLi"><a href="">Ajouter pièce</a></li>
 					<li class="notLastLi"><a href="">Supprimer pièce</a></li>
 					<li><a href="">Gestion routines</a></li>
 					
@@ -25,12 +25,7 @@
 		</div>
 		<div id = "rightSide"> <!-- contient barre de recherche, navigation et les différentes habitations -->	
 			<div id="barreSearchNav">
-                <form action="" method="post">
-                    <div class="search">
-                        <input type="text" class="search_key" placeholder="rechercher"  />
-                        <input type="submit" class="submit" value="rechercher">
-                    </div>
-                </form>
+				ici barre de navigation et de recherche
 			</div>
 			<div id="listeMaison">
 				<div class="piece">

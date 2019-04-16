@@ -1,161 +1,225 @@
-@media screen {
+@media screen{
 	body {
 		background-image: white;
 		background-image: url(/AtHome/res/fond1.jpg);
-
 	}
 
-	#main_div {
+	#main_div{
 		/*div principale contient : leftSide et rightSide, mais pas le header ni le footer*/
 		display: flex;
 	}
 
 	/*====================================================================================*/
-	#leftSide {
+	#leftSide{
 		/*contient : menu et favoris*/
-		display: flex;
-		flex-direction: column;
-		width: 20%;
-		height: 40em;
+		display: flex; flex-direction: column;
+		width: 20%; height: 40em;
 		margin: 1%;
 	}
-
-	#menu {
-		margin: 5%;
+	#menu{
+		margin : 5%;
 		height: 50%;
-		background-color: white;
+		background-color: white; 
 		text-align: center;
 	}
-
-	#titleMenu {
+	#titleMenu{
 		font-weight: bold;
 		font-size: 1.2em;
 		display: block;
-	}
-
+		}
 	ul {
 		list-style-type: none;
-		padding: 3%;
-		margin: 3%;
+		padding: 3%; margin : 3%;
 	}
-
 	li a {
 		text-decoration: none;
 		display: block;
 		background-color: #0047ab;
 		padding: 8% 8%;
-		text-align: center;
+		text-align : center;
 		font-weight: bold;
 		color: white;
 	}
-
-	.notLastLi {
+	.notLastLi{
 		margin-bottom: 5%;
 	}
 
-	#favoris {
+	#favoris{
 		text-align: center;
-		margin-left: 5%;
-		margin-right: 5%;
-		margin-bottom: 5%;
+		margin-left: 5%; margin-right: 5%; margin-bottom: 5%;
 		height: 50%;
-		background-color: white;
+		background-color: white; 
 		padding: 10%;
 		/*border: 2px outset black;*/
 	}
 
 	/*====================================================================================*/
-	#rightSide {
+	#rightSide{
 		/*contient barre de recherche, navigation et les différentes habitations*/
-		display: flex;
-		flex-direction: column;
-		width: 79%;
-		height: 40em;
-		margin-top: 1%;
-		margin-bottom: 1%;
-		margin-right: 1%;
+		display: flex; flex-direction: column;
+		width: 79%; height: 40em;
+		margin-top: 1%; margin-bottom: 1%; margin-right: 1%;
 	}
-
-	#barreSearchNav {
+	#barreSearchNav{
 		/*contient barre de navigation et barre de recherche*/
-		margin: 1.5%;
+		margin : 1.5%;
 		height: 5%;
 		background-color: white;
 	}
-
-	#listeMaison {
-		display: flex;
-		flex-direction: column;
-		margin-left: 1.5%;
-		margin-right: 1.5%;
+	#listeMaison{
+		display:flex;
+		flex-direction:column;
+		margin-left: 1.5%; margin-right: 1.5%;
 		height: 88%;
-		background-color: rgba(0, 0, 0, 0);
+		background-color: rgba(0,0,0,0);
 	}
-
-	.piece {
-		display: flex;
-		width: 100%;
-		height: 30%;
-		background-color: white;
-		border-radius: 1em;
+	.piece{
+		display:flex;
+		flex-direction:column;
+		width:100%;
+		height:30%;
+		background-color:white;
+		border-radius:1em;
 	}
-
-	.infos_principales {
-		display: flex;
-		width: 100%;
-		height: 20%;
-		background-color: #3F06B2;
-		border-radius: 1em 1em 0 0;
+	.infos_principales{
+		display:flex;
+		width:100%;
+		height:20%;
+		background-color:#3F06B2;
+		border-radius:1em 1em 0 0;
 	}
-
-	.nom_piece {
-		width: 20%;
-		background-color: green;
-		border-radius: 1em 0 0 0;
+	.nom_piece{
+		width:20%;
+		background-color:#3F06B2;
+		border-radius:1em 0 0 0;
 	}
-
-	.nom_piece p {
-		margin-top: 0.3em;
-		margin-left: 0.5em;
+	.nom_piece p{
+		margin-top:0.3em;
+		margin-left:0.5em;
+		color:white;
+	}
+	.pb{
+		display:flex;
+		width:50%;
+		height:100%;
+		background-color:#3F06B2;
+	}
+	.pb_lien{
+		margin-top:0.2em;
+		margin-left:1em;
+	}
+	.pb_lien a{
+		color:white;
+	}
+	.pb_img{
+		margin-top:0.2em;
+	}
+	.routine p{
+		color:white;
+		margin:0.2em 0 0 10em;
+	}
+	.infos_supplementaires{
+		display:flex;
+	}
+	.bloc1{
+		display:flex;
+		flex-direction: column;
+	}
+	.piece_img{
+		margin:1em 0 1em 1.3em;
+	}
+	.gestion_piece a{
+		text-decoration: none;
+		padding:0.4em;
+		background-color: #0047ab;
+		text-align : center;
+		font-weight: bold;
 		color: white;
+		margin:0 0 0.1em 0.6em
+	}
+	.liste_capteurs{
+		display:flex;
+		width:65%;
+		height:100%;
+		overflow:auto;
+		
+		margin-left:2em;
+	}
+	.capteur{
+		margin-left:1em;
+		
+	}
+	.ajouter_capteur a{
+		text-decoration: none;
+		padding:0.7em;
+		background-color: #0047ab;
+		text-align : center;
+		font-weight: bold;
+		color: white;
+		margin-top:20em;
+	}
+	.switch {
+		position: relative;
+		display: inline-block;
+		margin:0;
+		width: 60px;
+		height: 34px;
 	}
 
-	.pb {
-		width: 50%;
-		height: 100%;
-		background-color: yellow;
+	/* Hide default HTML checkbox */
+	.switch input {
+		opacity: 0;
+		width: 0;
+		height: 0;
 	}
 
-	.pb a {
-		margin: 0;
-		color: red;
+	/* The slider */
+	.slider {
+		position: absolute;
+		cursor: pointer;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: #ccc;
+		-webkit-transition: .4s;
+		transition: .4s;
 	}
 
-	.pb_img {
-		margin-top: 0.2em;
+	.slider:before {
+		position: absolute;
+		content: "";
+		height: 26px;
+		width: 26px;
+		left: 4px;
+		bottom: 4px;
+		background-color: white;
+		-webkit-transition: .4s;
+		transition: .4s;
 	}
 
-	#rightSide #barreSearchNav .search {
-		margin: 30px;
-		width: 210px;
-		height: 35px;
-		border: 1px solid silver;
+	input:checked + .slider {
+		background-color: #2196F3;
 	}
 
-	#rightSide #barreSearchNav .search_key {
-		width: 150px;
-		height: 25px;
-		border: none;
-		margin-top: 5px;
-		margin-left: 5px;
+	input:focus + .slider {
+		box-shadow: 0 0 1px #2196F3;
+	} 
+
+	input:checked + .slider:before {
+		-webkit-transform: translateX(26px);
+		-ms-transform: translateX(26px);
+		transform: translateX(26px);
 	}
 
-	#rightSide #barreSearchNav .submit {
-		background: none;
-		margin-top: 5px;
-		width: 40px;
-		height: 25px;
-		border: none;
+	/* Rounded sliders */
+	.slider.round {
+		border-radius: 34px;
 	}
 
-}
+	.slider.round:before {
+		border-radius: 50%;
+	}
+	.ajouter_capteur{
+		margin : 3em 0.4em 1em 2em;
+	}

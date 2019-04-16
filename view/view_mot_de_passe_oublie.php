@@ -6,7 +6,7 @@
 	</head>
 	<div class="container">
 		<h2 class="form_">mot de pass oublié</h2>
-		<form  action="../controller/controller_mot_de_passe_oublie.php" class="form_sign_in" method="post">
+		<form class="form_sign_in">
 			<input type="text" name="email" class="form-control" placeholder="e-mail">
 			<p>
 				<button class="btn btn-primary" type="submit">envoyer</button>
