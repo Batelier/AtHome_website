@@ -8,7 +8,7 @@
   <component name="PhpInterpreters">
     <interpreters>
       <interpreter id="65141247-c932-43b9-a270-96d8253d65d5" name="PHP 7.1" home="/usr/bin/php" debugger_id="php.debugger.XDebug" />
-      <interpreter id="ab79c2ad-7bb7-47e8-bb5f-349874d64e49" name="PHP.2.1.4" home="/Applications/MAMP/bin/php/php7.2.14/bin/php" debugger_id="php.debugger.XDebug" />
+      <interpreter id="ab79c2ad-7bb7-47e8-bb5f-349874d64e49" name="PHP 7.1.3" home="/Applications/MAMP/bin/php/php7.3.1/bin/php" debugger_id="php.debugger.XDebug" />
     </interpreters>
   </component>
   <component name="PhpInterpretersPhpInfoCache">
@@ -80,12 +80,12 @@
           </loaded_extensions>
         </phpinfo>
       </interpreter>
-      <interpreter name="PHP.2.1.4">
-        <phpinfo binary_type="PHP" php_cgi="/Applications/MAMP/bin/php/php7.2.14/bin/php-cgi" php_cli="/Applications/MAMP/bin/php/php7.2.14/bin/php" path_separator=":" version="7.2.14">
+      <interpreter name="PHP 7.1.3">
+        <phpinfo binary_type="PHP" php_cgi="/Applications/MAMP/bin/php/php7.3.1/bin/php-cgi" php_cli="/Applications/MAMP/bin/php/php7.3.1/bin/php" path_separator=":" version="7.3.1">
           <additional_php_ini />
-          <configuration_file>/Applications/MAMP/bin/php/php7.2.14/conf/php.ini</configuration_file>
+          <configuration_file>/Applications/MAMP/bin/php/php7.3.1/conf/php.ini</configuration_file>
           <configuration_options>
-            <configuration_option name="include_path" value=".:/Applications/MAMP/bin/php/php7.2.14/lib/php" />
+            <configuration_option name="include_path" value=".:/Applications/MAMP/bin/php/php7.3.1/lib/php" />
           </configuration_options>
           <debuggers />
           <loaded_extensions>
@@ -113,7 +113,6 @@
             <extension name="imap" />
             <extension name="intl" />
             <extension name="json" />
-            <extension name="ldap" />
             <extension name="libxml" />
             <extension name="mbstring" />
             <extension name="mysqli" />
