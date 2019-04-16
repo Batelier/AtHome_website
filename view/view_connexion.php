@@ -18,14 +18,58 @@
 						<span id="text_slogan">Avec AtHome, dab plus vite que ton ombre</span>
 					</div>
 				</div>
-				<div id="bloc_ratings">
-					<?php //select a random coment within those which are availables  ?>
+				<div id="bloc_text_annonce_ratings">
+					<span id="text_annonce_ratings"> Ce qu'en disent nos utilisateurs :</span>
 				</div>
-				<div id="bloc_nouvelles">
-					
-					<?php
-						//foreach news create a new bloc
-					?>
+				<div id="bloc_ratings">
+					<div id="bloc_pics_rating">
+						<div id="div_star">
+							<?php 
+								//select a random coment within those which are availables
+								//model + controller import les variables 
+								$star_nb = 4; //sera plus tard tiré de la bdd
+								$user_name = "Joe ";
+								$txt = "AtHome c'est vraiment le feu !";
+
+								for ($i=0; $i < $star_nb; $i++) {
+									?>
+										<img src="res/star_rating.png" id="rating">
+									<?php
+								}
+								for ($i=0; $i < 5- $star_nb; $i++) { 
+									?>
+										<img src="res/star_null.png" id="rating">
+									<?php
+								}
+							 ?>	
+					 	</div> <!-- fin div_star -->
+					 	<div id="div_profil_pic">
+					 		<img src="res/profil_pic.png" id="profil_pic">
+					 	</div>
+					</div>
+					<div id="bloc_text_rating">
+						<span id="comment"> <?php echo ($user_name) ?> nous dit : <?php echo ($txt) ?> </span>
+					</div>
+							
+				</div>
+				<div id="bloc_news">
+					<fieldset>
+						<legend>Catalogue des nouvelles</legend>
+						<?php
+							//foreach news create a new bloc
+							//model + controller à faire  --> news LIMIT 5
+							$news_1 = "Un nouveau capteur est disponible";
+							//foreach ($variable as $key) {
+								//pour chaque news, créer un nouveau machin, à mettre dans la boucle
+							//}
+						?>
+						<div id="news">
+							<?php echo($news_1)?> 
+						</div>
+						<div id="news">
+							<?php echo($news_1)?> 
+						</div>
+					</fieldset>
 				</div>
 				
 			</div><!--  -->
@@ -42,7 +86,7 @@
 				</div>
 				
 				<div class="bloc_contact">
-					<form id = "Contact" method="post" action="connexion.php">
+					<form id = "Contact" method="post">
 						<br>
 						<label>Nom complet</label>
    						<input class="input_contact" type="text" name="nom_complet" placeholder="Jean Dupont" />
