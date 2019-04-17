@@ -1,6 +1,6 @@
 
 body{
-	background: linear-gradient(to bottom right, rgba(242,246,248,0.7) 0%,rgba(216,225,231,0.7) 50%,rgba(181,198,208,0) 51%,rgba(224,239,249,0) 100%) fixed, url(/AtHome/res/fond3.jpg) no-repeat center fixed;
+	background: linear-gradient(to bottom right, rgba(242,246,248,0.7) 0%,rgba(216,225,231,0.7) 50%,rgba(181,198,208,0) 51%,rgba(224,239,249,0) 100%) fixed, url(/AtHome/res/fond4.jpg) no-repeat center fixed;
 	background-size: cover;
 }
 
@@ -59,6 +59,15 @@ legend{
 	font-size: 1.2em;
 	margin:auto;
 	border-color: #0047ab;
+}
+.input_field{
+	width: 100%;
+}
+.input_date{
+	width: 99%;
+}
+.input_select{
+	width: 102%;
 }
 @media screen and (max-width: 1280px)
 {
