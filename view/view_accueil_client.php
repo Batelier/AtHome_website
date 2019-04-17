@@ -64,7 +64,8 @@
 									<input type="checkbox">
 									<span class="slider round"></span>
 								</label>
-								<button id="delete_button"> Supprimer </button>
+								<input id="delete_button" type="submit"
+									name="supprimer[<?php echo($donnees['equipment_id']); ?>]" value="Supprimer"></input>
 							</div>
 						<?php $c=$c+1;}?>
 							

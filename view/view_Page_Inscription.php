@@ -13,6 +13,11 @@
 
 					<fieldset>
 						<legend>Formulaire d'inscription</legend>
+						<table>
+							<tr>
+								<td></td>
+							</tr>
+						</table>
 						<p>
 							<label for="prenom">Prénom</label>
 							<input type="text" name="prenom" id="prenom" maxlength="20" placeholder="Jean" autofocus required

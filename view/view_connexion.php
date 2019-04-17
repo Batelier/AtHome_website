@@ -15,7 +15,7 @@
 						<img src="res/logo_png.png" id="logo">
 					</div>
 					<div id="bloc_slogan">
-						<span id="text_slogan">Avec AtHome, dab plus vite que ton ombre</span>
+						<span id="text_slogan">Bienvenue sur AtHome !</span>
 					</div>
 				</div>
 				<div id="bloc_text_annonce_ratings">
