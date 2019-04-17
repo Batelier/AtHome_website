@@ -75,6 +75,7 @@
 	}
 	.piece{
 		display:flex;
+		flex-direction:column;
 		width:100%;
 		height:30%;
 		background-color:white;
@@ -89,7 +90,7 @@
 	}
 	.nom_piece{
 		width:20%;
-		background-color:green;
+		background-color:#3F06B2;
 		border-radius:1em 0 0 0;
 	}
 	.nom_piece p{
@@ -98,15 +99,127 @@
 		color:white;
 	}
 	.pb{
+		display:flex;
 		width:50%;
 		height:100%;
-		background-color:yellow;
+		background-color:#3F06B2;
 	}
-	.pb a{
-		margin:0;
-		color:red;
+	.pb_lien{
+		margin-top:0.2em;
+		margin-left:1em;
+	}
+	.pb_lien a{
+		color:white;
 	}
 	.pb_img{
 		margin-top:0.2em;
 	}
-}
+	.routine p{
+		color:white;
+		margin:0.2em 0 0 10em;
+	}
+	.infos_supplementaires{
+		display:flex;
+	}
+	.bloc1{
+		display:flex;
+		flex-direction: column;
+	}
+	.piece_img{
+		margin:1em 0 1em 1.3em;
+	}
+	.gestion_piece a{
+		text-decoration: none;
+		padding:0.4em;
+		background-color: #0047ab;
+		text-align : center;
+		font-weight: bold;
+		color: white;
+		margin:0 0 0.1em 0.6em
+	}
+	.liste_capteurs{
+		display:flex;
+		width:65%;
+		height:100%;
+		overflow:auto;
+		
+		margin-left:2em;
+	}
+	.capteur{
+		margin-left:1em;
+		
+	}
+	.ajouter_capteur a{
+		text-decoration: none;
+		padding:0.7em;
+		background-color: #0047ab;
+		text-align : center;
+		font-weight: bold;
+		color: white;
+		margin-top:20em;
+	}
+	.switch {
+		position: relative;
+		display: inline-block;
+		margin:0;
+		width: 60px;
+		height: 34px;
+	}
+
+	/* Hide default HTML checkbox */
+	.switch input {
+		opacity: 0;
+		width: 0;
+		height: 0;
+	}
+
+	/* The slider */
+	.slider {
+		position: absolute;
+		cursor: pointer;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: #ccc;
+		-webkit-transition: .4s;
+		transition: .4s;
+	}
+
+	.slider:before {
+		position: absolute;
+		content: "";
+		height: 26px;
+		width: 26px;
+		left: 4px;
+		bottom: 4px;
+		background-color: white;
+		-webkit-transition: .4s;
+		transition: .4s;
+	}
+
+	input:checked + .slider {
+		background-color: #2196F3;
+	}
+
+	input:focus + .slider {
+		box-shadow: 0 0 1px #2196F3;
+	} 
+
+	input:checked + .slider:before {
+		-webkit-transform: translateX(26px);
+		-ms-transform: translateX(26px);
+		transform: translateX(26px);
+	}
+
+	/* Rounded sliders */
+	.slider.round {
+		border-radius: 34px;
+	}
+
+	.slider.round:before {
+		border-radius: 50%;
+	}
+	.ajouter_capteur{
+		margin : 3em 0.4em 1em 2em;
+	}

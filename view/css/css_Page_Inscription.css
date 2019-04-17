@@ -1,3 +1,33 @@
+
+#main_div{
+		/*div principale contient : leftSide et rightSide, mais pas le header ni le footer*/
+		display: flex;
+		width: 100%;
+		height: 100%;
+		margin: 1%;
+		justify-content: space-around;
+		align-items: center; 
+	}
+
+#formulaire{
+	display: flex;
+	width: 100%;
+	height: 100%;
+	flex : 1.3;
+}
+figure{
+	display: flex; 
+	flex : 1;
+	/*effet arrondi*/
+	overflow:hidden;
+    border-radius: 30% 70% 30% 70%;
+}
+
+#img{
+	height: 100%;
+	width: 100%;
+}
+
 @media screen and (max-width: 1280px)
 {
 	/*   TEST

@@ -41,6 +41,6 @@ if (isset($_POST['register'])) {
 }
 
 //include header (à changer)
-include('view\view_header.php');
+include('view/view_header.php');
 //include view Page Inscription
-require('view\view_Page_Inscription.php');
+require('view/view_Page_Inscription.php');
