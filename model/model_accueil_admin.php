@@ -9,7 +9,7 @@ function get_all_users(){
 
 	$req = $db -> prepare('SELECT mail, first_name, name, user_type, registration FROM user');
 	$req -> execute();
-	$all_users = $req -> fetch();
+	$all_users = $req -> fetchAll();
 
 	return $all_users;
 }

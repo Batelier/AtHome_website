@@ -2,7 +2,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Page maison utilisateur principal ou secondaire</title>
-	<link rel="stylesheet" href="css/css_accueil_client.css" />
+	<link rel="stylesheet" href="view/css/css_accueil_client.css" />
 </head>
 <body>
 	<!-- Insérer ici le code factorisé de l'entête et du menu --> 
@@ -35,7 +35,7 @@
 						</div>
 						<div class="pb">
 							<div class="pb_img">
-								<img  src="/AtHome/res/pb_jpg.jpg" width="20em" height="20em">
+								<img  src="res/pb_jpg.jpg" width="20em" height="20em">
 							</div>
 							<div class="pb_lien">
 								<a href="lienpbs">Problèmes</a>
@@ -48,7 +48,7 @@
 					<div class="infos_supplementaires">
 						<div class="bloc1">
 							<div class="piece_img">
-								<img src="/AtHome/res/cuisine.jpg" width="70em" height="70em"> 
+								<img src="res/cuisine.jpg" width="70em" height="70em"> 
 							</div>
 							<div class="gestion_piece">
 								<a href="">Gérer pièce</a>
@@ -70,7 +70,7 @@
 							
 						</div>
 						<div class="ajouter_capteur">
-							<a href="">Ajouter Capteur</a>
+							<a href="routeur.php?cible=controller_ajouter_capteur">Ajouter Capteur</a>
 						</div>
 					</div>
 				</div>

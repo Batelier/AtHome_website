@@ -2,7 +2,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Page d'accueil</title>
-	<link rel="stylesheet" media="screen"  href="/view/css/css_accueil.css">
+	<link rel="stylesheet" media="screen"  href="view/css/css_accueil.css">
 </head>
 <body>
 	<!-- Logo , Espace texte Slogan, Se connecter, Inscription, mot de passe oublié
@@ -12,7 +12,7 @@
 			<div class="bloc_colonne1">
 				<div id="bloc_logo_slogan">
 					<div id="bloc_logo">
-						<img src="/res/logo_png.png" id="logo">
+						<img src="res/logo_png.png" id="logo">
 					</div>
 					<div id="bloc_slogan">
 						<span id="text_slogan">Avec AtHome, dab plus vite que ton ombre</span>
@@ -33,18 +33,18 @@
 
 								for ($i=0; $i < $star_nb; $i++) {
 									?>
-										<img src="/res/star_rating.png" id="rating">
+										<img src="res/star_rating.png" id="rating">
 									<?php
 								}
 								for ($i=0; $i < 5- $star_nb; $i++) { 
 									?>
-										<img src="/res/star_null.png" id="rating">
+										<img src="res/star_null.png" id="rating">
 									<?php
 								}
 							 ?>	
 					 	</div> <!-- fin div_star -->
 					 	<div id="div_profil_pic">
-					 		<img src="/res/profil_pic.png" id="profil_pic">
+					 		<img src="res/profil_pic.png" id="profil_pic">
 					 	</div>
 					</div>
 					<div id="bloc_text_rating">
