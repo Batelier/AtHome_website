@@ -7,12 +7,18 @@
 		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	</head>
 	<body>
-		<div id="main_div">
+		<script type="text/javascript" src="res\js\admin_popup_modifier.js"></script>
+
+		<div id="main_div" >
 			<table class="w3-table w3-bordered">
 				<tr>
 					<th>Prénom</th>
 					<th>Nom</th>
 					<th>Mail</th>
+					<th>Type d'utilisateur</th>
+					<th>Date d'enregistrement</th>
+					<th>Modifier</th>
+					<th>Supprimer</th>
 				</tr>
 				<?php
 					foreach ($all_users as $user) {
@@ -23,6 +29,10 @@
 							<td> <?php echo $user[2];  ?> </td>
 							<td> <?php echo $user[1];  ?> </td>
 							<td> <?php echo $user[0];  ?> </td>
+							<td> <?php echo $user[3];  ?> </td>
+							<td> <?php echo $user[4];  ?> </td>
+							<td> <button id="button_modifier" onclick="popup()">Modifier</button> </td>
+							<td> <button id="button_delete">Supprimer</button> </td>
 						</tr>
 						<?php
 					}

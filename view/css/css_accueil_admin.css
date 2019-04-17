@@ -9,4 +9,13 @@
 		background-color: #0047ab;
 		color : white;
 	}
+	#button_modifier{
+		color: white;
+		background-color: green;
+	}
+	#button_delete{
+		color: white;
+		background-color: red;
+	}
+
 }
