@@ -69,6 +69,9 @@
 						<div id="news">
 							<?php echo($news_1)?> 
 						</div>
+						<div id="news">
+							<?php echo($news_1)?> 
+						</div>
 					</fieldset>
 				</div>
 				
@@ -84,8 +87,9 @@
 	   					<input class="co_button input_connexion" type="submit" value="Créer un compte">
 					</form>
 				</div>
-				
+
 				<div class="bloc_contact">
+					<span id="txt_contact">Nous contacter</span>
 					<form id = "Contact" method="post">
 						<br>
 						<label>Nom complet</label>
