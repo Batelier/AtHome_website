@@ -6,7 +6,6 @@
 </head>
 <body>
 	<!-- Insérer ici le code factorisé de l'entête et du menu --> 
-
 	<div id= "main_div">
 		<div id = "leftSide"> <!-- contient : menu et favoris -->
 			<div id="menu">
@@ -65,13 +64,27 @@
 									<input type="checkbox">
 									<span class="slider round"></span>
 								</label>
+								<button id="delete_button"> Supprimer </button>
 							</div>
 						<?php $c=$c+1;}?>
 							
-						</div>
+						</div class="ajouter_capteur">
+						<!--
 						<div class="ajouter_capteur">
 							<a href="routeur.php?cible=controller_ajouter_capteur">Ajouter Capteur</a>
 						</div>
+						--> 
+
+							<form method="post" > <!-- action="/AtHome/model/model_ajouter_capteur.php"-->
+								<select name="capteurs" size="1">
+									<option>Choisir</option>
+									<option>Luminosité</option>
+									<option>Température</option>
+									<option>Fumée</option>
+								</select>
+								<input type="submit" value="Ajouter" name="add_sensor">
+							</form>
+
 					</div>
 				</div>
 			</div>
