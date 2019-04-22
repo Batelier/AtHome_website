@@ -1,3 +1,7 @@
 function popup(){
-	window.alert("ton pere le chat");
+	
+	document.getElementById('popup_modifier').style.display = "block";
+}
+function close_popup(){
+	document.getElementById('popup_modifier').style.display = "none";
 }
