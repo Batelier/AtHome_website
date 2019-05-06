@@ -53,9 +53,9 @@
 }
 
 .bandeau{
-	padding: 0.2em;
+	
 	display:flex;
-
+	height:20%;
 	border-radius: 2em 2em 0 0;
 }
 
@@ -65,10 +65,11 @@
 	#bloc_logo{
 		margin: auto;
 		width: 10%;
+		
 	}
 	#bloc_slogan{
 		background-color: white;
-		margin: 0 2% 0 2%;
+		margin: 0 2% 1% 2%;
 		width:76%;
 		text-align: center;
 		display: flex;
@@ -81,13 +82,14 @@
 		animation: AnimationName 14s ease infinite;
 	}
 	#text_slogan{
-		margin: auto;
+		margin:auto;
 		font-weight: bold;
 		font-size: 1.2em;
 		color: white;
 	}
 	#bloc_profil{
 		width: 10%;
+		
 		margin:auto;
 	}
 	#profil{

@@ -2,13 +2,13 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<link rel="stylesheet" href="view/css/css_header.css" />
+		<link rel="stylesheet" href="/AtHome/view/css/css_header.css" />
 	</head>
 	<body>
 	<div class="header">
 		<div class="bandeau">
 			<div id="bloc_logo">
-				<a href="routeur.php"><img src="res/logo_png.png" id="logo"></a>
+				<a href="routeur.php"><img src="/AtHome/res/logo_png.png" id="logo"></a>
 			</div>
 			<div id="bloc_slogan">
 				<span id="text_slogan">Bienvenue sur AtHome !</span>

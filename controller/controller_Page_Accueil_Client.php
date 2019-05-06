@@ -1,8 +1,8 @@
 <?php
 session_start();
-require("model/model_accueil_client.php");
+require("C:/wamp64/www/AtHome/model/model_accueil_client.php");
 
-if (isset($_SESSION['isUserConnected']) and $_SESSION['isUserConnected'] == true) {
+#if (isset($_SESSION['isUserConnected']) and $_SESSION['isUserConnected'] == true) {
 
 	if (isset($_POST['supprimer'])) {
 		echo "called";
@@ -13,9 +13,9 @@ if (isset($_SESSION['isUserConnected']) and $_SESSION['isUserConnected'] == true
 	}
 	$reponse = query_captors();
 
-	include("view/view_header.php");
-	require("view/view_accueil_client.php");
-}else{
+	include("C:/wamp64/www/AtHome/view/view_header.php");
+	require("C:/wamp64/www/AtHome/view/view_accueil_client.php");
+#}else{
 
-header('routeur.php');}
+#header('routeur.php');}
 
