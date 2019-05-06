@@ -85,12 +85,9 @@
 								</select>
 								<input type="submit" value="Ajouter" name="add_sensor">
 							</form>
-
 					</div>
 				</div>
 			</div>
 		</div>
-
-
 	<!-- Insérer ici le code factorisé du menu et du footer --> 
 </body>

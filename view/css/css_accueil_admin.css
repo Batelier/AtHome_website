@@ -19,4 +19,42 @@
 		background-color: red;
 	}
 
+	/*=============================code_popup=============================*/
+	#popup_modifier{
+		display: none;
+		top: 25%;
+		left : 25%;
+		background-color: white;
+		width: 50%;
+		height: 20em;
+		position: absolute;
+		border-radius: 1em;
+		border-style: double;	
+		border-color: #0047ab;
+	}
+	#header_modifier{
+		padding: 1%;
+		color: #0047ab;
+		font-weight: bold;
+		font-size: 1.1rem;
+		border-bottom-style: solid;
+		border-bottom-color: #0047ab;
+		display: flex;
+	}
+	#txt_header_modifier{
+		width: 95%;
+	}
+	#close_header_modifier{
+		width: 5%;
+		color: white;
+		background-color: red;
+		border-radius: 2em;
+		border-style: solid;
+		text-align: center;
+		cursor: pointer; 
+	}
+	#body_popup_modifier{
+		
+	}
+
 }
