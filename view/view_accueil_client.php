@@ -2,18 +2,17 @@
 <head>
 	<meta charset="utf-8">
 	<title>Page maison utilisateur principal ou secondaire</title>
-	<link rel="stylesheet" href="css/css_accueil_client.css" />
+	<link rel="stylesheet" href="view/css/css_accueil_client.css" />
 </head>
 <body>
 	<!-- Insérer ici le code factorisé de l'entête et du menu --> 
-
 	<div id= "main_div">
 		<div id = "leftSide"> <!-- contient : menu et favoris -->
 			<div id="menu">
 				<ul class="menul">
 					<span id="titleMenu" class="notLastLi"> Menu </span>
 					<li class="notLastLi"><a href="">Modifier pièce</a></li>
-					<li class="notLastLi"><a href="view_ajouter_piece.php">Ajouter pièce</a></li>
+					<li class="notLastLi"><a href="">Ajouter pièce</a></li>
 					<li class="notLastLi"><a href="">Supprimer pièce</a></li>
 					<li><a href="">Gestion routines</a></li>
 					
@@ -25,12 +24,7 @@
 		</div>
 		<div id = "rightSide"> <!-- contient barre de recherche, navigation et les différentes habitations -->	
 			<div id="barreSearchNav">
-                <form action="" method="post">
-                    <div class="search">
-                        <input type="text" class="search_key" placeholder="rechercher"  />
-                        <input type="submit" class="submit" value="rechercher">
-                    </div>
-                </form>
+				ici barre de navigation et de recherche
 			</div>
 			<div id="listeMaison">
 				<div class="piece">
@@ -40,7 +34,7 @@
 						</div>
 						<div class="pb">
 							<div class="pb_img">
-								<img  src="/AtHome/res/pb_jpg.jpg" width="20em" height="20em">
+								<img  src="res/pb_jpg.jpg" width="20em" height="20em">
 							</div>
 							<div class="pb_lien">
 								<a href="lienpbs">Problèmes</a>
@@ -53,7 +47,7 @@
 					<div class="infos_supplementaires">
 						<div class="bloc1">
 							<div class="piece_img">
-								<img src="/AtHome/res/cuisine.jpg" width="70em" height="70em"> 
+								<img src="res/cuisine.jpg" width="70em" height="70em"> 
 							</div>
 							<div class="gestion_piece">
 								<a href="">Gérer pièce</a>
@@ -70,18 +64,30 @@
 									<input type="checkbox">
 									<span class="slider round"></span>
 								</label>
+								<input id="delete_button" type="submit"
+									name="supprimer[<?php echo($donnees['equipment_id']); ?>]" value="Supprimer"></input>
 							</div>
 						<?php $c=$c+1;}?>
 							
-						</div>
+						</div class="ajouter_capteur">
+						<!--
 						<div class="ajouter_capteur">
-							<a href="">Ajouter Capteur</a>
+							<a href="routeur.php?cible=controller_ajouter_capteur">Ajouter Capteur</a>
 						</div>
+						--> 
+
+							<form method="post" > <!-- action="/AtHome/model/model_ajouter_capteur.php"-->
+								<select name="capteurs" size="1">
+									<option>Choisir</option>
+									<option>Luminosité</option>
+									<option>Température</option>
+									<option>Fumée</option>
+								</select>
+								<input type="submit" value="Ajouter" name="add_sensor">
+							</form>
 					</div>
 				</div>
 			</div>
 		</div>
-
-
 	<!-- Insérer ici le code factorisé du menu et du footer --> 
 </body>

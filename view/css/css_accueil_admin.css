@@ -3,10 +3,58 @@
 		padding: 3%;
 	}
 	body{
-		background: url(/AtHome/res/fond1.jpg) no-repeat center fixed;
+		background: linear-gradient(to bottom right, rgba(242,246,248,0.7) 0%,rgba(216,225,231,0.7) 50%,rgba(181,198,208,0) 51%,rgba(224,239,249,0) 100%) fixed, url(/AtHome/res/fond2.jpg) no-repeat center fixed; 
+		background-size: cover;
 	}
 	table{
 		background-color: #0047ab;
 		color : white;
 	}
+	#button_modifier{
+		color: white;
+		background-color: green;
+	}
+	#button_delete{
+		color: white;
+		background-color: red;
+	}
+
+	/*=============================code_popup=============================*/
+	#popup_modifier{
+		display: none;
+		top: 25%;
+		left : 25%;
+		background-color: white;
+		width: 50%;
+		height: 20em;
+		position: absolute;
+		border-radius: 1em;
+		border-style: double;	
+		border-color: #0047ab;
+	}
+	#header_modifier{
+		padding: 1%;
+		color: #0047ab;
+		font-weight: bold;
+		font-size: 1.1rem;
+		border-bottom-style: solid;
+		border-bottom-color: #0047ab;
+		display: flex;
+	}
+	#txt_header_modifier{
+		width: 95%;
+	}
+	#close_header_modifier{
+		width: 5%;
+		color: white;
+		background-color: red;
+		border-radius: 2em;
+		border-style: solid;
+		text-align: center;
+		cursor: pointer; 
+	}
+	#body_popup_modifier{
+		
+	}
+
 }

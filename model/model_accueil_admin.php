@@ -7,9 +7,9 @@ function get_all_users(){
 	db_connect(); //function from model_connexion_db.php
 	global $db; //pour pouvoir utiliser l'objet db -> database
 
-	$req = $db -> prepare('SELECT mail, first_name, name FROM user');
+	$req = $db -> prepare('SELECT mail, first_name, name, user_type, registration, user_id FROM user');
 	$req -> execute();
-	$all_users = $req -> fetch();
+	$all_users = $req -> fetchAll();
 
 	return $all_users;
 }

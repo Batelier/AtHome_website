@@ -17,7 +17,7 @@ A RAJOUTER
 - retaper deux fois le mot de passe --> FINISHED
 ---------------------------------------*/
 //require le model
-require('model/model_Page_Inscription.php');
+require('model\model_Page_Inscription.php');
 //si le formulaire a été rempli, on l'inscrit dans la base de données
 if (isset($_POST['register'])) {
 	//vérifier que le password soit le meme que le password_check
@@ -41,6 +41,6 @@ if (isset($_POST['register'])) {
 }
 
 //include header (à changer)
-include('view/view_header.php');
+include('view/view_header_inscription.php');
 //include view Page Inscription
 require('view/view_Page_Inscription.php');
