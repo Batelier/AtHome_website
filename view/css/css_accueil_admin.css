@@ -14,9 +14,23 @@
 		color: white;
 		background-color: green;
 	}
+	#button_modifier:hover{
+		cursor: pointer;
+		color: green;
+		background-color: lightgreen;
+	}
+	#button_delete:hover{
+		cursor: pointer;
+		color: red;
+		background-color: white;
+	}
 	#button_delete{
 		color: white;
 		background-color: red;
+	}
+	#user_row:hover{
+		background-color: lightblue;
+		color: #0047ab;
 	}
 
 	/*=============================code_popup=============================*/
@@ -54,7 +68,33 @@
 		cursor: pointer; 
 	}
 	#body_popup_modifier{
-		
+		padding: 5%;
+
+	}
+	#formulaire{
+		display: block;
+		/*background-color: #0047ab;
+		border-radius: 2em;*/
+	}
+	#table_modifier{
+		background-color: #0047ab;
+		padding: 2%;
+		border-radius: 2em;
+		width: 100%;
+	}
+	#register_button{
+		color: white;
+		font-weight: bold;
+		background-color: #0047ab;
+		border-radius: 2em;
+		border-style: outset;
+		width: 50%;
+		margin : 0.3em 25% 0 25%;
+	}
+	#register_button:hover{
+		cursor: pointer;
+		color:  #0047ab;
+		background-color: lightblue;
 	}
 
 }

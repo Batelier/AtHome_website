@@ -10,6 +10,9 @@ if (isset($_SESSION['isAdminConnected']) and $_SESSION['isAdminConnected'] == tr
 	$all_users = get_all_users();
 	require('view/view_accueil_admin.php');
 	
+	if (isset($_POST['register'])) {
+		echo "ton pere le chat";
+	}
 }
 else {
 	echo "YOU ARE NOT LOGGED IN !";
