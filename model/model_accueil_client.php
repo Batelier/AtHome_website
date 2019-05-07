@@ -27,7 +27,9 @@ function ajouter_capteur($type){
 function delete_sensor($id){
 	db_connect();
 	global $db;
-
-	$req = $db -> prepare('DELETE equipment WHERE equipment_id LIKE (?)');
-	$req -> execute([$id]);
+	$req = $db->prepare('DELETE FROM equipment WHERE equipment_id = :id_capteur');
+	$req->execute(array(
+	'id_capteur' => $id
+	));
+	
 }

@@ -55,26 +55,27 @@
 						</div>
 						<div class="liste_capteurs">
 						<?php 
-						$c=0;
 						while ($donnees = $reponse->fetch()){
 						?>
 							<div class="capteur">
 								<p> <?php echo ($donnees['model'])?> </p>
-								<label class="switch">
-									<input type="checkbox">
-									<span class="slider round"></span>
-								</label>
-								<input id="delete_button" type="submit"
-									name="supprimer[<?php echo($donnees['equipment_id']); ?>]" value="Supprimer"></input>
+									<label class="switch">
+										<input type="checkbox">
+										<span class="slider round"></span>
+									</label>
+								<form method="post">
+									<input name="id_capteur" type="hidden" value=" <?php echo ($donnees['equipment_id'])?>">
+									<input name="supprimer_capteur" type="submit" value="Supprimer">
+								</form>
 							</div>
-						<?php $c=$c+1;}?>
+						<?php } ?>
 							
 						</div class="ajouter_capteur">
 						<!--
 						<div class="ajouter_capteur">
 							<a href="routeur.php?cible=controller_ajouter_capteur">Ajouter Capteur</a>
 						</div>
-						--> 
+						-->
 
 							<form method="post" > <!-- action="/AtHome/model/model_ajouter_capteur.php"-->
 								<select name="capteurs" size="1">
