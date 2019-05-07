@@ -1,5 +1,10 @@
 <?php 
-require("model/model_faq_client");
+/*
+ - manque .php dans le require
+ - .php dans le dernier include()
+
+*/
+require("model/model_faq_client.php");
 
 $req = top_useful();
 
@@ -9,4 +14,4 @@ if (isset($_POST['recherche'])){
 }
 
 include("view/view_header.php");
-include("view/view_faq_client");
+include("view/view_faq_client.php");
