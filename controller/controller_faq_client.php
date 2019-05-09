@@ -6,6 +6,9 @@
 */
 require("model/model_faq_client.php");
 
+/*if (isset($_SESSION['isClientConnected']) and $_SESSION['isClientConnected'] == true) {
+*/
+include("view/view_header.php");
 $req = top_useful();
 
 if (isset($_POST['recherche'])){
@@ -13,5 +16,5 @@ if (isset($_POST['recherche'])){
 	$req = search($text); 
 }
 
-include("view/view_header.php");
 include("view/view_faq_client.php");
+/*}*/
