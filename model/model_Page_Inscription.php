@@ -9,3 +9,5 @@ function register($name, $first_name, $mail, $password, $phone, $mobile, $regist
 	$req = $db-> prepare('INSERT INTO user(name, first_name, password, mail, phone, mobile, registration, user_type) VALUES (?, ?,?,?,?,?,?,?)');
 	$req-> execute([$name,$first_name,$password,$mail,$phone,$mobile,$registration,$user_type]);
 }
+
+

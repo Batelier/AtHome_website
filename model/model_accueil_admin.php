@@ -14,6 +14,13 @@ function get_all_users(){
 	return $all_users;
 }
 
+function modifier_informations($id, $name, $first_name, $user_type){
+	db_connect();
+	global $db;
+
+
+}
+
 //fonction récupérer la liste de tous les clients 
 
 //fonction récupérer seulement les techniciens
