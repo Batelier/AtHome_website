@@ -5,6 +5,7 @@
 	<link rel="stylesheet" href="/AtHome/view/css/css_accueil_client.css" />
 </head>
 <body>
+	<script type="text/javascript" src="/AtHome/res/js/client_popup_ajouter_piece.js"></script>
 	<!-- Insérer ici le code factorisé de l'entête et du menu --> 
 	<div id= "main_div">
 		<div id = "leftSide"> <!-- contient : menu et favoris -->
@@ -12,7 +13,10 @@
 				<ul class="menul">
 					<span id="titleMenu" class="notLastLi"> Menu </span>
 					<li class="notLastLi"><a href="">Modifier pièce</a></li>
-					<li class="notLastLi"><a href="">Ajouter pièce</a></li>
+					<div class="inner_button">
+						<button id="button_ajouter_piece" name="ajouter_piece" onclick="popup()" >Ajouter piece</button> </td>
+					</div>
+					
 					<li class="notLastLi"><a href="">Supprimer pièce</a></li>
 					<li><a href="">Gestion routines</a></li>
 					
@@ -90,5 +94,12 @@
 				</div>
 			</div>
 		</div>
+	<div id="popup_ajouter_piece">
+						<div id="header_ajouter_piece">
+							<div id="txt_header_ajouter_piece">Ajouter une piece</div>
+								<div id="close_header_ajouter_piece" onclick="close_popup()"> &#10006 </div>
+						</div>
+						ceci est le popup_modifier
+					</div>
 	<!-- Insérer ici le code factorisé du menu et du footer --> 
 </body>
