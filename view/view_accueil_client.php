@@ -16,7 +16,6 @@
 					<div class="inner_button">
 						<button id="button_ajouter_piece" name="ajouter_piece" onclick="popup()" >Ajouter piece</button> </td>
 					</div>
-					
 					<li class="notLastLi"><a href="">Supprimer pièce</a></li>
 					<li><a href="">Gestion routines</a></li>
 					
@@ -94,12 +93,30 @@
 				</div>
 			</div>
 		</div>
-	<div id="popup_ajouter_piece">
-						<div id="header_ajouter_piece">
-							<div id="txt_header_ajouter_piece">Ajouter une piece</div>
-								<div id="close_header_ajouter_piece" onclick="close_popup()"> &#10006 </div>
+		<div id="fond_noir"></div>
+		<div id="popup_ajouter_piece">
+			<div id="header_ajouter_piece">
+				<div id="txt_header_ajouter_piece">Ajouter une pièce</div>
+				<div id="close_header_ajouter_piece" onclick="close_popup()"> &#10006 </div>
+			</div>
+			<div id="body_popup_ajouter_piece">
+				<form method="post" action="" id="formulaire">
+						<table id="table_ajouter_piece">
+							<tr>
+								<td><label for="prenom">Nom de la pièce</label></td>
+								<td><input class="input_field" type="text" name="prenom" id="prenom" maxlength="20" autofocus></td>
+							</tr>
+							<tr>
+								<td><label for="nom">Superficie de la pièce</label></td>
+								<td><input class="input_field" type="number" step="0.1" name="nom" id="nom" maxlength="20" ></td>
+							</tr>
+						</table>
+						<div id="bloc_register_button">
+							<input type="submit" value="Valider" name="register" id="register_button">
 						</div>
-						ceci est le popup_modifier
-					</div>
-	<!-- Insérer ici le code factorisé du menu et du footer --> 
+				</form>
+			</div>
+		<!-- code page supprimer/ modifier, appliquer l'id css de position relative --> 
+		</div>
+		
 </body>
