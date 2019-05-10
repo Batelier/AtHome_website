@@ -27,13 +27,13 @@
 						//balise <tr -> ligne   td -> colonne
 						?>
 						<tr id="user_row">
-							<td> <?php echo $user[2];  ?> </td>
 							<td> <?php echo $user[1];  ?> </td>
+							<td> <?php echo $user[2];  ?> </td>
 							<td> <?php echo $user[0];  ?> </td>
 							<td> <?php echo $user[3];  ?> </td>
 							<td> <?php echo $user[4];  ?> </td>
 							<td> <button id="button_modifier" name="modifier[<?php echo($user[5]); ?>]"
-							 		onclick="popup()" onclick="modifier_btn()">Modifier</button> </td>
+							 		onclick="popup()" onclick="modifier_btn() ">Modifier</button> </td>
 							<td> <button id="button_delete">Supprimer</button> </td>
 							<td> <?php echo("");  ?> </td>
 						</tr>
@@ -42,6 +42,9 @@
 				?>
 			</table>
 		</div>
+
+		<div id="fond_noir"></div>
+
 		<div id="popup_modifier">
 			<div id="header_modifier">
 				<div id="txt_header_modifier">Modifier un élément</div>
@@ -52,8 +55,7 @@
 						<table id="table_modifier">
 							<tr>
 								<td><label for="prenom">Prénom</label></td>
-								<td><input  class="input_field" type="text" name="prenom" id="prenom" maxlength="20" autofocus
-								value="<?php if(isset($prenom)) {echo($prenom);} ?>"></td>
+								<td><input class="input_field" type="text" name="prenom" id="prenom" maxlength="20" autofocus></td>
 							</tr>
 							<tr>
 								<td><label for="nom">Nom</label></td>
@@ -87,6 +89,6 @@
 				</form>
 			</div>
 			<!-- code page supprimer/ modifier, appliquer l'id css de position relative --> 
-		</div>
+		</div>		
 	</body>
 </html>
