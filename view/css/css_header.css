@@ -15,7 +15,6 @@
 }
 .slogan{
 	width:60%;
-	
 	background-color:white;
 }
 .slogan_txt{
@@ -25,17 +24,25 @@
 	
 }
 .naviguer{
-	background-color:yellow;
+	/*background-color:yellow;*/
 }
 .naviguer ul
 {
+	display: flex;
+	flex-direction: row;
+	align-items: space-around; 
+	justify-content: space-around;
+	flex-wrap: wrap;
+
 	list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
+    border-radius: 2em;
     background-color: #0047ab;
 	
 }
+
 .naviguer li {
     float: left;
 }
@@ -44,8 +51,9 @@
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 40px;
+    padding: 1em;
     text-decoration: none;
+    border-radius: 1em; 
 }
 
 .naviguer li a:hover {
