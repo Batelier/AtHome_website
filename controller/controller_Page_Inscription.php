@@ -19,6 +19,7 @@ A RAJOUTER
 //require le model
 require('model\model_Page_Inscription.php');
 //si le formulaire a été rempli, on l'inscrit dans la base de données
+
 if (isset($_POST['register'])) {
 	//vérifier que le password soit le meme que le password_check
 	if ($_POST['password'] == $_POST['password_check']) {
