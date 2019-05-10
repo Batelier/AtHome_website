@@ -115,7 +115,7 @@
 		margin-top:0.2em;
 	}
 	.routine p{
-		color:white;
+		color:green;
 		margin:0.2em 0 0 10em;
 	}
 	.infos_supplementaires{
@@ -228,4 +228,90 @@
 		margin-top: 10%;
 		display: block;
 	}
+	#popup_ajouter_piece{
+		display: none;
+		top: 25%;
+		left : 25%;
+		background-color: white;
+		width: 50%;
+		height: 15em;
+		position: absolute;
+		border-radius: 1em;
+		border-style: double;	
+		border-color: #0047ab;
+	}
+	#header_ajouter_piece{
+		padding: 1%;
+		color: #0047ab;
+		font-weight: bold;
+		font-size: 1.1rem;
+		border-bottom-style: solid;
+		border-bottom-color: #0047ab;
+		display: flex;
+	}
+	#txt_header_ajouter_piece{
+		width: 95%;
+	}
+	#close_header_ajouter_piece{
+		width: 5%;
+		color: white;
+		background-color: red;
+		border-radius: 2em;
+		border-style: solid;
+		text-align: center;
+		cursor: pointer; 
+	}
+	#body_popup_ajouter_piece{
+		padding: 5%;
+
+	}
+	#formulaire{
+		display: block;
+		/*background-color: #0047ab;
+		border-radius: 2em;*/
+	}
+	#table_ajouter_piece{
+		background-color: #0047ab;
+		padding: 2%;
+		border-radius: 2em;
+		width: 100%;
+	}
+	#register_button{
+		color: white;
+		font-weight: bold;
+		background-color: #0047ab;
+		border-radius: 2em;
+		border-style: outset;
+		width: 20%;
+		padding:0.5em;
+		margin : 2em 25% 0 40%;
+	}
+	#register_button:hover{
+		cursor: pointer;
+		color:  #0047ab;
+		background-color: lightblue;
+	}
+	/*===================================*/
+	#fond_noir{
+		top: 0%;
+		left : 0%;
+		display: none;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		background-color:rgba(0, 0, 0, 0.7);
+	}
+	#button_ajouter_piece {
+		background-color: #0047ab;
+		border: none;
+		color: white;
+		padding: 15px 3.1em;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 0 0 0.7em 0;
+		cursor: pointer;
+		
+}
 }

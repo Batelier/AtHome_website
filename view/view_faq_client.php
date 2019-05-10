@@ -5,13 +5,19 @@
 	<link rel="stylesheet" type="text/css" href="css/css_header.css">
 	<link rel="stylesheet" type="text/css" href="view/css/css_faq_client.css">
 	<title>view_faq_client</title>
+	<script type="text/javascript" src="controller/ajax_recherche.js"></script>
+
 </head>
 <body>
 	<div id="corps">
 		<div id="recherche">
 			<form method="post" action="routeur.php?cible=controller_faq_client">
-		   		<input type="search" name="recherche" placeholder="Vos questions ..." />
-			</form>	
+		   		<input type="search" name="recherche" placeholder="Vos questions ..." onchange="recherche_dynamique(this.value)" />
+		   		<!--recherche_dynamique dans ajax_recherche-->
+			</form>
+			<br/>
+			<div id="txtHint"><!-- Les suggestions s'affichent ici --></div>
+
 		</div>
 		<div id="questions_frequentes">
 			<?php
@@ -24,24 +30,12 @@
 				</article>
 				<div class="aside">
 				<aside>
-					<p><strong>Utilité : </strong><?php echo htmlspecialchars($data['useful']) ?></p>
+					<p><strong>Utilité : </strong><?php echo $data['useful'] ?></p>
 				</aside>
 			</section>
 			<?php 
 				}
 			 ?>
-			<div class="question">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec sagittis massa. Nulla facilisi. Cras id arcu lorem, et semper purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis vel enim mi, in lobortis sem. Vestibulum luctus elit eu libero ultrices id fermentum sem sagittis. Nulla imperdiet mauris sed sapien dignissim id aliquam est aliquam. Maecenas non odio ipsum, a elementum nisi. Mauris non erat eu erat placerat convallis. Mauris in pretium urna. Cras laoreet molestie odio, consequat consequat velit commodo eu. Integer vitae lectus ac nunc posuere pellentesque non at eros. Suspendisse non lectus lorem.</p>
-			</div>
-			<div class="question">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec sagittis massa. Nulla facilisi. Cras id arcu lorem, et semper purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis vel enim mi, in lobortis sem. Vestibulum luctus elit eu libero ultrices id fermentum sem sagittis. Nulla imperdiet mauris sed sapien dignissim id aliquam est aliquam. Maecenas non odio ipsum, a elementum nisi. Mauris non erat eu erat placerat convallis. Mauris in pretium urna. Cras laoreet molestie odio, consequat consequat velit commodo eu. Integer vitae lectus ac nunc posuere pellentesque non at eros. Suspendisse non lectus lorem.</p>
-			</div>
-			<div class="question">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec sagittis massa. Nulla facilisi. Cras id arcu lorem, et semper purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis vel enim mi, in lobortis sem. Vestibulum luctus elit eu libero ultrices id fermentum sem sagittis. Nulla imperdiet mauris sed sapien dignissim id aliquam est aliquam. Maecenas non odio ipsum, a elementum nisi. Mauris non erat eu erat placerat convallis. Mauris in pretium urna. Cras laoreet molestie odio, consequat consequat velit commodo eu. Integer vitae lectus ac nunc posuere pellentesque non at eros. Suspendisse non lectus lorem.</p>
-			</div>
-			<div class="question">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec sagittis massa. Nulla facilisi. Cras id arcu lorem, et semper purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis vel enim mi, in lobortis sem. Vestibulum luctus elit eu libero ultrices id fermentum sem sagittis. Nulla imperdiet mauris sed sapien dignissim id aliquam est aliquam. Maecenas non odio ipsum, a elementum nisi. Mauris non erat eu erat placerat convallis. Mauris in pretium urna. Cras laoreet molestie odio, consequat consequat velit commodo eu. Integer vitae lectus ac nunc posuere pellentesque non at eros. Suspendisse non lectus lorem.</p>
-			</div>
 		</div>
 	</div>
 </body>

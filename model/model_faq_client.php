@@ -15,8 +15,10 @@ function search($txt){
 	db_connect();
 	global $db; 
 
-	$req = $db -> prepare('SELECT * FROM faq ORDER BY useful DESC WHERE question LIKE %'.$txt.'%'); 
+	$req = $db -> prepare("SELECT * FROM faq ORDER BY useful DESC WHERE question LIKE '" . $txt . "'"); 
 	$req -> execute();
+	$req->store_result();
 	$values = $req -> fetchAll(); 
+	$req->close();
 	return $values;
 }
