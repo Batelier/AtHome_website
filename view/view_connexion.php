@@ -93,12 +93,13 @@
 					<form id = "Contact" action="routeur.php?cible=controller_contact_us" method="post">
 						<br>
 						<label>Nom complet</label>
-   						<input class="input_contact" type="text" name="nom_complet" placeholder="Jean Dupont" />
+   						<input class="input_contact" type="text" name="nom_complet" placeholder="Jean Dupont" required="required"/>
    						<label>Adresse mail</label>
-   						<input class="input_contact" type="text" name="mail" placeholder="exemple@gmail.com" />
+   						<input class="input_contact" type="text" name="mail" placeholder="exemple@gmail.com" required="required" />
    						<label>Message</label>
-   						<textarea name="text_area"></textarea>
-   						<input class="input_contact" type="submit" value="Envoyer">
+   						<textarea name="text_area" required="required"></textarea>
+   			            <input class="input_contact" type="submit" value="Envoyer">
+
 					</form>
 				</div>
 			</div><!-- Se connecter, mdp oublié, inscription, Nous contacter -->
