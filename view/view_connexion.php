@@ -90,14 +90,14 @@
 
 				<div class="bloc_contact">
 					<span id="txt_contact">Nous contacter</span>
-					<form id = "Contact" method="post">
+					<form id = "Contact" action="routeur.php?cible=controller_contact_us" method="post">
 						<br>
 						<label>Nom complet</label>
    						<input class="input_contact" type="text" name="nom_complet" placeholder="Jean Dupont" />
    						<label>Adresse mail</label>
    						<input class="input_contact" type="text" name="mail" placeholder="exemple@gmail.com" />
    						<label>Message</label>
-   						<textarea></textarea>
+   						<textarea name="text_area"></textarea>
    						<input class="input_contact" type="submit" value="Envoyer">
 					</form>
 				</div>
