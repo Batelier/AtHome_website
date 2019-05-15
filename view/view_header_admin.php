@@ -23,7 +23,7 @@
 				<li><a href="#Definir disponibilités">Definir disponibilités</a></li>
 				<li><a href="#Gestion des pages">Gestion des pages</a></li>
 				<li><a href="#messagerie">Messagerie</a></li>
-				<li><a href="#FAQ">FAQ</a></li>
+				<li><a href="routeur?cible=controller_faq">FAQ</a></li>
 				<li><a href="#Forum">Forum</a></li>
 			</ul>
 		</div>
