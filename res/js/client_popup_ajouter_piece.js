@@ -14,12 +14,32 @@ function close_popup_add_home(){
 	document.getElementById('fond_noir').style.display = "none";
 	document.getElementById('popup_ajouter_home').style.display = "none";
 }
-function refresh() {
-	$.ajax({
-    url: "/AtHome/controller/controller_Page_Accueil_Client.php", // Ton fichier ou se trouve ton chat
-    success:
-        function(retour){
-        $('#listeMaison').html(retour); // rafraichi toute ta DIV "bien sur il lui faut un id "
+function showUser(str){
+    if (str == ""){
+        document.getElementById("txtHint").innerHTML = "";
+        return;
+    }
+    if (window.XMLHttpRequest) {
+        xmlhttp= new XMLHttpRequest();
+    } else {
+    if (window.ActiveXObject)
+		try {
+            xmlhttp= new ActiveXObject("Msxml2.XMLHTTP");
 		}
-	}); 
+		catch (e) {
+            try {
+                xmlhttp= new ActiveXObject("Microsoft.XMLHTTP");
+            } catch (e) {
+                return NULL;
+            }
+        }
+     }
+
+    xmlhttp.onreadystatechange = function (){
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
+             document.getElementById("listeMaison").innerHTML = xmlhttp.responseText;
+        }
+    }
+    xmlhttp.open("GET", "/AtHome/view/js/get_room.php?q=" + str, true);
+    xmlhttp.send();
 }

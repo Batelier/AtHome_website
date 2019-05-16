@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<title>Page maison : utilisateur principal ou secondaire</title>
 	<link rel="stylesheet" href="/AtHome/view/css/css_accueil_client.css" />
+	
 </head>
 <body>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -34,71 +35,12 @@
 				<?php
 				while ($donnees_adresses = $reponse2->fetch()){?>
 				<div class="address">
-					<input type="button" class="choix_home" value="<?php echo $donnees_adresses[0];?>">
+					<input type="button" onclick="showUser(this.value)" class="choix_home" value="<?php echo $donnees_adresses[0];?>">
 				</div>
 				<?php } ?>
 			</div>
 			<div id="listeMaison">
-				<?php
-				while ($donnees3 = $reponse3->fetch()){
-				?>
-				<div class="piece">
-					<div class="infos_principales">
-						<div class="nom_piece">
-							<p><?php echo $donnees3[0]; ?> <p>
-						</div>
-						<div class="pb">
-							<div class="pb_img">
-								<img  src="/AtHome/res/pb_jpg.jpg" width="20em" height="20em">
-							</div>
-							<div class="pb_lien">
-								<a href="lienpbs">Problèmes</a>
-							</div>
-						</div>
-						<div class="routine">
-							<p>Routine : Eco</p>
-						</div>
-					</div>
-					<div class="infos_supplementaires">
-						<div class="bloc1">
-							<div class="piece_img">
-								<img src="/AtHome/res/cuisine.jpg" width="70em" height="70em"> 
-							</div>
-							<div class="gestion_piece">
-								<a href="">Gérer pièce</a>
-							</div>
-						</div>
-						<div class="liste_capteurs">
-						<?php 
-						while ($donnees = $reponse->fetch()){
-						?>
-							<div class="capteur">
-								<p> <?php echo ($donnees['model'])?> </p>
-									<label class="switch">
-										<input type="checkbox">
-										<span class="slider round"></span>
-									</label>
-								<form method="post">
-									<input name="id_capteur" type="hidden" value=" <?php echo ($donnees['equipment_id'])?>">
-									<input name="supprimer_capteur" type="submit" value="Supprimer">
-								</form>
-							</div>
-						<?php } ?>
-						</div>
-						<div class="ajouter_capteur">
-							<form method="post" > <!-- action="/AtHome/model/model_ajouter_capteur.php"-->
-								<select name="capteurs" size="1">
-									<option>Choisir</option>
-									<option>Luminosité</option>
-									<option>Température</option>
-									<option>Fumée</option>
-								</select>
-								<input type="submit" value="Ajouter" name="add_sensor">
-							</form>
-						</div>
-					</div>
-				</div>
-				<?php } ?>
+				
 			</div>
 		</div>
 		<div id="fond_noir"></div>
@@ -114,7 +56,7 @@
 								<td><label for="wich_home">Logement : </label></td>
 								<td><select name="homes" id="homes">
 									<?php 
-									while ($donnees2 = $reponse2->fetch()){
+									while ($donnees2 = $reponse4->fetch()){
 									?>
 									<option><?php echo $donnees2[0];?></option>
 									<?php } ?>
