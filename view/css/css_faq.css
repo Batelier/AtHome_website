@@ -11,9 +11,20 @@
 		align-items: center;
 	}
 
-	#recherche{
+	#entete{
+		display: flex;
+		flex-direction: row; 
 		width: 90%;
-		margin: 0.8em;
+		margin: 0.8em; 
+	}
+
+	#ajout{
+		flex: 1; 
+		right-margin: 1em; 
+	}
+
+	#recherche{
+		flex: 9; 
 	}
 
 	input{
@@ -43,6 +54,14 @@
 		display: flex;
 		flex-direction: column;
 	}
-
+	.pied_article{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	.gerer form {
+		display: flex;
+		flex-direction: row;
+	}
 
 }
