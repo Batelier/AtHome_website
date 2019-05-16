@@ -16,7 +16,7 @@
 						<table>
 							<tr>
 								<td><label for="prenom">Prénom</label></td>
-								<td><input  class="input_field" type="text" name="prenom" id="prenom" maxlength="20" placeholder="Jean" autofocus required
+								<td><input class="input_field" type="text" name="prenom" id="prenom" maxlength="20" placeholder="Jean" autofocus required
 								value="<?php if(isset($prenom)) {echo($prenom);} ?>"></td>
 							</tr>
 							<tr>

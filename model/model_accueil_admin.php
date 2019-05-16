@@ -21,6 +21,8 @@ function modifier_informations($id, $name, $first_name, $user_type){
 
 }
 
+
+
 //fonction récupérer la liste de tous les clients 
 
 //fonction récupérer seulement les techniciens

@@ -13,6 +13,17 @@ function login($mail){
 	return $values;
 }
 
+function recuperer_id($email){
+	db_connect();
+	global $db;
+	
+	$req = $db -> prepare('SELECT user_id FROM user WHERE mail = ?');
+	$req -> execute([$email]);
+	$values = $req -> fetch();
+	return $values;
+	
+}
+
 //fonction vérifier que l'identifiant et mdp correspond à qqn dans la base de donnée
 
 //fonction get les infos du jour

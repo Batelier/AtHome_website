@@ -1,7 +1,6 @@
 <?php
 session_start();
 require("model/model_accueil_admin.php");
-
 //if isset is_connected and type = admin
 //si l'admin est bien connecté, afficher sa page, pour des raisons de sécurité, un refresh de page inclut un log out
 if (isset($_SESSION['isAdminConnected']) and $_SESSION['isAdminConnected'] == true) {
@@ -12,6 +11,12 @@ if (isset($_SESSION['isAdminConnected']) and $_SESSION['isAdminConnected'] == tr
 	
 	if (isset($_POST['register'])) {
 		echo "ton pere le chat";
+	}
+
+	//si un bouton modifier est utilisé
+	if (isset($_POST['submit_modifier'])) {
+		echo $_POST['user_id'];
+
 	}
 }
 else {

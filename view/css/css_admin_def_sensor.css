@@ -1,0 +1,7 @@
+body{
+	background: linear-gradient(to bottom right, rgba(242,246,248,0.7) 0%,rgba(216,225,231,0.7) 50%,rgba(181,198,208,0) 51%,rgba(224,239,249,0) 100%) fixed, url(/AtHome/res/fond2.jpg) no-repeat center fixed; 
+	background-size: cover;
+}
+p{
+	color: red;
+}
