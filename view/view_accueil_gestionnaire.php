@@ -7,7 +7,8 @@
 
 </head>
 <body>
-<div id="main_div">
+<div id ="conteneur_principal">
+<div id="bloc_colonne_left">
     <div id = "leftSide"> <!-- contient : menu-->
         <div id="menu">
             <ul class="menul">
@@ -17,25 +18,31 @@
             </ul>
         </div>
     </div>
-    <div id="slogan">
-        <span >Espace gestionnaire d'immeuble</span>
-    </div>
+</div>
 
+<div id="bloc_colonne_right"
+    <div id="slogan_searche">
+        <div id="slogan">
+        <span>Espace gestionnaire d'immeuble</span>
+        </div>
     <div class="container_search">
             <form action="" class="parent_search">
                 <input type="text">
                 <input type="button" value="search">
             </form>
     </div>
-
+    </div>
     <div id="container_customer_information">
         <?php
         require("model/model_Page_gestionnaire.php");
         get_user();
         ?>
     </div>
-
 </div>
+</div>
+
+
+
 
 </body>
 
