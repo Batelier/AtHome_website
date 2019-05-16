@@ -19,9 +19,9 @@
 		</div>
 		<div class="naviguer">
 			<ul>
-				<li><a href="#Liste utilisateurs">Liste utilisateurs</a></li>
-				<li><a href="#Definir disponibilités">Definir disponibilités</a></li>
-				<li><a href="#Gestion des pages">Gestion des pages</a></li>
+				<li><a href="routeur.php?cible=controller_accueil_admin">Liste utilisateurs</a></li>
+				<li><a href="routeur.php?cible=controller_admin_def_sensor">Definir disponibilités</a></li>
+				<li><a href="routeur.php?cible=controller_admin_def_page">Gestion des pages</a></li>
 				<li><a href="#messagerie">Messagerie</a></li>
 				<li><a href="#FAQ">FAQ</a></li>
 				<li><a href="#Forum">Forum</a></li>

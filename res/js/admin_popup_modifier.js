@@ -1,5 +1,5 @@
 function popup(str){
-
+    
 	document.getElementById('fond_noir').style.display = "block";
 	document.getElementById('popup_modifier').style.display = "block";
 }
@@ -13,7 +13,7 @@ function showUser(str)
             {
                 if (str == "")
                 {
-                    document.getElementById("txtHint").innerHTML = "";
+                    //document.getElementById("txtHint").innerHTML = "";
                     return;
                 }
                 if (window.XMLHttpRequest) {
