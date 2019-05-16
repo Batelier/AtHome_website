@@ -6,11 +6,6 @@ require("model/model_contact_us.php");
         $email = $_POST['mail'];
         $text = $_POST['text_area'];
         contact_us($nom_complet, $email, $text);
-        ?>
-        <script>
-            alert("Merci de nous contacter!")
-        </script>
-        <?php
         header('Location:routeur.php');
     }
 

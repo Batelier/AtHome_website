@@ -11,13 +11,12 @@ function contact_us($complete_name,$mail,$message)
 
         $sql = "INSERT INTO contact_us(complete_name,mail,message) VALUES ('$complete_name','$mail','$message')";
 
-      //  $req = $db->prepare = "INSERT INTO  contact_us(complete_name, mail, message) VALUES (?,?,?)";
-      //  $req->excute([$complete_name,$mail,$message]);
+        //  $req = $db->prepare = "INSERT INTO  contact_us(complete_name, mail, message) VALUES (?,?,?)";
+        //  $req->excute([$complete_name,$mail,$message]);
         $db->exec($sql);
+    } catch (PDOException $e)
+    {
+        echo $sql . "<br>" . $e->getMessage();
     }
-
-catch(PDOException $e)
-{
-    echo $sql . "<br>" . $e->getMessage();
 }
-}
+?>
