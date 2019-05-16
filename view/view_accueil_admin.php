@@ -33,16 +33,15 @@
 							<td> <?php echo $user[3];  ?> </td>
 							<td> <?php echo $user[4];  ?> </td>
 							<form method="post">
-								<td><input type="hidden" name="user_id" value="<?php echo($user[5]); ?>"></td>
-								<td><input type="submit" name="submit_modifier" id="button_modifier"
-									value="Modifier"></td>
+							<input type="hidden" name="user_id" value="<?php echo($user[5]); ?>">
+							<td><input type="submit" name="submit_modifier" id="button_modifier"
+									value="Modifier" onclick="popup(this.name); <?php   ?>"></td>
 							</form>
 							<td> <button id="button_modifier" name="modifier[<?php echo($user[5]); ?>]" 
-									onclick="popup(this.name)"
+									onclick="popup(this.name); <?php   ?>"
 							 		>Modifier</button> </td>
 							 		<!-- onclick="popup(this.name)" onclick="modifier_btn()" -->
 							<td> <button id="button_delete" name="del[<?php echo($user[5]); ?>]">Supprimer</button> </td>
-							<td> <?php echo("");  ?> </td>
 						</tr>
 						<?php
 					}
