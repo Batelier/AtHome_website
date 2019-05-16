@@ -1,0 +1,89 @@
+
+.container_search {
+    width: 500px;
+    height: 50px;
+    margin-left: 30em;
+    margin-top: 0.5em;
+    display: flex;
+}
+
+.parent_search {
+    width: 100%;
+    height: 42px;
+    top: 4px;
+    position: relative;
+
+}
+
+.parent_search>input:first-of-type {
+
+    width: 200px;
+    height: 40px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    outline: none;
+}
+
+.parent_search>input:first-of-type:focus {
+    border: 1px solid #317ef3;
+    padding-left: 10px;
+}
+
+.parent_search>input:last-of-type {
+
+    width: 100px;
+    height: 44px;
+    position: absolute;
+    background: #317ef3;
+    border: 1px solid #317ef3;
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+}
+
+body
+{
+    background: linear-gradient(to bottom right, rgba(242,246,248,0.7) 0%,rgba(216,225,231,0.7) 50%,rgba(181,198,208,0) 51%,rgba(224,239,249,0) 100%) fixed, url(/AtHome/res/fond3.jpg) no-repeat center fixed;
+    background-size: cover;
+}
+
+#main_div
+{
+    display: flex;
+}
+#leftSide
+{
+    height: 40em;
+    width: 20%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    margin: 1%;
+}
+
+#slogan
+{
+    height: 15%;
+    width: 25%;
+    display: flex;
+    background: white;
+    margin: 1%;
+    text-align: center;
+}
+
+#container_customer_information
+{
+    background: white;
+    display: flex;
+    margin-top: 200px;
+    margin-right: 100px;
+}
+
+#customer_information
+{
+    height: 100px;
+    width: 200px;
+    background: #0047ab;
+    display: flex;
+    margin: 100%;
+}

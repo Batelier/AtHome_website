@@ -26,10 +26,13 @@ if (isset($_POST['email'])) {
 			header('Location:routeur?cible=controller_accueil_admin');
 		}
 		else if ($values[2] == 'gestionnaire') {
+		    $_SESSION['isGestionnaireConneted'] = true;
 			//page_unavailable();
+            header('Location:routeur?cible=controller_accueil_Gestionnaire');
 		}
 		else if ($values[2] == 'technicien') {
 			//page_unavailable();
+
 		}
 	}
 	else {
