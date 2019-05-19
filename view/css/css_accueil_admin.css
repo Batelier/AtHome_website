@@ -1,6 +1,12 @@
 @media screen {
 	#main_div{
-		padding: 3%;
+		padding: 0 3% 0 3%;
+	}
+
+	#ajax_search{
+		margin: 1em 0 1em 0;
+		padding: 0.5em 0 0.5em 3em;
+		align-items: center;
 	}
 	body{
 		background: linear-gradient(to bottom right, rgba(242,246,248,0.7) 0%,rgba(216,225,231,0.7) 50%,rgba(181,198,208,0) 51%,rgba(224,239,249,0) 100%) fixed, url(/AtHome/res/fond2.jpg) no-repeat center fixed; 
@@ -82,7 +88,7 @@
 		border-radius: 2em;
 		width: 100%;
 	}
-	#register_button{
+	.register_button{
 		color: white;
 		font-weight: bold;
 		background-color: #0047ab;
@@ -91,7 +97,23 @@
 		width: 50%;
 		margin : 0.3em 25% 0 25%;
 	}
-	#register_button:hover{
+	.lbl{
+		color: #0047ab;
+		font-weight: bold;
+	}
+	.btn{
+		color: white;
+		font-weight: bold;
+		background-color: #0047ab;
+		border-radius: 2em;
+		border-style: outset;
+	}
+	.btn:hover{
+		cursor: pointer;
+		color:  #0047ab;
+		background-color: lightblue;
+	}
+	.register_button:hover{
 		cursor: pointer;
 		color:  #0047ab;
 		background-color: lightblue;

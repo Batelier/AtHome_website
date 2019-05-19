@@ -13,7 +13,7 @@ if (isset($_SESSION['isUserConnected']) and $_SESSION['isUserConnected'] == true
 	$reponse1 = query_captors();
 	$reponse2 = get_addresses((int)$_SESSION['id']);
 	$reponse3 = get_name_room((int)$_SESSION['id']);
-	$reponse4 = get_addresses((int)$_SESSION['id']);;
+	$reponse4 = get_addresses((int)$_SESSION['id']);
 	include("C:/wamp64/www/AtHome/view/view_header.php");
 	require("C:/wamp64/www/AtHome/view/view_accueil_client.php");
 	if (isset($_POST['register_button_ajouter_home'])) {
