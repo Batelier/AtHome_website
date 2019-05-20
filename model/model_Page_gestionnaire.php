@@ -1,6 +1,5 @@
 <?php
 $q = isset($_GET["q"]) ? intval($_GET["q"]) : '';
-
     $con=mysqli_connect("localhost","root","","athome_db");
     if($_GET["q"]=="all")
     {
