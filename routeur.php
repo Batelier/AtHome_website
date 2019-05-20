@@ -13,7 +13,13 @@ if (isset($_GET['cible']) && !empty($_GET['cible'])) {
     $url = 'controller_Page_Connexion';
 }
 
-require('controller/' . $url . '.php');
+if (isset($_GET['param'])) {
+	require('controller/' . $url . '.php?param='. $_GET['param']);
+}else{
+	require('controller/' . $url . '.php');
+}
+
+
 
 
 

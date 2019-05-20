@@ -7,9 +7,21 @@
 		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	</head>
 	<body>
+		<?php global $id; ?>
 		<script type="text/javascript" src="res\js\admin_popup_modifier.js"></script>
 		<script type="text/javascript" src="controller\ajax_admin_userList.js" ></script>
-
+		
+		<div id="ajax_search">
+			<button class="btn">Actualiser</button>
+			<label class="lbl">Afficher :</label>
+			<select onchange="ajax(this.value)">
+				<option value="">Choisir un type d'utilisateur</option>
+				<option value="utilisateur_principal">Utilisateur Principal</option>
+				<option value="utilisateur_secondaire">Utilisateur Secondaire</option>
+				<option value="administrateur">Administrateur</option>
+				<option value="gestionnaire">Gestionnaire d'immeuble</option>
+			</select>
+		</div>
 		<div id="main_div" >
 			<table class="w3-table w3-bordered">
 				<tr>
@@ -18,6 +30,8 @@
 					<th>Mail</th>
 					<th>Type d'utilisateur</th>
 					<th>Date d'enregistrement</th>
+					<th>Fixe</th>
+					<th>Portable</th>
 					<th>Modifier</th>
 					<th>Supprimer</th>
 				</tr>
@@ -27,15 +41,20 @@
 						//balise <tr -> ligne   td -> colonne
 						?>
 						<tr id="user_row">
-							<td> <?php echo $user[1];  ?> </td>
-							<td> <?php echo $user[2];  ?> </td>
-							<td> <?php echo $user[0];  ?> </td>
-							<td> <?php echo $user[3];  ?> </td>
-							<td> <?php echo $user[4];  ?> </td>
-							<td> <button id="button_modifier" name="modifier[<?php echo($user[5]); ?>]"
-							 		onclick="popup(this.name)" onclick="modifier_btn() ">Modifier</button> </td>
+							<td> <?php echo $user['first_name'];  ?> </td>
+							<td> <?php echo $user['name'];  ?> </td>
+							<td> <?php echo $user['mail'];  ?> </td>
+							<td> <?php echo $user['user_type'];  ?> </td>
+							<td> <?php echo $user['registration'];  ?> </td>
+							<td> <?php echo $user['phone'];  ?> </td>
+							<td> <?php echo $user['mobile'];  ?> </td>
+							<td>
+							<form method="post" name="sub_id">
+								<input type="submit" id="button_modifier" value="Modifier" name="show_modifier[<?php echo($user[5]); ?>]" >
+							</form>
+							</td>
+
 							<td> <button id="button_delete" name="del[<?php echo($user[5]); ?>]">Supprimer</button> </td>
-							<td> <?php echo("");  ?> </td>
 						</tr>
 						<?php
 					}
@@ -51,7 +70,7 @@
 				<div id="close_header_modifier" onclick="close_popup()"> &#10006 </div>
 			</div>
 			<div id="body_popup_modifier">
-				<form method="post" action="" id="formulaire">
+				<form method="post" action="" id="formulaire" name="form_modifier">
 						<table id="table_modifier">
 							<tr>
 								<td><label for="prenom">Prénom</label></td>
@@ -71,7 +90,7 @@
 							</tr>
 							
 							<tr>
-								<td><label for="date">Type d'utilisateur</label></td>
+								<td><label for="type">Type d'utilisateur</label></td>
 								<td>
 									<select class="input_select" name='type'>
 										<option value="utilisateur_principal">Utilisateur principal</option>
@@ -82,13 +101,21 @@
 									</select>
 								</td>
 							</tr>
+
 						</table>
 						<div id="bloc_register_button">
-							<input type="submit" value="Modifier les informations" name="register" id="register_button">
+							<input type="submit" value="Modifier les informations" name="register" class="register_button" >
 						</div>
 				</form>
 			</div>
 			<!-- code page supprimer/ modifier, appliquer l'id css de position relative --> 
-		</div>		
+		</div>
+		<?php
+		if (isset($_POST['show_modifier'])) {
+			?> 
+			<script type="text/javascript">popup(); </script>
+			<?php
+		} 
+		?>		
 	</body>
 </html>

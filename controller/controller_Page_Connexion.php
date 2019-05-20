@@ -18,6 +18,8 @@ if (isset($_POST['email'])) {
 		//sécurité des pages -> si un random fait routeur?cible=admin.php alors qu'il n'est pas admin
 		if ($values[2] == 'utilisateur_principal') {
 			$_SESSION['isUserConnected'] = true;
+			$_SESSION['test'] = 'SAAAAAAAAAAAAAALLLLLLLLLLLLLUT4';
+			$_SESSION['id'] = recuperer_id($_POST['email'])[0];
 			header('Location:routeur?cible=controller_Page_Accueil_Client');
 		}
 		else if ($values[2] == 'administrateur') {
@@ -26,10 +28,13 @@ if (isset($_POST['email'])) {
 			header('Location:routeur?cible=controller_accueil_admin');
 		}
 		else if ($values[2] == 'gestionnaire') {
+		    $_SESSION['isGestionnaireConneted'] = true;
 			//page_unavailable();
+            header('Location:routeur?cible=controller_accueil_Gestionnaire');
 		}
 		else if ($values[2] == 'technicien') {
 			//page_unavailable();
+
 		}
 	}
 	else {
