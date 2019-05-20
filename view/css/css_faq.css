@@ -1,7 +1,7 @@
 @media screen{
 	body {
 		background: linear-gradient(to bottom right, rgba(242,246,248,0.7) 0%,rgba(216,225,231,0.7) 50%,
-			rgba(181,198,208,0) 51%,rgba(224,239,249,0) 100%) fixed, /*url(/AtHome/res/fond1.jpg)*/ url(/AtHome/res/fond4.jpg) no-repeat center fixed; 
+			rgba(181,198,208,0) 51%,rgba(224,239,249,0) 100%) fixed, url(/AtHome/res/fond4.jpg) no-repeat center fixed; 
 		background-size: cover; /* version standardisée */
 		}
 
@@ -20,7 +20,7 @@
 
 	#ajout{
 		flex: 1; 
-		right-margin: 1em; 
+		cursor: pointer; 
 	}
 
 	#recherche{
@@ -33,7 +33,13 @@
 		padding: 0.2em; 
 		width: 100%;    
 	}
-
+	button{
+		background-color: white; 
+		border-radius: 1em; 
+		padding: 0.2em; 
+		width: 100%;
+	}
+	
 	#questions_frequentes{
 		display: flex;
 		flex-direction: column;
@@ -45,7 +51,7 @@
 		text-align: justify;
 	}
 
-	.question{
+	section{
 		padding: 0.5em;
 		margin : 0.5em;
 		background-color: white;
@@ -53,15 +59,96 @@
 		border-radius: 1em;
 		display: flex;
 		flex-direction: column;
+		width: 100%;
 	}
 	.pied_article{
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
+		align-items: center; 
 	}
-	.gerer form {
+	.gerer {
 		display: flex;
 		flex-direction: row;
 	}
 
-}
+	#fond_noir{
+		display: none;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		background-color:rgba(0, 0, 0, 0.7);
+	}
+
+	#bloc_popup_ajout{
+		display: none;
+		/*display: flex;*/
+		justify-content: center;
+	}
+
+	#bloc_popup_modif{
+		display: none; 
+		/*display: flex;*/
+		justify-content: center;
+	}
+
+	.popup{
+		/*Taille et Position*/
+		top: 25%;
+		left : 25%;
+		width: 50%;
+		/*height: 15em;*/
+		/*position: absolute;*/
+
+		/*Style*/
+		background-color: white;
+		/*border-radius: 1em;
+		border-style: double;	
+		border-color: #0047ab;*/
+
+		/*Conteneur*/
+		display: flex;
+		flex-direction: column;
+		/*align-items: center;*/ 
+	}
+
+	.header_popup{
+		/*padding: 1%;
+		color: #0047ab;
+		font-weight: bold;
+		font-size: 1.1rem;
+		border-bottom-style: solid;
+		border-bottom-color: #0047ab;*/
+		display: flex;
+		flex-direction: row; 
+		justify-content: space-between;
+		align-items: center; 
+		width: 100%; 
+	}
+
+	.close_header{
+		color: white;
+		background-color: red;
+		width: 1.5em; 
+		height: 1.5em; 
+		border-radius: 1em;
+		border-style: solid;
+		text-align: center;
+		cursor: pointer; 
+	}
+
+
+	.body_popup{
+		display: flex; 
+		flex-direction: column;	
+		align-items: center; 
+		width: 100%; 
+	}
+	textarea{
+		width: 95%; 
+	}
+	.valider {
+		width: 50%;
+
+	}
+
