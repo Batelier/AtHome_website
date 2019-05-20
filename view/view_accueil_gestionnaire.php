@@ -49,7 +49,6 @@
         </menu>
 
         <div id="bloc_colonne_right">
-
             <div id="container_customer_information">
                 <div id="choix">
                     <form id="form_choix">
@@ -59,16 +58,17 @@
                                 t.disabled = !chk.checked;
                             }
                         </script>
-                        <p>Trier : </p>
-                        <div>
+                        <p class="select">Trier :</p>
+                        <div class="select">
                             <input type="radio" name="select" value="all" onchange="show(this.value)"/>
                             <label>All</label>
                         </div>
-                        <div>
+                        <div class="select">
                             <input type="radio" name="select" onclick="f1(this)"/>
-                            <label>First name:</label>
-
-                            <input type="text" name="first_name" id="text_first_name" disabled="disabled" onchange="show(this.value)"/> 
+                            <label>First name</label>
+                        </div>
+                        <div class="select">
+                            <input type="search" name="first_name" id="text_first_name" disabled="disabled" onchange="show(this.value)"/> 
                         </div>
                     </form>
                 </div>
