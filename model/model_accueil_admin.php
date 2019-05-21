@@ -1,10 +1,6 @@
 <?php
-if(isset($_GET['user_id']) ){
-	require('C:/wamp64/www/AtHome/model/model_connexion_db.php');
-}else{
-	require('model/model_connexion_db.php');
 
-}
+require('model/model_connexion_db.php');
 
 //fonction récupérer tous les utilisateurs (sans leur mot de passe obviously)
 function get_all_users(){
@@ -30,12 +26,32 @@ function modifier_informations($id, $name, $first_name, $user_type, $phone, $mob
 
 }
 
+function getUserInfo($id){
+	db_connect(); //function from model_connexion_db.php
+	global $db; //pour pouvoir utiliser l'objet db -> database
 
+	$req = $db -> prepare('SELECT * FROM user WHERE (user_id LIKE ?)');
+	$req -> execute([$id]);
+	$all_users = $req -> fetchAll();
 
-//fonction récupérer la liste de tous les clients 
+	return $all_users;
+}
 
-//fonction récupérer seulement les techniciens
+function get_user_by_type($type){
+	db_connect(); //function from model_connexion_db.php
+	global $db; //pour pouvoir utiliser l'objet db -> database
 
-//gestion ajouter/supprimer droits utilisateurs
+	$req = $db -> prepare('SELECT * FROM user WHERE user_type LIKE ?');
+	$req -> execute([$type]);
+	$all_users = $req -> fetchAll();
 
-//fonction 
+	return $all_users;
+}
+
+function del($id){
+	db_connect(); //function from model_connexion_db.php
+	global $db; //pour pouvoir utiliser l'objet db -> database
+
+	$req = $db -> prepare('DELETE FROM user WHERE user_id LIKE ?');
+	$req -> execute([$id]);
+}

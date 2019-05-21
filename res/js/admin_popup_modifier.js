@@ -7,7 +7,9 @@ function close_popup(){
 	document.getElementById('fond_noir').style.display = "none";
 	document.getElementById('popup_modifier').style.display = "none";
 }
-
+function really(){
+    alert("Cet utilisateur va être supprimé.");
+}
 
 /*Ajax function*/
 function ajax(str)
