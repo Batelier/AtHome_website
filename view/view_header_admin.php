@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="view/css/css_header.css" />
+		<link rel="stylesheet" href="view/css/css_accueil_admin.css" />
 	</head>
 	<body>
 	<div class="header">
@@ -14,7 +15,7 @@
 				<span id="text_slogan">Bienvenue sur AtHome !</span>
 			</div>
 			<div id="bloc_profil">
-				<img id="profil" src="/AtHome/res/profil_pic.png" width="100em" height="100em">
+				<a href="routeur.php?cible=controller_admin_profil"><img id="profil" src="/AtHome/res/profil_pic.png" width="100em" height="100em"></a>
 			</div>			
 		</div>
 		<div class="naviguer">

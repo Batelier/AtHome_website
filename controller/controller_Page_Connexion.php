@@ -25,6 +25,7 @@ if (isset($_POST['email'])) {
 		}
 		else if ($values[2] == 'administrateur') {
 			$_SESSION['isAdminConnected'] = true;
+			$_SESSION['id'] = recuperer_id($_POST['email'])['user_id'];
 			//popup_connected();
 			header('Location:routeur?cible=controller_accueil_admin');
 		}
