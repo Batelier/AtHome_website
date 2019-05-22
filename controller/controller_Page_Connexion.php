@@ -16,6 +16,7 @@ if (isset($_POST['email'])) {
 
 		//tester quel type d'utilisateur est connecté pour renvoyer sur la bonne page
 		//sécurité des pages -> si un random fait routeur?cible=admin.php alors qu'il n'est pas admin
+		?> <script type="text/javascript">alert('pd')</script> <?php
 		if ($values[2] == 'utilisateur_principal') {
 			$_SESSION['isUserConnected'] = true;
 			$_SESSION['test'] = 'SAAAAAAAAAAAAAALLLLLLLLLLLLLUT4';
