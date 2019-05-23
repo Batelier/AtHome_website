@@ -23,6 +23,16 @@ function recuperer_id($email){
 	return $values;
 	
 }
+function get_all_news(){
+	db_connect();
+	global $db;
+
+	$req = $db -> prepare('SELECT * FROM catalogue');
+	$req -> execute();
+	$news = $req -> fetchAll();
+
+	return $news;
+}
 
 //fonction vérifier que l'identifiant et mdp correspond à qqn dans la base de donnée
 

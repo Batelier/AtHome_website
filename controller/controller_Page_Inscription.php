@@ -22,8 +22,11 @@ require('model\model_Page_Inscription.php');
 
 if (isset($_POST['register'])) {
 	//vérifier que le password soit le meme que le password_check
-	if ($_POST['password'] == $_POST['password_check']) {
+	if ($_POST['password'] == $_POST['password_check'])
+	{
 		register($_POST['nom'], $_POST['prenom'], $_POST['email'], password_hash($_POST['password'], PASSWORD_DEFAULT) , $_POST['telFixe'],$_POST['portable'],$_POST['date'],$_POST['type']);
+		register_image($_POST['nom'], $_POST['prenom'], $_POST['email']);
+
 		?>
 			<script type="text/javascript">
 				confirm("Vous avez été inscrit !");

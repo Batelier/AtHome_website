@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="view/css/css_faq.css">
+	<link rel="stylesheet" href="view/css/css_accueil_admin.css">
 	<title>FAQ</title>
 	<script type="text/javascript" src="controller/ajax_recherche.js"></script>
 	<script type="text/javascript">

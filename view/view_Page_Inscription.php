@@ -9,7 +9,7 @@
 		<div id="main_div">
 			<div id="bloc_formulaire">
 			<!-- balise de formulaire, method='post/get', action = adresse de la page qui va récupérer les données -->
-				<form method="post" action="" id="formulaire">
+				<form method="post" action="" id="formulaire" enctype="multipart/form-data">
 
 					<fieldset>
 						<legend>Formulaire d'inscription</legend>
@@ -58,6 +58,10 @@
 								</select>
 							</td>
 						</tr>
+                            <tr>
+                                <td><label for="image">soumettre votre image</label></td>
+                                <td><input class="input_image" type="file" name="image"></td>
+                            </tr>
 						</table>
 						<div id="bloc_register_button">
 							<input type="submit" value="Envoyer le formulaire" name="register" id="register_button">
