@@ -8,28 +8,61 @@ function query_captors(){
 	return $reponse;
 }
 
-function ajouter_capteur($type){
+function query_captors_by_model($model){
 	db_connect(); //function from model_connexion_db.php
 	global $db; //pour pouvoir utiliser l'objet db -> database
-		
-	/*Les values seront ensuite importés de la bdd*/
-	$price = 0.5;
-	$orating_state = 1;
-	//$db -> prepare('INSERT INTO equipment(manufacter, model, price, orating_state) 
-	//	VALUES ('.$type.', '.$type.', '.$price.', '.$orating_state.')');
 
-	$req = $db-> prepare('INSERT INTO equipment(manufacter, model, price, orating_state)  VALUES (?,?,?,?)');
-	$req-> execute([$type, $type, $price, $orating_state]);
+	$reponse = $db->prepare('SELECT equipment_id FROM equipment WHERE model = ?');
+	$reponse -> execute(array($model));
+	$values = $reponse -> fetch();
+	return $values;
+}
+
+function query_captors_by_room($id){
+	db_connect();
+	global $db;
+	$req =$db->prepare('SELECT * FROM equipment INNER JOIN equip ON equip.equipment_id =equipment.equipment_id WHERE room_id = ?');
+	$req->execute(array($id));
+	return $req;
+	
+}
+
+function ajouter_capteur($equipment_id, $room_id){
+	db_connect(); //function from model_connexion_db.php
+	global $db; //pour pouvoir utiliser l'objet db -> database
+	
+	$req = $db-> prepare('INSERT INTO equip(equipment_id, room_id)  VALUES (?,?)');
+	$req-> execute([$equipment_id, $room_id]);
 	//$db->exec('INSERT INTO equipment(model) VALUES("'.$_POST['capteurs'].'")');
 
 }
 
-function delete_sensor($id){
+function delete_sensor($id_capteur, $room_id){
 	db_connect();
 	global $db;
-	$req = $db->prepare('DELETE FROM equipment WHERE equipment_id = :id_capteur');
+	$req = $db->prepare('DELETE FROM equip WHERE equipment_id = :id_capteur AND room_id = :room_id');
 	$req->execute(array(
-	'id_capteur' => $id
+	'id_capteur' => $id_capteur,
+	'room_id' => $room_id
+	));
+	
+}
+function delete_room($room_id){
+	db_connect();
+	global $db;
+	$req = $db->prepare('DELETE FROM room WHERE room_id = :room_id');
+	$req->execute(array(
+	'room_id' => $room_id
+	));
+	
+}
+
+function delete_home($home_id){
+	db_connect();
+	global $db;
+	$req = $db->prepare('DELETE FROM home WHERE home_id = :home_id');
+	$req->execute(array(
+	'home_id' => $home_id
 	));
 	
 }

@@ -149,12 +149,12 @@
 		flex-direction: column;
 	}
 	.piece_img{
-		margin:1em 0 1em 1.3em;
+		margin:1em 0 0.4em 1.3em;
 	}
 	.gestion_piece a{
 		text-decoration: none;
 		padding:0.4em;
-		background-color: #0047ab;
+		background-color: red;
 		text-align : center;
 		font-weight: bold;
 		color: white;
@@ -376,6 +376,64 @@
 		color:  #0047ab;
 		background-color: lightblue;
 	}
+	#popup_manage_room{
+		display: none;
+		top: 25%;
+		left : 25%;
+		background-color: white;
+		width: 60%;
+		height: 30em;
+		position: absolute;
+		border-radius: 1em;
+		border-style: double;	
+		border-color: #0047ab;
+	}
+	#header_manage_room{
+		padding: 1%;
+		color: #0047ab;
+		font-weight: bold;
+		font-size: 1.1rem;
+		border-bottom-style: solid;
+		border-bottom-color: #0047ab;
+		display: flex;
+	}
+	#txt_header_manage_room{
+		width: 95%;
+	}
+	#close_header_manage_room{
+		width: 5%;
+		color: white;
+		background-color: red;
+		border-radius: 2em;
+		border-style: solid;
+		text-align: center;
+		cursor: pointer; 
+	}
+	#body_popup_manage_room{
+		padding: 5%;
+
+	}
+	#table_manage_room{
+		background-color: #0047ab;
+		padding: 2%;
+		border-radius: 2em;
+		width: 100%;
+	}
+	#register_button_manage_room{
+		color: white;
+		font-weight: bold;
+		background-color: #0047ab;
+		border-radius: 2em;
+		border-style: outset;
+		width: 20%;
+		padding:0.5em;
+		margin : 2em 25% 0 40%;
+	}
+	#register_button_manage_room:hover{
+		cursor: pointer;
+		color:  #0047ab;
+		background-color: lightblue;
+	}
 	/*===================================*/
 	#fond_noir{
 		top: 0%;
@@ -409,6 +467,22 @@
 		font-size: 16px;
 		margin: 0 0 0.7em 0;
 		cursor: pointer;
-		
-}
+	}
+	#button_manage_room {
+		background-color: red;
+		border: none;
+		color: white;
+		padding: 0.5em;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin-left: 0.7em;
+		margin-bottom: 2em;
+		cursor: pointer;
+	}
+	
+	.echelle{
+		margin-top:0.6em;
+	}
 } 

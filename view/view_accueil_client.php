@@ -40,6 +40,7 @@
 				<?php } ?>
 			</div>
 			<div id="listeMaison">
+			
 				
 			</div>
 		</div>
@@ -106,6 +107,28 @@
 				</form>
 			</div>
 		<!-- code page supprimer/ modifier, appliquer l'id css de position relative --> 
-		</div>
+	</div>
+	<div id="popup_manage_room">
+			<div id="header_manage_room">
+				<div id="txt_header_manage_room">Gérer pièce</div>
+				<div id="close_header_manage_room" onclick="close_popup_manage_room()"> &#10006 </div>
+			</div>
+			<div id="body_popup_manage_room">
+				<?php 
+						$reponse = query_captors_by_room(1);
+						while ($donnees = $reponse->fetch()){
+						?>
+							<div class="capteur">
+								<p> <?php echo ($donnees['model'])?> </p>
+									<label class="switch">
+										<input type="checkbox">
+										<span class="slider round"></span>
+									</label>
+							</div>
+						<?php } ?>
+			</div>
+		<!-- code page supprimer/ modifier, appliquer l'id css de position relative --> 
+	</div>
+	
 	
 </body>
