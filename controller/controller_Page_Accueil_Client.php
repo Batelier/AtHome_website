@@ -20,15 +20,14 @@ if (isset($_SESSION['isUserConnected']) and $_SESSION['isUserConnected'] == true
 	$reponse1 = query_captors();
 	$reponse2 = get_addresses((int)$_SESSION['id']);
 	$reponse3 = get_name_room((int)$_SESSION['id']);
-<<<<<<< HEAD
+
 	$reponse4 = get_addresses((int)$_SESSION['id']);;
-	include("C:/wamp64/www/AtHome/view/view_header.php");
-	require("C:/wamp64/www/AtHome/view/view_accueil_client.php");
-=======
+	
+
 	$reponse4 = get_addresses((int)$_SESSION['id']);
 	include("view/view_header.php");
 	require("view/view_accueil_client.php");
->>>>>>> 6a9fd24b41e4155e2583a54d499fea78428fc5d5
+
 	if (isset($_POST['register_button_ajouter_home'])) {
 		add_home($_POST['address'],$_POST['code_postal'],$_POST['area_home'],$_SESSION['id']);
 		echo "<script> window.location.replace('routeur.php?cible=controller_Page_Accueil_Client');</script>";
@@ -41,12 +40,7 @@ if (isset($_SESSION['isUserConnected']) and $_SESSION['isUserConnected'] == true
 
 	echo($_SESSION['id']);
 }else{
-<<<<<<< HEAD
+
 		echo "YOU ARE NOT LOGGED IN !";
 		echo "<br> <a href=\"routeur.php\"> retour </a>";
 	}
-=======
-	echo "YOU ARE NOT LOGGED IN !";
-	echo "<br> <a href=\"routeur.php\"> retour </a>";
-}
->>>>>>> 6a9fd24b41e4155e2583a54d499fea78428fc5d5
