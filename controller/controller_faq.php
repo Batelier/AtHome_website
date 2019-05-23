@@ -3,6 +3,7 @@ session_start();
 
 require("model/model_faq.php");
 
+
 if (isset($_SESSION['isUserConnected']) and $_SESSION['isUserConnected'] == true) {
 	include("view/view_header.php");
 }
@@ -25,13 +26,14 @@ elseif (isset($_SESSION['isAdminConnected']) and $_SESSION['isAdminConnected'] =
 			//modifier un elt
 			modif($_SESSION['question_id'], $_POST['question'], $_POST['answer']);
 		}
-		 else {
+	}
+
+	if(isset($_POST['add'])) {
 			//ajouter un elt
 			add($_POST['question'], $_POST['answer']);
 		}
 	}
 
-}
 
 if (isset($_POST['recherche'])){
 

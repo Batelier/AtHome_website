@@ -1,6 +1,9 @@
 <?php
 session_start();
 
+$_SESSION = array();
+
+
 /*------------------------------------
 - popup javascript -> DONE
 - changement de page selon le type d'utilisateur -> DONE

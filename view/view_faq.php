@@ -26,11 +26,11 @@
 	<div id="corps">
 		<div id="entete">
 			<?php
-			if ($_SESSION['isAdminConnected']){
+			if (isset($_SESSION['isAdminConnected']) and $_SESSION['isAdminConnected'] == true){
 				?>
 				<div id="ajout">
 					<form method="post" name="add">
-						<input type="submit" name="show_add" value="+ Ajouter">
+						<input type="button" name="show_add" value="+ Ajouter" onclick="popup_add()">
 					</form>
 				</div>
 			<?php
@@ -54,12 +54,12 @@
 					<p><strong><?php echo $data['question']; ?></strong></p>
 					<p><?php echo $data['answer']; ?></p>
 				</article>
-				<div class="pied_article">
+				<!--<div class="pied_article">
 					<aside>
 						<p><strong>Utilité : </strong><?php echo $data['useful'] ?></p>
-					</aside>
+					</aside>-->
 					<?php
-					if ($_SESSION['isAdminConnected']){
+					if (isset($_SESSION['isAdminConnected']) and $_SESSION['isAdminConnected'] == true){
 						?>
 						<div class="gerer">
 							<form method="post" name="suppr">
@@ -72,7 +72,7 @@
 					<?php
 					}
 					?>
-				</div>
+				<!--</div>-->
 			</section>
 			<?php 
 				}
@@ -83,7 +83,7 @@
 
 	<div id="popup_add">
 		<div class="header_popup">
-			<div class="txt_header">Modifier une Question-Réponse</div>
+			<div class="txt_header">Ajouter une Question-Réponse</div>
 			<div class="close_header" onclick="close_popup()"> &#10006 </div>
 		</div>
 		<div class="body_popup">
@@ -99,7 +99,7 @@
 						</tr>
 					</table>
 					<div class="bloc_register_button">
-						<input type="submit" value="Modifier" name="register" class="register_button" >
+						<input type="submit" value="Ajouter" name="add" class="register_button"  >
 					</div>
 			</form>
 		</div>
@@ -136,12 +136,12 @@
 		<?php
 		} 
 		?>
-	<?php
+	<?php /*
 		if (isset($_POST['show_add'])) {
 			?> 
 			<script type="text/javascript">popup_add();</script>
 		<?php
-		} 
+		} */
 		?>
 </body>
 </html>
