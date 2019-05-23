@@ -4,7 +4,8 @@
 	<title>def_page</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="view/css/css_admin_def_page.css">
-	<link rel="stylesheet" type="text/css" href="view/css/css_admin_def_page.css">
+	<link rel="stylesheet" type="text/css" href="view/css/css_faq.css">
+	<link rel="stylesheet" href="view/css/css_accueil_admin.css">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<script type="text/javascript" src="res\js\admin_popup_modifier.js"></script>
 </head>
@@ -18,13 +19,22 @@
 	</div>
 	<div id="bloc_news">
 		<?php
-		$variable = array(0);
-		foreach ($variable as $news) {
+		foreach ($news as $news) {
 				//boucler chaque bail
 			?>
+			<div id="btns">
+				<form method="post" name="sub_id">
+					<input type="submit" id="button_modifier" class="mod_btn" value="Modifier" name="mod[<?php echo($news['catalogue_id']); ?>]" >
+				</form>
+
+				<form onsubmit="equip_del()" method="post">
+					<td> <input type="submit" id="button_delete" class="mod_btn" name="del[<?php echo($news['catalogue_id']); ?>]" value="Supprimer"></input> </td>
+				</form>
+			</div>
+			
 			<div id="news">
-				<span class="news_title">WTF MEC</span>
-				<span class="news_body">coucou les amis</span>
+				<span class="news_title"><?php echo $news['title']; ?></span>
+				<span class="news_body"><?php echo $news['text']; ?></span>
 			</div>
 
 			<?php
@@ -35,66 +45,60 @@
 	<!-- ===================================popup=================================== -->
 	<div id="popup_add">
 		<div class="header_popup">
-			<div class="txt_header">Ajouter une Question-Réponse</div>
+			<div class="txt_header">Ajouter une nouvelle au catalogue</div>
 			<div class="close_header" onclick="close_popup()"> &#10006 </div>
 		</div>
 		<div class="body_popup">
 			<form method="post" action="" class="formulaire" name="form_modifier">
-					<table>
-						<tr>
-							<td><label for="question">Question</label></td>
-							<td><textarea class="input_field" name="question" id="question" autofocus value=""></textarea></td>
-						</tr>
-						<tr>
-							<td><label for="answer">Réponse</label></td>
-							<td class="answ"><textarea class="input_field" name="answer" id="answer" value="" ></textarea></td>
-						</tr>
-					</table>
-					<div class="bloc_register_button">
-						<input type="submit" value="Ajouter" name="add" class="register_button"  >
-					</div>
+				<table>
+					<tr>
+						<td><label for="question">Titre</label></td>
+						<td><input class="input_title" name="title" id="question" autofocus value="" placeholder="Titre de la nouvelle"></input></td>
+					</tr>
+					<tr>
+						<td><label for="answer">Annonce</label></td>
+						<td ><textarea class="input_body" name="text" id="answer" value="" placeholder="Nouvelle"></textarea></td>
+					</tr>
+				</table>
+				<div class="bloc_register_button">
+					<input type="submit" value="Ajouter" name="add_news" class="register_button"  >
+				</div>
 			</form>
 		</div>
 	</div>
 
 	<!-- ===================================popup=================================== -->
 	<div id="popup_modifier">
-		<div id="header_modifier">
-			<div id="txt_header_modifier">Modifier un élément</div>
-			<div id="close_header_modifier" onclick="close_popup()"> &#10006 </div>
+		<div class="header_popup">
+			<div class="txt_header">Modifier la nouvelle</div>
+			<div class="close_header" onclick="close_popup()"> &#10006 </div>
 		</div>
-		<div id="body_popup_modifier">
-			<form method="post" action="" id="formulaire" name="form_modifier">
-				<table id="table_modifier">
+		<div class="body_popup">
+			<form method="post" action="" class="formulaire" name="form_modifier">
+				<table>
 					<tr>
-						<td><label for="sensor_name">Nom</label></td>
-						<td><input class="input_field" type="tel" name="sensor_name" maxlength="20" value="<?php echo($current_sensor['name']) ?>"></td>
+						<td><label for="question">Titre</label></td>
+						<td><input class="input_title" name="mod_title" id="question" autofocus value="<?php echo($current_news['title']) ?>" ></input></td>
 					</tr>
 					<tr>
-						<td><label for="sensor_name">Description</label></td>
-						<td><input class="input_field" type="tel" name="description" maxlength="20" value="<?php echo($current_sensor['description']) ?>"></td>
+						<td><label for="answer">Annonce</label></td>
+						<td ><textarea class="input_body" name="mod_text" id="answer" value="" ><?php echo($current_news['text']) ?></textarea></td>
 					</tr>
-					<tr>
-						<td><label for="prenom">Modèle</label></td>
-						<td><input class="input_field" type="text" name="model" id="prenom" maxlength="20" autofocus value="<?php echo($current_sensor['model']) ?>"></td>
-					</tr>
-					<tr>
-						<td><label for="nom">Constructeur</label></td>
-						<td><input class="input_field" type="text" name="constructeur" id="nom" maxlength="20" value="<?php echo($current_sensor['manufacturer']) ?>" ></td>
-					</tr>
-					<tr>
-						<td><label for="telFixe">Prix</label></td>
-						<td><input class="input_field" type="tel" name="prix" id="telFixe" maxlength="10" value="<?php echo($current_sensor['price']) ?>"></td>
-					</tr>
-					<input type="hidden" name="orating_state" value="<?php echo($current_sensor['orating_state']) ?>">
-
 				</table>
-				<div id="bloc_register_button">
-					<input type="submit" value="Modifier les informations" name="mod_sensor" class="register_button" >
+				<div class="bloc_register_button">
+					<input type="submit" value="Modifier" name="mod_news" class="register_button"  >
 				</div>
 			</form>
 		</div>
-		<!-- code page supprimer/ modifier, appliquer l'id css de position relative --> 
 	</div>
+	<?php
+		if (isset($_POST['mod'])) {
+			?> 
+			<script type="text/javascript">
+				popup_mod();
+			</script>
+			<?php
+		} 
+		?>
 </body>
 </html>

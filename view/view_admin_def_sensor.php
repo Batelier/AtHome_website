@@ -12,7 +12,8 @@
 		
 		<!-- Ajouter un capteur -->
 		<div id="ajax_search">
-			<button class="btn" onclick="popup_add();">Ajouter un capteur</button>
+			<h1>Définir les capteurs disponibles</h1> 
+			<button class="btn btn2" onclick="popup_add();">Ajouter un capteur</button>
 			<form method="post">
 				<input class="btn" type="submit" value="Actualiser" name="sub_type" ></input>
 			</form>

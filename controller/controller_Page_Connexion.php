@@ -11,6 +11,8 @@ $_SESSION = array();
 ------------------------------------*/
 require('model/model_Page_Connexion.php');
 
+$news = get_all_news();
+
 if (isset($_POST['email'])) {
 	$values = login($_POST['email']);
 	//if password is set and password is correct
