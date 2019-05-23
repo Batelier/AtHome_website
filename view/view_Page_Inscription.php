@@ -58,10 +58,11 @@
 								</select>
 							</td>
 						</tr>
+						<!-- 
                             <tr>
                                 <td><label for="image">soumettre votre image</label></td>
                                 <td><input class="input_image" type="file" name="image"></td>
-                            </tr>
+                            </tr> -->
 						</table>
 						<div id="bloc_register_button">
 							<input type="submit" value="Envoyer le formulaire" name="register" id="register_button">

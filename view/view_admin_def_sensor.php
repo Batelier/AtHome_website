@@ -40,7 +40,7 @@
 							<td> <?php echo $user['name'];  ?> </td>
 							<td> <?php echo $user['model'];  ?> </td>
 							<td> <?php echo $user['description'];  ?> </td>
-							<td> <?php echo $user['manufacturer'];  ?> </td>
+							<td> <?php echo $user['manufacter'];  ?> </td>
 							<td> <?php echo $user['price'] . " €";  ?> </td>
 							<td> <?php echo $user['orating_state'];  ?> </td>
 							<td>
@@ -74,7 +74,7 @@
 							</tr>
 							<tr>
 								<td><label for="sensor_name">Description</label></td>
-								<td><input class="input_field" type="tel" name="description" maxlength="20" value="<?php echo($current_sensor['description']) ?>"></td>
+								<td><input class="input_field" type="tel" name="description" value="<?php echo($current_sensor['description']) ?>"></td>
 							</tr>
 							<tr>
 								<td><label for="prenom">Modèle</label></td>
@@ -82,7 +82,7 @@
 							</tr>
 							<tr>
 								<td><label for="nom">Constructeur</label></td>
-								<td><input class="input_field" type="text" name="constructeur" id="nom" maxlength="20" value="<?php echo($current_sensor['manufacturer']) ?>" ></td>
+								<td><input class="input_field" type="text" name="constructeur" id="nom" value="<?php echo($current_sensor['manufacter']) ?>" ></td>
 							</tr>
 							<tr>
 								<td><label for="telFixe">Prix</label></td>
@@ -112,7 +112,7 @@
 							</tr>
 							<tr>
 								<td><label for="sensor_name">Description</label></td>
-								<td><input class="input_field" type="tel" name="description" maxlength="20"></td>
+								<td><input class="input_field" type="tel" name="description" ></td>
 							</tr>
 							<tr>
 								<td><label for="prenom">Modèle</label></td>

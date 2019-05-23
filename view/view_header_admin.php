@@ -16,16 +16,15 @@
 			</div>
 			<div id="bloc_profil">
 				<a href="routeur.php?cible=controller_admin_profil"><img id="profil" src="/AtHome/res/profil_pic.png" width="100em" height="100em"></a>
-			</div>			
+			</div>
 		</div>
 		<div class="naviguer">
 			<ul>
 				<li><a href="routeur.php?cible=controller_accueil_admin">Liste utilisateurs</a></li>
 				<li><a href="routeur.php?cible=controller_admin_def_sensor">Definir disponibilités</a></li>
-				<li><a href="routeur.php?cible=controller_admin_def_page">Gestion des pages</a></li>
+				<li><a href="routeur.php?cible=controller_admin_def_page">Catalogue des nouvelles</a></li>
 				<li><a href="#messagerie">Messagerie</a></li>
 				<li><a href="routeur?cible=controller_faq">FAQ</a></li>
-				<li><a href="#Forum">Forum</a></li>
 			</ul>
 		</div>
 	</div>	

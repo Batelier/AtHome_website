@@ -11,8 +11,9 @@
 		<script type="text/javascript" src="res\js\admin_popup_modifier.js"></script>
 		<script type="text/javascript" src="controller\ajax_admin_userList.js" ></script>
 		
-		<div id="ajax_search">
-			<form method="post" name="tri">
+		<div id="ajax_search" class="btn2">
+			<h1 >Liste des utilisateurs</h1>
+			<form method="post" name="tri" class="btn2">
 				<label class="lbl">Afficher :</label>
 				<select name="user">
 					<option value="">Choisir un type d'utilisateur</option>

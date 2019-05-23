@@ -14,19 +14,18 @@
 				<span id="text_slogan">Bienvenue sur AtHome !</span>
 			</div>
 			<div id="bloc_profil">
-				<img id="profil" src="/AtHome/res/profil_pic.png" width="100em" height="100em">
+				<a href="routeur.php?cible=controller_admin_profil"><img id="profil" src="/AtHome/res/profil_pic.png" width="100em" height="100em"></a>
 			</div>			
 		</div>
 		<div class="naviguer">
 			<ul>
-				<li><a href="#home">Home</a></li>
-				<li><a href="#compte">Compte</a></li>
+				<li><a href="routeur.php?cible=controller_Page_Accueil_Client">Home</a></li>
+				<li><a href="routeur.php?cible=controller_admin_profil">Compte</a></li>
 				<li><a href="#consommation">Consommation de l'habitat</a></li>
 				<li><a href="#aide">Aide</a></li>
 				<li><a href="#contact">Contact support</a></li>
 				<li><a href="#messagerie">Messagerie</a></li>
 				<li><a href="routeur?cible=controller_faq">FAQ</a></li>
-				<li><a href="#Forum">Forum</a></li>
 			</ul>
 		</div>
 	</div>	
