@@ -25,7 +25,7 @@ if (isset($_POST['email'])) {
 		if ($values[2] == 'utilisateur_principal') {
 			$_SESSION['isUserConnected'] = true;
 			$_SESSION['test'] = 'SAAAAAAAAAAAAAALLLLLLLLLLLLLUT4';
-			$_SESSION['id'] = recuperer_id($_POST['email'])[0];
+			$_SESSION['id'] = recuperer_id($_POST['email'])['user_id'];
 			header('Location:routeur?cible=controller_Page_Accueil_Client');
 		}
 		else if ($values[2] == 'administrateur') {

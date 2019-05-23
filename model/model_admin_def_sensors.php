@@ -24,7 +24,7 @@ function mod_sensor($manufacturer, $model, $price, $orating_state, $name, $descr
 	db_connect();
 	global $db;
 
-	$req = $db -> prepare('UPDATE equipment SET manufacter=?, model=?, price=?, orating_state=?, name=?, description=? WHERE equipment_id LIKE ?');
+	$req = $db -> prepare('UPDATE equipment SET manufacturer=?, model=?, price=?, orating_state=?, name=?, description=? WHERE equipment_id LIKE ?');
 	$req -> execute([$manufacturer, $model, $price, $orating_state, $name, $description, $_SESSION['sensor_id']]);
 
 }
