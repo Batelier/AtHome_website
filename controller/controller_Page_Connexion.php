@@ -11,6 +11,8 @@ $_SESSION = array();
 ------------------------------------*/
 require('model/model_Page_Connexion.php');
 
+$news = get_all_news();
+
 if (isset($_POST['email'])) {
 	$values = login($_POST['email']);
 	//if password is set and password is correct
@@ -23,7 +25,7 @@ if (isset($_POST['email'])) {
 		if ($values[2] == 'utilisateur_principal') {
 			$_SESSION['isUserConnected'] = true;
 			$_SESSION['test'] = 'SAAAAAAAAAAAAAALLLLLLLLLLLLLUT4';
-			$_SESSION['id'] = recuperer_id($_POST['email'])[0];
+			$_SESSION['id'] = recuperer_id($_POST['email'])['user_id'];
 			header('Location:routeur?cible=controller_Page_Accueil_Client');
 		}
 		else if ($values[2] == 'administrateur') {

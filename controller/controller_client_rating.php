@@ -9,10 +9,10 @@ if (isset($_SESSION['isUserConnected']) and $_SESSION['isUserConnected'] == true
 		delete_room($_POST['identi_room']);
 	}
 	if (isset($_POST['delete_home'])){
-			delete_home($_POST['home_id']);
+		delete_home($_POST['home_id']);
 	}
-
-
+	
+	
 	if (isset($_POST['add_sensor']) and !($_POST['capteurs'] == "Choisir")) {
 		ajouter_capteur(query_captors_by_model($_POST['capteurs'])[0], $_POST['id_room']);
 	}
@@ -20,33 +20,21 @@ if (isset($_SESSION['isUserConnected']) and $_SESSION['isUserConnected'] == true
 	$reponse1 = query_captors();
 	$reponse2 = get_addresses((int)$_SESSION['id']);
 	$reponse3 = get_name_room((int)$_SESSION['id']);
-<<<<<<< HEAD
-	$reponse4 = get_addresses((int)$_SESSION['id']);;
-	include("C:/wamp64/www/AtHome/view/view_header.php");
-	require("C:/wamp64/www/AtHome/view/view_accueil_client.php");
-=======
 	$reponse4 = get_addresses((int)$_SESSION['id']);
 	include("view/view_header.php");
 	require("view/view_accueil_client.php");
->>>>>>> 6a9fd24b41e4155e2583a54d499fea78428fc5d5
 	if (isset($_POST['register_button_ajouter_home'])) {
 		add_home($_POST['address'],$_POST['code_postal'],$_POST['area_home'],$_SESSION['id']);
 		echo "<script> window.location.replace('routeur.php?cible=controller_Page_Accueil_Client');</script>";
 	}
-
+	
 	if (isset($_POST['register_button_ajouter_piece'])) {
 		add_room($_POST['prenom'],$_POST['nom'],get_home_id($_POST['homes'])[0]);
 		echo "<script> window.location.replace('routeur.php?cible=controller_Page_Accueil_Client');</script>";
 	}
-
+	
 	echo($_SESSION['id']);
 }else{
-<<<<<<< HEAD
-		echo "YOU ARE NOT LOGGED IN !";
-		echo "<br> <a href=\"routeur.php\"> retour </a>";
-	}
-=======
 	echo "YOU ARE NOT LOGGED IN !";
 	echo "<br> <a href=\"routeur.php\"> retour </a>";
 }
->>>>>>> 6a9fd24b41e4155e2583a54d499fea78428fc5d5

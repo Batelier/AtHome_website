@@ -41,7 +41,7 @@
 										<img src="res/star_null.png" id="rating">
 									<?php
 								}
-							 ?>	
+							 ?>
 					 	</div> <!-- fin div_star -->
 					 	<div id="div_profil_pic">
 					 		<img src="res/profil_pic.png" id="profil_pic">
@@ -56,22 +56,17 @@
 					<fieldset>
 						<legend>Catalogue des nouvelles</legend>
 						<?php
-							//foreach news create a new bloc
-							//model + controller à faire  --> news LIMIT 5
-							$news_1 = "Un nouveau capteur est disponible";
-							//foreach ($variable as $key) {
-								//pour chaque news, créer un nouveau machin, à mettre dans la boucle
-							//}
+						foreach ($news as $news) {
+						//boucler chaque bail
+							?>
+							<div id="news" class="news_">
+								<span class="news_title"><?php echo $news['title']; ?></span>
+								<span class="news_body"><?php echo $news['text']; ?></span>
+							</div>
+
+							<?php
+						}
 						?>
-						<div id="news">
-							<?php echo($news_1)?> 
-						</div>
-						<div id="news">
-							<?php echo($news_1)?> 
-						</div>
-						<div id="news">
-							<?php echo($news_1)?> 
-						</div>
 					</fieldset>
 				</div>
 				

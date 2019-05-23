@@ -14,6 +14,9 @@ elseif (isset($_SESSION['isAdminConnected']) and $_SESSION['isAdminConnected'] =
 	if (isset($_POST['show_modifier'])) {
 		$qi = key($_POST['show_modifier']);
 		$_SESSION['question_id'] = $qi;
+		/*$qna = get_by_id($_SESSION['question_id']);*/
+		/*$_SESSION['question'] = $qna['question'];
+		$_SESSION['answer'] = $qna['answer'];*/
 	}
 
 	//suprimer un elt

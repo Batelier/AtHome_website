@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="view/css/css_faq.css">
+	<link rel="stylesheet" href="view/css/css_accueil_admin.css">
 	<title>FAQ</title>
 	<script type="text/javascript" src="controller/ajax_recherche.js"></script>
 	<script type="text/javascript">
@@ -66,7 +67,7 @@
 								<input type="submit" id="button_delete" name="suppr[<?php echo($data['question_id']); ?>]" value="Supprimer">
 							</form>
 							<form method="post" name="modif">
-								<input type="submit" id="button_modifier" name="show_modifier[<?php echo($data['question_id']); ?>]" value="Modifier">
+								<input type="submit" id="button_modifier" name="show_modifier[<?php echo($data['question_id']); echo($data['question']); echo($data['answer']); ?>]" value="Modifier">
 							</form>
 						</div>
 					<?php
