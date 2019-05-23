@@ -32,7 +32,7 @@ function register_image($name,$first_name,$mail)
         $form_data_type = $_FILES['image']['type'];
         $form_data = $_FILES['image']['tmp_name'];
         $data = addslashes(fread(fopen($form_data, "r"), filesize($form_data)));
-        $req = $db->prepare('INSERT INTO image(bin_data,filename,filesize,filetype,user_id) VALUES (?,?,?,?,?)');
+        $req = $db->prepare('INSERT INTO image(bin_data,filename,filesize,file_type,user_id) VALUES (?,?,?,?,?)');
         $req->execute([$data, $form_data_name, $form_data_size, $form_data_type, getUserId($name, $first_name, $mail)]);
 
 }

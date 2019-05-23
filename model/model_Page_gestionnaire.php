@@ -3,20 +3,24 @@ $q = isset($_GET["q"]) ? intval($_GET["q"]) : '';
     $con=mysqli_connect("localhost","root","","athome_db");
     if($_GET["q"]=="all")
     {
-        $sql = "SELECT user.name,user.first_name,user.user_id,image.bin_data,image.filetype FROM user inner join image on user.user_id = image.user_id";
+        $sql = "SELECT user.name,user.first_name,user.user_id,image.bin_data,image.file_type FROM user inner join image on user.user_id = image.user_id";
     }
     else
     {
-        $sql = "SELECT user.name,user.first_name,user.user_id,image.bin_data,image.filetype FROM user inner join image on user.user_id = image.user_id where first_name = '".$_GET["q"]."'";
+        $sql = "SELECT user.name,user.first_name,user.user_id,image.bin_data,image.file_type FROM user inner join image on user.user_id = image.user_id where first_name = '".$_GET["q"]."'";
     }
 
     $result=mysqli_query($con,$sql);
 
-    if (mysqli_num_rows($result) > 0)
+if (mysqli_num_rows($result) > 0)
     {
-        while($row = mysqli_fetch_assoc($result))
-
-        { 
+        while($row= mysqli_fetch_assoc($result))
+        {
+            $data = $row["bin_data"];
+           $type = $row["file_type"];
+          //  Header( "Content-type:$type");
+            header("Content-type:".$row["file_type"]);
+            $data = $row["bin_data"];
            echo "<div class='customer_information'>
                     <div class='entete'>
                         <div class='num_appartement'>
@@ -28,6 +32,7 @@ $q = isset($_GET["q"]) ? intval($_GET["q"]) : '';
                             <div class='profil'>
                                 <div class='photo_profil'>
                                     <img src='res/profil_pic.png' class='profil_pic'/>
+                                    $data
                                 </div>
                                 <div class='nom_prenom'>
                                     <p>".$row["first_name"]." ".$row["name"] . "</p>
