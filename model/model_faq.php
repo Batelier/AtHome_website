@@ -11,6 +11,16 @@ function default_req(){
 	return $values;
 }
 
+function get_by_id($id){
+	db_connect();
+	global $db; 
+
+	$req = $db -> prepare('SELECT question, answer FROM faq WHERE question_id = ?'); 
+	$req -> execute([$id]);
+	$values = $req -> fetchAll(); 
+	return $values;
+}
+
 function search($txt){
 	db_connect();
 	global $db; 

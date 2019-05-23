@@ -66,7 +66,7 @@
 								<input type="submit" id="button_delete" name="suppr[<?php echo($data['question_id']); ?>]" value="Supprimer">
 							</form>
 							<form method="post" name="modif">
-								<input type="submit" id="button_modifier" name="show_modifier[<?php echo($data['question_id']); ?>]" value="Modifier">
+								<input type="submit" id="button_modifier" name="show_modifier[<?php echo($data['question_id']); echo($data['question']); echo($data['answer']); ?>]" value="Modifier">
 							</form>
 						</div>
 					<?php
