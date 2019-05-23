@@ -15,21 +15,48 @@ $q = isset($_GET["q"]) ? intval($_GET["q"]) : '';
     if (mysqli_num_rows($result) > 0)
     {
         while($row = mysqli_fetch_assoc($result))
-        {
-           $data = $row["bin_data"];
-           $type = $row["filetype"];
-           Header( "Content-type:$type");
-            echo "<div class='customer_information'>".
-                "<div class='num_appartement'></div><span>"."Appartement :n*".$row["user_id"]."</span></div>".
-                "<div class='photo'>". $data."</div>".
-                "<div class='non_prenom'><span>"."name: " . $row["name"]. "  first name: " . $row["first_name"]."</span>".
-                "<div class='consommation'>"."<img src='res/2861.png_300.png' style='height: 20px'>"."</div>".
-                "<div class='deux_button'>"."<button type='button'>Contact</button>"."<button type='button'>Alert Consommation</button>"."</div>".
-                "</div>";
+
+        { 
+           echo "<div class='customer_information'>
+                    <div class='entete'>
+                        <div class='num_appartement'>
+                            <p>Appartement : n*". $row["user_id"]."</p>
+                        </div>
+                    </div>
+                    <div class='corps'>
+                        <div class='infos'>
+                            <div class='profil'>
+                                <div class='photo_profil'>
+                                    <img src='res/profil_pic.png' class='profil_pic'/>
+                                </div>
+                                <div class='nom_prenom'>
+                                    <p>".$row["first_name"]." ".$row["name"] . "</p>
+                                </div>
+                            </div>
+                            <div class='address'>
+                                    <p>68 Rue de Biture sur Orge</p>
+                            </div>
+                        </div>
+                        <div class='consommation'>
+                            <img src='res/2861.png_300.png' class='conso_pic'/>
+                        </div>
+                        <div class='deux_button'>
+                            <button type='button'>Contact</button>
+                            <button type='button'>Alerte De Consommation</button>
+                            <form method='post'>
+                                <input type='submit' id='button_delete' name='del[". $row['user_id'] ."]' value='Supprimer'></input> 
+                            </form>
+                        </div>
+                    </div>
+                </div>";
+
+
         }
     } else
         {
-        echo "0 result";
+        echo "<p>0 result<p>";
     }
 
     mysqli_close($con);
+
+    

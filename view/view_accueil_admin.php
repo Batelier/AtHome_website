@@ -12,15 +12,17 @@
 		<script type="text/javascript" src="controller\ajax_admin_userList.js" ></script>
 		
 		<div id="ajax_search">
-			<button class="btn">Actualiser</button>
-			<label class="lbl">Afficher :</label>
-			<select onchange="ajax(this.value)">
-				<option value="">Choisir un type d'utilisateur</option>
-				<option value="utilisateur_principal">Utilisateur Principal</option>
-				<option value="utilisateur_secondaire">Utilisateur Secondaire</option>
-				<option value="administrateur">Administrateur</option>
-				<option value="gestionnaire">Gestionnaire d'immeuble</option>
-			</select>
+			<form method="post" name="tri">
+				<label class="lbl">Afficher :</label>
+				<select name="user">
+					<option value="">Choisir un type d'utilisateur</option>
+					<option value="utilisateur_principal">Utilisateur Principal</option>
+					<option value="utilisateur_secondaire">Utilisateur Secondaire</option>
+					<option value="administrateur">Administrateur</option>
+					<option value="gestionnaire">Gestionnaire d'immeuble</option>
+				</select>
+				<input class="btn" type="submit" value="Actualiser" name="sub_type" ></input>
+			</form>
 		</div>
 		<div id="main_div" >
 			<table class="w3-table w3-bordered">
@@ -50,11 +52,13 @@
 							<td> <?php echo $user['mobile'];  ?> </td>
 							<td>
 							<form method="post" name="sub_id">
-								<input type="submit" id="button_modifier" value="Modifier" name="show_modifier[<?php echo($user[5]); ?>]" >
+								<input type="submit" id="button_modifier" value="Modifier" name="show_modifier[<?php echo($user['user_id']); ?>]" >
 							</form>
 							</td>
-
-							<td> <button id="button_delete" name="del[<?php echo($user[5]); ?>]">Supprimer</button> </td>
+							<form onsubmit="really()" method="post">
+								<td> <input type="submit" id="button_delete" name="del[<?php echo($user['user_id']); ?>]" value="Supprimer"></input> </td>
+							</form>
+							
 						</tr>
 						<?php
 					}
@@ -74,7 +78,7 @@
 						<table id="table_modifier">
 							<tr>
 								<td><label for="prenom">Prénom</label></td>
-								<td><input class="input_field" type="text" name="prenom" id="prenom" maxlength="20" autofocus></td>
+								<td><input class="input_field" type="text" name="prenom" id="prenom" maxlength="20" autofocus value=""></td>
 							</tr>
 							<tr>
 								<td><label for="nom">Nom</label></td>

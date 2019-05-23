@@ -10,12 +10,22 @@ if (isset($_SESSION['isAdminConnected']) and $_SESSION['isAdminConnected'] == tr
 	include('view/view_header_admin.php');
 
 	$all_users = get_all_users();
-
-	require('view/view_accueil_admin.php');
  
 	if (isset($_POST['show_modifier'])) {
 		$ui = key($_POST['show_modifier']);
 		$_SESSION['user_id'] = $ui;
+	}
+
+	//button tri
+	if (isset($_POST['sub_type']) and $_POST['user'] != '') {
+		$all_users = get_user_by_type($_POST['user']);
+
+	}
+
+	//button delete
+	if (isset($_POST['del'])) {
+		//echo key($_POST['del']);
+		del(key($_POST['del']));
 	}
 
 	if (isset($_POST['register'])) {
@@ -24,6 +34,7 @@ if (isset($_SESSION['isAdminConnected']) and $_SESSION['isAdminConnected'] == tr
 		//$id, $name, $first_name, $user_type, $phone, $mobile
 	}
 
+	require('view/view_accueil_admin.php');
 }
 else {
 	echo "YOU ARE NOT LOGGED IN !";

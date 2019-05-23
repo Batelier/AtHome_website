@@ -39,53 +39,34 @@
     </script>
 </head>
 <body>
-<div id ="conteneur_principal">
-<div id="bloc_colonne_left">
-    <div id = "leftSide"> <!-- contient : menu-->
-        <div id="menu">
-            <ul class="menul">
-                <span id="titleMenu" class="notLastLi"> Menu </span>
-                <li class="notLastLi"><a href="">Alerte Automatique</a></li>
-                <li class="notLastLi"><a href="">Desactivite alerte</a></li>
-            </ul>
+    <div id="bloc_page">
+        <div id ="conteneur_principal">
+            <div id="container_customer_information">
+                <div id="choix">
+                    <form id="form_choix">
+                        <script>
+                            function f1(chk){
+                                var t = document.getElementById("text_first_name");
+                                t.disabled = !chk.checked;
+                            }
+                        </script>
+                        <p class="select">Trier :</p>
+                        <div class="select">
+                            <input type="radio" name="select" value="all" onchange="show(this.value)"/>
+                            <label>All</label>
+                        </div>
+                        <div class="select">
+                            <input type="radio" name="select" onclick="f1(this)"/>
+                            <label>First name</label>
+                        </div>
+                        <div class="select">
+                            <input type="search" name="first_name" id="text_first_name" disabled="disabled" onchange="show(this.value)"/> 
+                        </div>
+                    </form>
+                </div>
+                <div id="txtHint"></div>
+            </div>
         </div>
     </div>
-</div>
-
-<div id="bloc_colonne_right"
-    <div id="slogan_searche">
-        <div id="slogan">
-        <span>Espace gestionnaire d'immeuble</span>
-        </div>
-    <div class="container_search">
-            <form action="" class="parent_search">
-                <input type="text">
-                <input type="button" value="search">
-            </form>
-    </div>
-    </div>
-
-    <div id="container_customer_information">
-        <div id="choix">
-            <form id="form_choix">
-                <script>
-                    function f1(chk){
-                        var t = document.getElementById("text_first_name");
-                        t.disabled = !chk.checked;
-                    }
-                </script>
-                all<input type="radio" name="select" value="all" onchange="show(this.value)"><br>
-                first name:<input type="radio" name="select" onclick="f1(this)">
-                <input type="text" name="first_name" id="text_first_name" disabled="disabled" onchange="show(this.value)">
-            </form>
-        </div>
-        <div id="txtHint"></div>
-</div>
-</div>
-
-
-
-
 </body>
-
 </html>
