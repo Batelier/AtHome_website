@@ -2,14 +2,14 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Page maison : utilisateur principal ou secondaire</title>
-	<link rel="stylesheet" href="/AtHome/view/css/css_accueil_client.css" />
+	<title>Page maison : utilisateur secondaire</title>
+	<link rel="stylesheet" href="/AtHome/view/css/css_accueil_client_secondaire.css" />
 
 </head>
 <body>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
-	<script type="text/javascript" src="/AtHome/res/js/client_popup_ajouter_piece.js"></script>
+	<script type="text/javascript" src="/AtHome/res/js/client_popup_ajouter_piece_secondaire.js"></script>
 	<!-- Insérer ici le code factorisé de l'entête et du menu -->
 	<div id= "main_div">
 		<div id = "leftSide"> <!-- contient : menu et favoris -->

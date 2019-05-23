@@ -71,6 +71,6 @@ function showUser(str){
              document.getElementById("listeMaison").innerHTML = xmlhttp.responseText;
         }
     }
-    xmlhttp.open("GET", "/AtHome/view/js/get_room.php?q=" + str, true);
+    xmlhttp.open("GET", "/AtHome/view/js/get_room_secondaire.php?q=" + str, true);
     xmlhttp.send();
 }

@@ -17,10 +17,7 @@ $value_home_id = $req_home_id->fetch();
 $reponse2 = get_addresses((int)$_SESSION['id']);
 $reponse3 = get_name_room((int)$_SESSION['id']); ?>
 
-<form method='post'>
-	<input type="hidden" name="home_id" value= "<?php echo $value_home_id[0];?>">
-	<input onclick="return confirm('Etes vous sûrs ?')" id="del_home" name="delete_home" type='submit' value='Supprimer Home'>
-</form>
+
 
 <?php
 while ($donnees3 = $req->fetch()){ ?>
@@ -49,12 +46,6 @@ while ($donnees3 = $req->fetch()){ ?>
 					<div class="piece_img">
 						<img src="/AtHome/res/cuisine.jpg" width="85em" height="85em">
 					</div>
-					<div class="delete_piece">
-						<form method="post">
-							<input name="identi_room" type="hidden" value=" <?php echo ($donnees3['room_id'])?>">
-							<input onclick="return confirm('Etes vous sûrs ?')" type="submit" name ="button_delete_room" id="button_manage_room" value="Supprimer">
-						</form>
-					</div>
 				</div>
 				<div class="liste_capteurs">
 					<?php
@@ -70,11 +61,7 @@ while ($donnees3 = $req->fetch()){ ?>
 										<span class="slider round"></span>
 									</label>
 								<?php } ?>
-								<form method="post">
-									<input name="ident_room" type="hidden" value=" <?php echo ($donnees3['room_id'])?>">
-									<input name="id_capteur" type="hidden" value=" <?php echo ($donnees['equipment_id'])?>">
-									<input name="supprimer_capteur" type="submit" value="Supprimer">
-								</form>
+								
 							</div>
 						<?php } ?>
 					</div>
