@@ -39,16 +39,8 @@
     </script>
 </head>
 <body>
-    <div id ="conteneur_principal">
-        <menu>
-            <ul class="menul">
-                <span id="titleMenu" class="notLastLi"> Menu </span>
-                <li class="notLastLi"><a href="">Alerte Automatique</a></li>
-                <li class="notLastLi"><a href="">Desactivite alerte</a></li>
-            </ul>
-        </menu>
-
-        <div id="bloc_colonne_right">
+    <div id="bloc_page">
+        <div id ="conteneur_principal">
             <div id="container_customer_information">
                 <div id="choix">
                     <form id="form_choix">

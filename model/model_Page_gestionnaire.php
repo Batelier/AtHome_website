@@ -22,23 +22,28 @@ $q = isset($_GET["q"]) ? intval($_GET["q"]) : '';
                         </div>
                     </div>
                     <div class='corps'>
-                        <div class='profil'>
-                            <div class='photo_profile'>
-                                <img src='res/profil_pic.png'/>
+                        <div class='infos'>
+                            <div class='profil'>
+                                <div class='photo_profil'>
+                                    <img src='res/profil_pic.png' class='profil_pic'/>
+                                </div>
+                                <div class='nom_prenom'>
+                                    <p>".$row["first_name"]." ".$row["name"] . "</p>
+                                </div>
                             </div>
-                            <div class='nom_prenom'>
-                                <p>".$row["first_name"]." ".$row["name"] . "</p>
-                            </div>
-                            <div class='adrress'>
-                                <p>68 Rue de Biture sur Orge</p>
+                            <div class='address'>
+                                    <p>68 Rue de Biture sur Orge</p>
                             </div>
                         </div>
                         <div class='consommation'>
-                            <img src='res/2861.png_300.png' />
+                            <img src='res/2861.png_300.png' class='conso_pic'/>
                         </div>
                         <div class='deux_button'>
                             <button type='button'>Contact</button>
                             <button type='button'>Alerte De Consommation</button>
+                            <form method='post'>
+                                <input type='submit' id='button_delete' name='del[". $row['user_id'] ."]' value='Supprimer'></input> 
+                            </form>
                         </div>
                     </div>
                 </div>";
@@ -50,3 +55,5 @@ $q = isset($_GET["q"]) ? intval($_GET["q"]) : '';
     }
 
     mysqli_close($con);
+
+    
