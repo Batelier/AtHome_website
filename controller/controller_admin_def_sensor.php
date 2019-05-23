@@ -14,7 +14,7 @@ if (isset($_SESSION['isAdminConnected']) and $_SESSION['isAdminConnected'] == tr
 		$current_sensor = get_sensor_info($ui);
 	}
 	if (isset($_POST['add_sensor'])) {
-		//$manufacturer, $model, $price, $orating_state
+		//$manufacter, $model, $price, $orating_state
 		add_sensor($_POST['constructeur'], $_POST['model'], $_POST['prix'], $_POST['orating_state'], $_POST['sensor_name'], $_POST['description']);
 	}
 

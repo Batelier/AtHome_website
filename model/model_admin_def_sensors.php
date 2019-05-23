@@ -12,20 +12,20 @@ function get_all_sensors(){
 	return $sensors;
 }
 //($_POST['constructeur'], $_POST['model'], $_POST['prix'], $_POST['orating_state'], $_POST['sensor_name']);
-function add_sensor($manufacturer, $model, $price, $orating_state, $name, $description){
+function add_sensor($manufacter, $model, $price, $orating_state, $name, $description){
 	db_connect();
 	global $db;
 
-	$req = $db -> prepare('INSERT INTO equipment(manufacturer, model, price, orating_state, name, description) VALUES (?, ?, ?, ?, ?, ?)');
-	$req -> execute([$manufacturer, $model, $price, $orating_state, $name, $description]);
+	$req = $db -> prepare('INSERT INTO equipment(manufacter, model, price, orating_state, name, description) VALUES (?, ?, ?, ?, ?, ?)');
+	$req -> execute([$manufacter, $model, $price, $orating_state, $name, $description]);
 }
 
-function mod_sensor($manufacturer, $model, $price, $orating_state, $name, $description){
+function mod_sensor($manufacter, $model, $price, $orating_state, $name, $description){
 	db_connect();
 	global $db;
 
-	$req = $db -> prepare('UPDATE equipment SET manufacturer=?, model=?, price=?, orating_state=?, name=?, description=? WHERE equipment_id LIKE ?');
-	$req -> execute([$manufacturer, $model, $price, $orating_state, $name, $description, $_SESSION['sensor_id']]);
+	$req = $db -> prepare('UPDATE equipment SET manufacter=?, model=?, price=?, orating_state=?, name=?, description=? WHERE equipment_id LIKE ?');
+	$req -> execute([$manufacter, $model, $price, $orating_state, $name, $description, $_SESSION['sensor_id']]);
 
 }
 
