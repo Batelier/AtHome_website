@@ -1,4 +1,4 @@
-function popup(str){
+function popup(){
     
 	document.getElementById('fond_noir').style.display = "block";
 	document.getElementById('popup_modifier').style.display = "block";
@@ -6,14 +6,27 @@ function popup(str){
 function close_popup(){
 	document.getElementById('fond_noir').style.display = "none";
 	document.getElementById('popup_modifier').style.display = "none";
+   // document.getElementById('mod').style.display = "none";
+    document.getElementById('popup_add').style.display = "none";
+}
+function really(){
+    alert("Cet utilisateur va être supprimé.");
+}
+function popup_add(){
+    document.getElementById('fond_noir').style.display = "block";
+    document.getElementById('popup_add').style.display = "block";
+}
+function popup_mod(){
+    document.getElementById('fond_noir').style.display = "block";
+    document.getElementById('popup_modifier').style.display = "block";
 }
 
 /*Ajax function*/
-function showUser(str)
+function ajax(str)
             {
                 if (str == "")
                 {
-                    //document.getElementById("txtHint").innerHTML = "";
+                    document.getElementById("txtHint").innerHTML = "";
                     return;
                 }
                 if (window.XMLHttpRequest) {

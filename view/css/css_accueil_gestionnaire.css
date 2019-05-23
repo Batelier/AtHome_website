@@ -1,4 +1,181 @@
 
+body
+{
+    background: linear-gradient(to bottom right, rgba(242,246,248,0.7) 0%,rgba(216,225,231,0.7) 50%,rgba(181,198,208,0) 51%,rgba(224,239,249,0) 100%) fixed, url(/AtHome/res/fond3.jpg) no-repeat center fixed;
+    background-size: cover;
+}
+
+p{
+    text-align: justify;
+}
+#bloc_page{
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    padding-top: 1em; 
+    padding-bottom: 1em; 
+}
+
+#conteneur_principal
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%; 
+}
+
+
+    #container_customer_information{
+        display : flex;
+        flex-direction: column;
+        align-items: center; 
+        border : 1px solid black;
+        border-radius: 1em; 
+        background-color: white; 
+        width: 100%; 
+    }
+
+        #choix{
+            /*border: 1px solid green;*/
+        }
+
+            #choix form{
+                display : flex;
+                flex-direction: row;
+                align-items: center; 
+                justify-content: space-around;
+            }
+                .select{
+                    padding: 0.2em;
+                }
+
+        #txtHint{
+           width: 100%;
+           display: flex; 
+           flex-direction: column;
+           justify-content: center;
+           align-items: center; 
+        }
+
+            .customer_information{
+                display : flex;
+                flex-direction : column;
+                /*justify-content: center; 
+                align-items: center;*/ 
+                border : 1px solid black;
+                border-radius: 1em; 
+                margin: 1em;
+                overflow: hidden;
+                width: 90%;
+            }
+
+                .customer_information div{
+                    padding: 0.5em;
+                }
+
+                .entete{
+                    flex:1;
+                    background-color: #0047ab; 
+                }
+
+                    .num_appartement{
+                        color: white; 
+                    }
+
+                .corps{
+                    display: flex;
+                    flex-direction: row;
+                    flex: 3;
+                    max-height: 15em;
+                }
+
+                    .infos{
+                        display: flex;
+                        flex-direction: column;
+                        flex: 3;
+                        border-radius: 1em; 
+                        /*box-shadow: 0.2em 0.2em 1em black;*/ 
+                    }
+
+                        .profil{
+                            flex: 1;
+                            display: flex;
+                            flex-direction: row;
+                            flex-wrap: wrap; 
+                            /*border : 1px solid black;*/
+                        }
+
+                            .photo_profil{
+
+                                flex: 1;
+                                /*max-width: 3em;*/
+                                min-width: 3em;
+                                /*border: 1px solid blue;*/ 
+                            }
+
+                                .profil_pic{
+                                    width: 100%;
+                                }
+
+                            .nom_prenom{
+                               flex: 2; 
+                               /*border: 1px solid black;*/ 
+                            }
+
+                        .address{
+                            flex: 1;
+                            /*border: 1px solid black;*/
+                        }
+
+                    .consommation{
+                        flex: 5;
+                    }
+
+                        .conso_pic{
+                            width: 100%; 
+                            height: 100%; 
+                        }
+
+                    .deux_button{
+                        display: flex; 
+                        flex-direction: column; 
+                        flex: 2;
+                    }
+
+/*
+#bloc_colonne_left
+{
+    width: 65%;
+    height: 100%;
+    margin : 2%;
+    display: flex;
+    flex-direction: column;
+}
+#leftSide
+{
+    height: 40em;
+    width: 20%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    margin: 1%;
+}
+#slogan
+{
+    height: 50px;
+    width: 300px;
+    background: white;
+
+}
+
+#container_customer_information
+{
+    width: 100%;
+    margin-top: 10%;
+}
+
+
 .container_search {
     width: 500px;
     height: 50px;
@@ -41,55 +218,6 @@
     outline: none;
 }
 
-body
-{
-    background: linear-gradient(to bottom right, rgba(242,246,248,0.7) 0%,rgba(216,225,231,0.7) 50%,rgba(181,198,208,0) 51%,rgba(224,239,249,0) 100%) fixed, url(/AtHome/res/fond3.jpg) no-repeat center fixed;
-    background-size: cover;
-}
-
-#conteneur_principal
-{
-    display: flex;
-}
-
-#bloc_colonne_left
-{
-    width: 65%;
-    height: 100%;
-    margin : 2%;
-    display: flex;
-    flex-direction: column;
-}
-#leftSide
-{
-    height: 40em;
-    width: 20%;
-    background: white;
-    display: flex;
-    flex-direction: column;
-    margin: 1%;
-}
-#slogan
-{
-    height: 50px;
-    width: 300px;
-    background: white;
-
-}
-
-#bloc_colonne_right
-{
-    display: flex;
-    flex-direction: column;
-
-
-}
-#container_customer_information
-{
-    width: 100%;
-    margin-top: 10%;
-}
-
-
+*/
 
 

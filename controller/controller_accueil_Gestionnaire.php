@@ -7,9 +7,6 @@ if (isset($_SESSION['isGestionnaireConneted']) and $_SESSION['isGestionnaireConn
 
     require('view/view_accueil_gestionnaire.php');
 
-    if (isset($_POST['register'])) {
-        echo "ton pere le chat";
-    }
 }
 else {
     echo "YOU ARE NOT LOGGED IN !";

@@ -1,0 +1,22 @@
+body{
+	display: flex;
+	flex-direction: column;
+	background: linear-gradient(to bottom right, rgba(242,246,248,0.7) 0%,rgba(216,225,231,0.7) 50%,rgba(181,198,208,0) 51%,rgba(224,239,249,0) 100%) fixed, url(/AtHome/res/fond4.jpg) no-repeat center fixed;
+	background-size: cover;
+}
+.title{
+	margin-left: 30%;
+	color: black;
+	font-weight: bold;
+}
+#main_info{
+	width: 40%;
+	margin: auto;
+}
+table{
+	border-style: dashed;
+	border-color: white;
+}
+input{
+	width: 80%;
+}
