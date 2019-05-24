@@ -34,9 +34,8 @@ elseif (isset($_SESSION['isAdminConnected']) and $_SESSION['isAdminConnected'] =
 	if(isset($_POST['add'])) {
 			//ajouter un elt
 			add($_POST['question'], $_POST['answer']);
-		}
 	}
-
+}
 
 if (isset($_POST['recherche'])){
 

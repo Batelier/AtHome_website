@@ -35,7 +35,7 @@ function add($question, $answer){
 	db_connect();
 	global $db; 
 
-	$req = $db -> prepare('INSERT INTO faq VALUES (NULL, ?, ?, 0)');
+	$req = $db -> prepare('INSERT INTO faq VALUES (NULL, ?, ?)');
 	$req -> execute([$question, $answer]);
 }
 
