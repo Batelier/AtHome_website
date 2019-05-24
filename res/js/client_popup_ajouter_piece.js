@@ -36,9 +36,24 @@ function graphique(id){
 		data: {
 			labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Ju', 'Jul','Aug','Sept','Oct','Nov','Dec'],
 	    datasets: [{
-	      label: 'apples',
+	      label: 'Consommation d eau',
 	      data: [12, 19, 3, 17, 6, 3, 7,8,15,11,10,8],
 	      backgroundColor: "rgba(153,255,51,0.4)"
+	    }]
+		}
+	});
+}
+
+function graphique1(id){
+	var ctx = document.getElementById(id).getContext('2d');
+	var myChart = new Chart(ctx, {
+		type: 'line',
+		data: {
+			labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Ju', 'Jul','Aug','Sept','Oct','Nov','Dec'],
+	    datasets: [{
+	      label: 'Consommation électrique',
+	      data: [6, 19, 12, 16, 20, 3, 2,8,1,11,15,15],
+	      backgroundColor: "rgba(255,133,10,0.4)"
 	    }]
 		}
 	});

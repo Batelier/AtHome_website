@@ -111,7 +111,7 @@
 
 	<div id="popup_details">
 			<div id="header_details">
-				<div id="txt_header_details">Ajouter un logement</div>
+				<div id="txt_header_details">Détail de vos consommations</div>
 				<div id="close_header_details" onclick="close_popup_details()"></div>
 			</div>
 			<div id="body_popup_details">
@@ -123,7 +123,7 @@
 				</div>
 			</div>
 			<script> graphique('myChart');
-			graphique('myChart1');</script>
+			graphique1('myChart1');</script>
 	</div>
 
 
