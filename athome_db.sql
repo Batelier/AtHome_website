@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  jeu. 09 mai 2019 à 09:44
+-- Généré le :  ven. 24 mai 2019 à 12:06
 -- Version du serveur :  5.7.24
 -- Version de PHP :  7.2.14
 
@@ -39,6 +39,29 @@ CREATE TABLE IF NOT EXISTS `attribute` (
   PRIMARY KEY (`secondary_user_id`),
   KEY `primary_user_id` (`primary_user_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `catalogue`
+--
+
+DROP TABLE IF EXISTS `catalogue`;
+CREATE TABLE IF NOT EXISTS `catalogue` (
+  `catalogue_id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) NOT NULL,
+  `text` varchar(255) NOT NULL,
+  PRIMARY KEY (`catalogue_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `catalogue`
+--
+
+INSERT INTO `catalogue` (`catalogue_id`, `title`, `text`) VALUES
+(1, 'Nouveau capteur disponible !', 'Nouveau capteur de tempÃ©rature disponible !'),
+(2, 'Mise Ã  jour de la faq', 'DerniÃ¨re question rÃ©ponse en ligne !'),
+(3, 'DÃ©couvrez AtHome', 'AtHome, la solution domotique');
 
 -- --------------------------------------------------------
 
@@ -103,9 +126,18 @@ CREATE TABLE IF NOT EXISTS `equipment` (
   `manufacter` varchar(255) NOT NULL,
   `model` varchar(255) NOT NULL,
   `price` float NOT NULL,
-  `orating_state` tinyint(1) NOT NULL,
+  `orating_state` tinyint(4) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `description` varchar(255) NOT NULL,
   PRIMARY KEY (`equipment_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `equipment`
+--
+
+INSERT INTO `equipment` (`equipment_id`, `manufacter`, `model`, `price`, `orating_state`, `name`, `description`) VALUES
+(1, 'Stark Industries', 'ART', 50, 1, 'lumiere', 'rÃ©gler la luminositÃ©');
 
 -- --------------------------------------------------------
 
@@ -148,7 +180,6 @@ CREATE TABLE IF NOT EXISTS `faq` (
   `question_id` int(11) NOT NULL AUTO_INCREMENT,
   `question` text NOT NULL,
   `answer` text NOT NULL,
-  `useful` int(11) NOT NULL,
   PRIMARY KEY (`question_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
@@ -156,10 +187,8 @@ CREATE TABLE IF NOT EXISTS `faq` (
 -- Déchargement des données de la table `faq`
 --
 
-INSERT INTO `faq` (`question_id`, `question`, `answer`, `useful`) VALUES
-(1, 'Comment DABer ?', '1. tendre un bras sur le coté (sans faire de salut nazi) \r\n2. tendre le deuxieme bras dans la meme direction que le premier\r\n3. plier legèrement le 2eme \r\n\r\nEt voila ! Vous avez accompli votre 1er DAB ! \r\nFélicitation GIGA-DABeur !!!', 666),
-(2, 'Tous les pokemons sont-ils gay ?', 'La réponse est toute trouvée : les pokémons possedant un genre ne sont pas forcément gay (mais apres ils font ce qu\'ils veulent tavu). Au contraire les pokemon ne possedant pas de genre se reproduisent par mitose, et donc ne copulent pas. Ceci enlève donc tout doute possible : les pokémons non genrés ne sont pas gay. Toutefois, la théorie de la mitose n\'est pas admise par toute la communauté scientifique. De ce fait, les partisans de #balanceTaMitose considèrent que tous les pokémons non genrés sont gay.\r\n(Cet article est \"pour un ami\")  ', 151),
-(3, 'Comment ?', 'Comme ça : Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec sagittis massa. Nulla facilisi. Cras id arcu lorem, et semper purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis vel enim mi, in lobortis sem. Vestibulum luctus elit eu libero ultrices id fermentum sem sagittis.', 2);
+INSERT INTO `faq` (`question_id`, `question`, `answer`) VALUES
+(3, 'Comment ajouter une piÃ¨ce ?', 'Dans votre espace \"Home\", cliquez sur \"ajouter piÃ¨ce\", sÃ©lectionnez la maison dans laquelle vous voulez ajouter la piÃ¨ce, puis indiquez son nom et la surface.');
 
 -- --------------------------------------------------------
 
@@ -176,10 +205,26 @@ CREATE TABLE IF NOT EXISTS `home` (
   `water_consumption` float NOT NULL,
   `electrical_consumption` float NOT NULL,
   `user_id` int(11) NOT NULL,
-  `room_id` int(11) NOT NULL,
   PRIMARY KEY (`home_id`),
-  KEY `user_id` (`user_id`),
-  KEY `room_id` (`room_id`)
+  KEY `user_id` (`user_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `image`
+--
+
+DROP TABLE IF EXISTS `image`;
+CREATE TABLE IF NOT EXISTS `image` (
+  `image_id` int(11) NOT NULL AUTO_INCREMENT,
+  `bin_data` longblob,
+  `filename` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `filesize` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `file_type` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `user_id` int(11) NOT NULL,
+  PRIMARY KEY (`image_id`),
+  KEY `user_id` (`user_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -320,14 +365,16 @@ CREATE TABLE IF NOT EXISTS `user` (
   `registration` date NOT NULL,
   `user_type` varchar(255) NOT NULL,
   PRIMARY KEY (`user_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `user`
 --
 
 INSERT INTO `user` (`user_id`, `name`, `first_name`, `password`, `mail`, `phone`, `mobile`, `registration`, `user_type`) VALUES
-(1, 'latouffe', 'bob', '$2y$10$hpD/ZOO3QzwwhrGRG73.Nudkjfuxvd8ycO/HIjBlhzy4bUyT3W26W', 'client@gmail.com', '0000000000', '0000000000', '2019-05-07', 'utilisateur_principal');
+(7, 'Roberjot', 'Baptiste', '$2y$10$icRRWS0D3zLgZ3E8ZVUFOe7c/S..T9N/9UP4N2LpsAfLgUilu6FYe', 'admin@gmail.com', '0656565656', '02', '2019-05-09', 'administrateur'),
+(6, 'Roberjot', 'Baptiste', '$2y$10$0j9oEF3omX0V0K5AwCUtEOPD1xuD7XQ/lslJZQQgklBRxBxxbmslS', 'client@gmail.com', '0656565656', '0', '2019-05-02', 'utilisateur_principal'),
+(5, 'Roberjot', 'Baptiste', '$2y$10$2hoC70wnJOg3i7AZo/O55OU3eg4Ez7pEeQFUHBj85alIrN4Ycq/0m', 'baptiste.roberjot@gmail.com', '0656565656', '546874', '2019-05-09', 'administrateur');
 
 -- --------------------------------------------------------
 
