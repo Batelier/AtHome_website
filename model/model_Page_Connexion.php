@@ -27,7 +27,7 @@ function get_all_news(){
 	db_connect();
 	global $db;
 
-	$req = $db -> prepare('SELECT * FROM catalogue');
+	$req = $db -> prepare('SELECT * FROM catalogue ORDER BY catalogue_id DESC');
 	$req -> execute();
 	$news = $req -> fetchAll();
 
