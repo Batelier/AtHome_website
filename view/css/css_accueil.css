@@ -117,11 +117,14 @@
 		width: 20%;	
 	}
 	#bloc_text_rating{
+		background-color: rgba(255,255,255,0.8);
 		margin-left: 2.5%;
 		width: 84.5%;
-		background: white;
 		border-radius: 2em;
 		display: flex;
+		color: #0047ab;
+		font-size: 1rem;
+		font-weight: bold;
 	}
 	#comment{
 		margin: auto;

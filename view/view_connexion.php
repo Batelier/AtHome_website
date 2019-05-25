@@ -27,9 +27,9 @@
 							<?php 
 								//select a random coment within those which are availables
 								//model + controller import les variables 
-								$star_nb = 4; //sera plus tard tiré de la bdd
-								$user_name = "Joe ";
-								$txt = "AtHome c'est vraiment le feu !";
+								$star_nb = $daily_comment["rating"]; //sera plus tard tiré de la bdd
+								$user_name = $daily_comment['user_id'];
+								$txt = $daily_comment["comment"];
 
 								for ($i=0; $i < $star_nb; $i++) {
 									?>
@@ -48,7 +48,7 @@
 					 	</div>
 					</div>
 					<div id="bloc_text_rating">
-						<span id="comment"> <?php echo ($user_name) ?> nous dit : <?php echo ($txt) ?> </span>
+						<span id="comment"> Anonyme : <?php echo ($txt) ?> </span>
 					</div>
 							
 				</div>
@@ -85,23 +85,21 @@
 
 				<div class="bloc_contact">
 					<span id="txt_contact">Nous contacter</span>
-                    <script>
-                        function contact_us_alert()
-                        {
-                            alert("Merci de nous contacter! ");
-                        }
-                    </script>
-					<form id = "Contact" action="routeur.php?cible=controller_contact_us" method="post" onsubmit="contact_us_alert()" ">
-
+					<script>
+						function contact_us_alert()
+						{
+							alert("Merci de nous contacter! ");
+						}
+					</script>
+					<form id = "Contact" action="routeur.php?cible=controller_contact_us" method="post" onsubmit="contact_us_alert()">
 						<br>
 						<label>Nom complet</label>
-   						<input class="input_contact" type="text" name="nom_complet" placeholder="Jean Dupont" required="required"/>
-   						<label>Adresse mail</label>
-   						<input class="input_contact" type="text" name="mail" placeholder="exemple@gmail.com" required="required" />
-   						<label>Message</label>
-   						<textarea name="text_area" required="required"></textarea>
-   			            <input class="input_contact" type="submit" value="Envoyer" >
-
+						<input class="input_contact" type="text" name="nom_complet" placeholder="Jean Dupont" required="required"/>
+						<label>Adresse mail</label>
+						<input class="input_contact" type="text" name="mail" placeholder="exemple@gmail.com" required="required" />
+						<label>Message</label>
+						<textarea name="text_area" required="required"></textarea>
+						<input class="input_contact" type="submit" value="Envoyer" >
 					</form>
 				</div>
 			</div><!-- Se connecter, mdp oublié, inscription, Nous contacter -->

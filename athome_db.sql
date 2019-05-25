@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  ven. 24 mai 2019 à 12:06
+-- Généré le :  sam. 25 mai 2019 à 18:38
 -- Version du serveur :  5.7.24
 -- Version de PHP :  7.2.14
 
@@ -76,7 +76,19 @@ CREATE TABLE IF NOT EXISTS `contact_us` (
   `mail` varchar(255) NOT NULL,
   `message` text NOT NULL,
   PRIMARY KEY (`contact_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `contact_us`
+--
+
+INSERT INTO `contact_us` (`contact_id`, `complete_name`, `mail`, `message`) VALUES
+(1, 'Baptiste Roberjot', 'yomek@g.com', 'Bonsoir'),
+(2, 'Baptiste Roberjot', 'baptiste.rbj@gmail.com', 'Bonsoir'),
+(3, 'Baptiste Roberjot', 'yomek@g.com', 'zerg'),
+(4, 'Baptiste Roberjot', 'yomek@g.com', 'zaefaze'),
+(5, 'Baptiste Roberjot', 'azer', 'azeufbgalzueo azliejpazile alzhbfe'),
+(6, 'Baptiste Roberjot', 'baptiste.rbj@gmail.com', 'Bonsoir, je ne parviens pas Ã  daber');
 
 -- --------------------------------------------------------
 
@@ -112,7 +124,17 @@ CREATE TABLE IF NOT EXISTS `equip` (
   PRIMARY KEY (`equip_id`),
   KEY `equipment_id` (`equipment_id`),
   KEY `room_id` (`room_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `equip`
+--
+
+INSERT INTO `equip` (`equip_id`, `equipment_id`, `room_id`) VALUES
+(3, 3, 2),
+(2, 3, 1),
+(4, 1, 2),
+(5, 1, 3);
 
 -- --------------------------------------------------------
 
@@ -130,14 +152,15 @@ CREATE TABLE IF NOT EXISTS `equipment` (
   `name` varchar(255) NOT NULL,
   `description` varchar(255) NOT NULL,
   PRIMARY KEY (`equipment_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `equipment`
 --
 
 INSERT INTO `equipment` (`equipment_id`, `manufacter`, `model`, `price`, `orating_state`, `name`, `description`) VALUES
-(1, 'Stark Industries', 'ART', 50, 1, 'lumiere', 'rÃ©gler la luminositÃ©');
+(1, 'Stark Industries', 'ART', 50, 1, 'lumiere', 'rÃ©gler la luminositÃ©'),
+(3, 'Tony Stark', 'RTY', 50, 1, 'lumiere', 'Allumer ou Ã©teindre');
 
 -- --------------------------------------------------------
 
@@ -181,14 +204,15 @@ CREATE TABLE IF NOT EXISTS `faq` (
   `question` text NOT NULL,
   `answer` text NOT NULL,
   PRIMARY KEY (`question_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `faq`
 --
 
 INSERT INTO `faq` (`question_id`, `question`, `answer`) VALUES
-(3, 'Comment ajouter une piÃ¨ce ?', 'Dans votre espace \"Home\", cliquez sur \"ajouter piÃ¨ce\", sÃ©lectionnez la maison dans laquelle vous voulez ajouter la piÃ¨ce, puis indiquez son nom et la surface.');
+(3, 'Comment ajouter une piÃ¨ce ?', 'Dans votre espace \"Home\", cliquez sur \"ajouter piÃ¨ce\", sÃ©lectionnez la maison dans laquelle vous voulez ajouter la piÃ¨ce, puis indiquez son nom et la surface.'),
+(5, 'Question', 'RÃ©ponse\r\n');
 
 -- --------------------------------------------------------
 
@@ -207,7 +231,15 @@ CREATE TABLE IF NOT EXISTS `home` (
   `user_id` int(11) NOT NULL,
   PRIMARY KEY (`home_id`),
   KEY `user_id` (`user_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `home`
+--
+
+INSERT INTO `home` (`home_id`, `address`, `postal_code`, `area`, `water_consumption`, `electrical_consumption`, `user_id`) VALUES
+(2, '12 rue du pont royal', 69420, 300, 1, 1, 6),
+(3, '20 rue de Vanves', 78130, 450, 1, 1, 6);
 
 -- --------------------------------------------------------
 
@@ -310,7 +342,16 @@ CREATE TABLE IF NOT EXISTS `room` (
   `home_id` int(11) NOT NULL,
   PRIMARY KEY (`room_id`),
   KEY `home_id` (`home_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `room`
+--
+
+INSERT INTO `room` (`room_id`, `name`, `area`, `home_id`) VALUES
+(1, 'Chambre', 50, 1),
+(2, 'salle de bain', 20, 2),
+(3, 'Cuisine', 30, 3);
 
 -- --------------------------------------------------------
 
@@ -390,7 +431,16 @@ CREATE TABLE IF NOT EXISTS `website_rating` (
   `user_id` int(11) NOT NULL,
   PRIMARY KEY (`rating_id`),
   KEY `user_id` (`user_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `website_rating`
+--
+
+INSERT INTO `website_rating` (`rating_id`, `comment`, `rating`, `user_id`) VALUES
+(14, 'Plus besoin de se lever pour allumer les lumiÃ¨res !', 3, 1),
+(13, 'TrÃ¨s pratique !', 4, 1),
+(12, 'J\'utilise AtHome tous les jours !', 5, 1);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
