@@ -25,6 +25,14 @@ function close_popup_details(){
 	document.getElementById('fond_noir').style.display = "none";
 	document.getElementById('popup_details').style.display = "none";
 }
+function popup_mod_piece(){
+	document.getElementById('fond_noir').style.display = "block";
+	document.getElementById('popup_mod_piece').style.display = "block";
+}
+function close_popup_mod_piece(){
+	document.getElementById('fond_noir').style.display = "none";
+	document.getElementById('popup_mod_piece').style.display = "none";
+}
 
 
 

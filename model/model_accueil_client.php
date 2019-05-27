@@ -89,6 +89,13 @@ function add_room($name,$area,$home_id){
 	$req-> execute([$name,$area,$home_id]);
 }
 
+function mod_room($name,$area,$room){
+	db_connect();
+	global $db;
+	$req = $db -> prepare('	UPDATE room SET name = ?, area=? WHERE name = ?');
+	$req->execute(array($name,$area,$room));
+}
+
 function get_addresses($id){
 	db_connect();
 	global $db;

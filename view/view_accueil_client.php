@@ -16,7 +16,9 @@
 			<div id="menu">
 				<ul class="menul">
 					<span id="titleMenu" class="notLastLi"> Menu </span>
-					<li class="notLastLi"><a href="">Modifier pièce</a></li>
+					<div class="inner_button">
+						<button id="button_mod_piece" name="modifier_piece" onclick="popup_mod_piece()" >Modifier pièce</button> </td>
+					</div>
 					<div class="inner_button">
 						<button id="button_ajouter_piece" name="ajouter_piece" onclick="popup()" >Ajouter piece</button> </td>
 					</div>
@@ -104,6 +106,39 @@
 						</table>
 						<div id="bloc_register_button">
 							<input type="submit" value="Valider" name="register_button_ajouter_home" id="register_button_ajouter_home">
+						</div>
+				</form>
+			</div>
+	</div>
+	<div id="popup_mod_piece">
+			<div id="header_mod_piece">
+				<div id="txt_header_mod_piece">Modifier une pièce</div>
+				<div id="close_header_mod_piece" onclick="close_popup_mod_piece()"></div>
+			</div>
+			<div id="body_popup_mod_piece">
+				<form method="post" action="" class="formulaire">
+						<table id="table_ajouter_piece">
+							<tr>
+								<td><label for="wich_home">Pièce </label></td>
+								<td><select name="pieces" id="homes">
+									<?php
+									while ($donnees5 = $reponse5->fetch()){
+									?>
+									<option><?php echo $donnees5[0];?></option>
+									<?php } ?>
+								</select></td>
+							</tr>
+							<tr>
+								<td><label for="prenom">Changer le nom de la pièce : </label></td>
+								<td><input class="input_field" type="text" name="mod_name_piece" id="prenom" maxlength="20" autofocus></td>
+							</tr>
+							<tr>
+								<td><label for="nom">Changer la superficie de la pièce : </label></td>
+								<td><input class="input_field" type="number" step="0.1" name="mod_area_piece" id="nom" maxlength="20" ></td>
+							</tr>
+						</table>
+						<div id="bloc_register_button">
+							<input type="submit" value="Valider" name="register_button_mod_piece" id="register_button_ajouter_piece">
 						</div>
 				</form>
 			</div>
