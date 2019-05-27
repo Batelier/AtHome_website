@@ -70,23 +70,23 @@
 						<table id="table_modifier">
 							<tr>
 								<td><label for="sensor_name">Nom</label></td>
-								<td><input class="input_field" type="tel" name="sensor_name" maxlength="20" value="<?php echo($current_sensor['name']) ?>"></td>
+								<td><input class="input_field" type="text" name="sensor_name" required maxlength="20" value="<?php echo($current_sensor['name']) ?>"></td>
 							</tr>
 							<tr>
 								<td><label for="sensor_name">Description</label></td>
-								<td><input class="input_field" type="tel" name="description" value="<?php echo($current_sensor['description']) ?>"></td>
+								<td><input required class="input_field" type="text" name="description" value="<?php echo($current_sensor['description']) ?>"></td>
 							</tr>
 							<tr>
 								<td><label for="prenom">Modèle</label></td>
-								<td><input class="input_field" type="text" name="model" id="prenom" maxlength="20" autofocus value="<?php echo($current_sensor['model']) ?>"></td>
+								<td><input required  class="input_field" type="text" name="model" id="prenom" maxlength="20" autofocus value="<?php echo($current_sensor['model']) ?>"></td>
 							</tr>
 							<tr>
 								<td><label for="nom">Constructeur</label></td>
-								<td><input class="input_field" type="text" name="constructeur" id="nom" value="<?php echo($current_sensor['manufacter']) ?>" ></td>
+								<td><input  required class="input_field" type="text" name="constructeur" id="nom" value="<?php echo($current_sensor['manufacter']) ?>" ></td>
 							</tr>
 							<tr>
 								<td><label for="telFixe">Prix</label></td>
-								<td><input class="input_field" type="tel" name="prix" id="telFixe" maxlength="10" value="<?php echo($current_sensor['price']) ?>"></td>
+								<td><input  required class="input_field" type="number" name="prix" id="telFixe" maxlength="10" value="<?php echo($current_sensor['price']) ?>"></td>
 							</tr>
 							<input type="hidden" name="orating_state" value="<?php echo($current_sensor['orating_state']) ?>">
 
@@ -108,23 +108,23 @@
 						<table id="table_modifier">
 							<tr>
 								<td><label for="sensor_name">Nom</label></td>
-								<td><input class="input_field" type="tel" name="sensor_name" maxlength="20"></td>
+								<td><input required  class="input_field" type="tel" name="sensor_name" maxlength="20"></td>
 							</tr>
 							<tr>
 								<td><label for="sensor_name">Description</label></td>
-								<td><input class="input_field" type="tel" name="description" ></td>
+								<td><input  required class="input_field" type="tel" name="description" ></td>
 							</tr>
 							<tr>
 								<td><label for="prenom">Modèle</label></td>
-								<td><input class="input_field" type="text" name="model" id="prenom" maxlength="20" autofocus value=""></td>
+								<td><input required  class="input_field" type="text" name="model" id="prenom" maxlength="20" autofocus value=""></td>
 							</tr>
 							<tr>
 								<td><label for="nom">Constructeur</label></td>
-								<td><input class="input_field" type="text" name="constructeur" id="nom" maxlength="20" ></td>
+								<td><input required  class="input_field" type="text" name="constructeur" id="nom" maxlength="20" ></td>
 							</tr>
 							<tr>
 								<td><label for="telFixe">Prix</label></td>
-								<td><input class="input_field" type="tel" name="prix" id="telFixe" maxlength="10"></td>
+								<td><input  required class="input_field" type="number" name="prix" id="telFixe" maxlength="10"></td>
 							</tr>
 							<input type="hidden" name="orating_state" value="1">
 

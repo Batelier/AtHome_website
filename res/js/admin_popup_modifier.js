@@ -13,7 +13,7 @@ function really(){
     alert("Cet utilisateur va être supprimé.");
 }
 function equip_del(){
-    alert("Cet capteur va être supprimé.");
+    alert("Ce capteur va être supprimé.");
 }
 function popup_add(){
     document.getElementById('fond_noir').style.display = "block";

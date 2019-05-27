@@ -79,25 +79,25 @@
 						<table id="table_modifier">
 							<tr>
 								<td><label for="prenom">Prénom</label></td>
-								<td><input class="input_field" type="text" name="prenom" id="prenom" maxlength="20" autofocus value=""></td>
+								<td><input  required class="input_field" type="text" name="prenom" id="prenom" maxlength="20" autofocus value=""></td>
 							</tr>
 							<tr>
 								<td><label for="nom">Nom</label></td>
-								<td><input class="input_field" type="text" name="nom" id="nom" maxlength="20" ></td>
+								<td><input  required class="input_field" type="text" name="nom" id="nom" maxlength="20" ></td>
 							</tr>
 							<tr>
 								<td><label for="telFixe">Téléphone fixe</label></td>
-								<td><input class="input_field" type="tel" name="telFixe" id="telFixe" maxlength="10"></td>
+								<td><input  required class="input_field" type="tel" name="telFixe" id="telFixe" maxlength="10"></td>
 							</tr>
 							<tr>
 								<td><label for="portable">Téléphone portable</label></td>
-								<td><input class="input_field" type="tel" name="portable" id="portable" maxlength="10"></td>	
+								<td><input  required class="input_field" type="tel" name="portable" id="portable" maxlength="10"></td>	
 							</tr>
 							
 							<tr>
 								<td><label for="type">Type d'utilisateur</label></td>
 								<td>
-									<select class="input_select" name='type'>
+									<select required  class="input_select" name='type'>
 										<option value="utilisateur_principal">Utilisateur principal</option>
 										<option value="utilisateur_secondaire">Utilisateur secondaire</option>
 										<option value="gestionnaire">Gestionnaire d'immeuble</option>

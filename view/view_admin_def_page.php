@@ -53,11 +53,11 @@
 				<table>
 					<tr>
 						<td><label for="question">Titre</label></td>
-						<td><input class="input_title" name="title" id="question" autofocus value="" placeholder="Titre de la nouvelle"></input></td>
+						<td><input  required class="input_title" name="title" id="question" autofocus value="" placeholder="Titre de la nouvelle"></input></td>
 					</tr>
 					<tr>
 						<td><label for="answer">Annonce</label></td>
-						<td ><textarea class="input_body" name="text" id="answer" value="" placeholder="Nouvelle"></textarea></td>
+						<td ><textarea  required class="input_body" name="text" id="answer" value="" placeholder="Nouvelle"></textarea></td>
 					</tr>
 				</table>
 				<div class="bloc_register_button">
@@ -78,11 +78,11 @@
 				<table>
 					<tr>
 						<td><label for="question">Titre</label></td>
-						<td><input class="input_title" name="mod_title" id="question" autofocus value="<?php echo($current_news['title']) ?>" ></input></td>
+						<td><input  required class="input_title" name="mod_title" id="question" autofocus value="<?php echo($current_news['title']) ?>" ></input></td>
 					</tr>
 					<tr>
 						<td><label for="answer">Annonce</label></td>
-						<td ><textarea class="input_body" name="mod_text" id="answer" value="" ><?php echo($current_news['text']) ?></textarea></td>
+						<td ><textarea  required class="input_body" name="mod_text" id="answer" value="" ><?php echo($current_news['text']) ?></textarea></td>
 					</tr>
 				</table>
 				<div class="bloc_register_button">

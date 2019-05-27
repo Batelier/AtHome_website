@@ -13,26 +13,26 @@
 			<table id="table_modifier">
 				<tr>
 					<td><label for="prenom">Prénom</label></td>
-					<td><input class="input_field" type="text" name="prenom" id="prenom" maxlength="20" autofocus value="<?php echo($user_info['first_name']) ?>"></td>
+					<td><input  required class="input_field" type="text" name="prenom" id="prenom" maxlength="20" autofocus value="<?php echo($user_info['first_name']) ?>"></td>
 				</tr>
 				<tr>
 					<td><label for="nom">Nom</label></td>
-					<td><input class="input_field" type="text" name="nom" id="nom" maxlength="20" 
+					<td><input  required class="input_field" type="text" name="nom" id="nom" maxlength="20" 
 						value="<?php echo($user_info['name']) ?>"></td>
 				</tr>
 				<tr>
 					<td><label for="mail">Mail</label></td>
-					<td><input class="input_field" type="text" name="mail"
+					<td><input required  class="input_field" type="text" name="mail"
 						value="<?php echo($user_info['mail']) ?>"></td>
 				</tr>
 				<tr>
 					<td><label for="telFixe">Téléphone fixe</label></td>
-					<td><input class="input_field" type="tel" name="telFixe" id="telFixe" maxlength="10"
+					<td><input  required class="input_field" type="tel" name="telFixe" id="telFixe" maxlength="10"
 						value="<?php echo($user_info['phone']) ?>"></td>
 				</tr>
 				<tr>
 					<td><label for="portable">Téléphone portable</label></td>
-					<td><input class="input_field" type="tel" name="portable" id="portable" maxlength="10"
+					<td><input required  class="input_field" type="tel" name="portable" id="portable" maxlength="10"
 						value="<?php echo($user_info['mobile']) ?>"></td>	
 				</tr>
 				<tr>

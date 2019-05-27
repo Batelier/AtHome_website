@@ -38,10 +38,9 @@
 			}
 			?>
 			<div id="recherche">
-				<form method="post" action="routeur.php?cible=controller_faq" id="recherche">
+				<!-- <form method="post" action="routeur.php?cible=controller_faq" id="recherche">
 			   		<input type="search" name="recherche" placeholder="Vos questions ..." onchange="recherche_dynamique(this.value)"/>
-			   		<!--recherche_dynamique dans ajax_recherche-->
-				</form>
+				</form> -->
 				<br/>
 				<div id="txtHint"><!-- Les suggestions s'affichent ici --></div>
 			</div>

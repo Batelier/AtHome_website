@@ -37,6 +37,15 @@ function register_image($name,$first_name,$mail)
 
 }
 
+function get_email(){
+    db_connect();
+    global $db;
+
+    $req = $db -> prepare('SELECT mail FROM user');
+    $req -> execute();
+    $values = $req -> fetchAll();
+    return $values;
+}
 
 
 
