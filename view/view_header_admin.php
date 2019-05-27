@@ -23,7 +23,7 @@
 				<li><a href="routeur.php?cible=controller_accueil_admin">Liste utilisateurs</a></li>
 				<li><a href="routeur.php?cible=controller_admin_def_sensor">Definir disponibilités</a></li>
 				<li><a href="routeur.php?cible=controller_admin_def_page">Catalogue des nouvelles</a></li>
-				<li><a href="#messagerie">Messagerie</a></li>
+				<li><a href="routeur.php?cible=controller_messagerie">Messagerie</a></li>
 				<li><a href="routeur?cible=controller_faq">FAQ</a></li>
 			</ul>
 		</div>

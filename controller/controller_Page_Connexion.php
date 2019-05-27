@@ -12,6 +12,11 @@ $_SESSION = array();
 require('model/model_Page_Connexion.php');
 
 $news = get_all_news();
+$daily_comment = get_daily_com(get_random_rating());
+while (strlen($daily_comment['comment']) == 0) {
+	$daily_comment = get_daily_com(get_random_rating());
+}
+
 
 if (isset($_POST['email'])) {
 	$values = login($_POST['email']);

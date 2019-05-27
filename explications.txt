@@ -1,10 +1,10 @@
 GIT : 
-Toujours pull avant de fuck everything up
+Toujours pull avant push
 
 FONCTIONNEMENT GLOBAL 
-Rooteur : 
+Routeur : 
 routeur est le fichier à lancer au démarage
-par défaut rooteur lance la page de connexion
+par défaut routeur lance la page de connexion
 
 Model : 
 fonction sql
@@ -18,7 +18,7 @@ seulement l'affichage
 affichage (html + variables php (boucles si besoin))
 
 NORME
-nommage : view_nomDuBordel / controller_nomDuBordel / model_... / css_...
+nommage : view_nom / controller_nomDuBordel / model_... / css_...
 le fichier contenant les pages css se trouvent dans le view
 ! --> Toutes les pages en .php, même celles ne contenant que du html (très rare d'ailleurs)
 !!! --> les indentations et nom de variables corrects + commentaires

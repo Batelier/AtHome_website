@@ -34,6 +34,31 @@ function get_all_news(){
 	return $news;
 }
 
+function get_random_rating(){
+	db_connect();
+	global $db;
+
+	$req1 = $db -> prepare('SELECT rating_id FROM website_rating ORDER BY rating_id DESC');
+	$req1 -> execute();
+	$count = $req1 -> fetch();
+
+	$nb = rand(1, $count[0]);
+
+	return $nb;
+
+}
+
+function get_daily_com($id_rating){
+	db_connect();
+	global $db;
+
+	$req = $db -> prepare('SELECT * FROM website_rating WHERE rating_id LIKE ?');
+	$req -> execute([$id_rating]);
+	$values = $req -> fetch();
+
+	return $values;
+}
+
 //fonction vérifier que l'identifiant et mdp correspond à qqn dans la base de donnée
 
 //fonction get les infos du jour

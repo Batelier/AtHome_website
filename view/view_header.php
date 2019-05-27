@@ -21,10 +21,7 @@
 			<ul>
 				<li><a href="routeur.php?cible=controller_Page_Accueil_Client">Home</a></li>
 				<li><a href="routeur.php?cible=controller_admin_profil">Compte</a></li>
-				<li><a href="#consommation">Consommation de l'habitat</a></li>
-				<li><a href="#aide">Aide</a></li>
-				<li><a href="#contact">Contact support</a></li>
-				<li><a href="#messagerie">Messagerie</a></li>
+				<li><a href="routeur.php?cible=controller_client_rating">Nous noter</a></li>
 				<li><a href="routeur?cible=controller_faq">FAQ</a></li>
 			</ul>
 		</div>
