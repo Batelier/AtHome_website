@@ -31,7 +31,7 @@
 					</tr>
 					<tr>
 						<td><label for="answer">Commentaire</label></td>
-						<td ><textarea class="input_body" name="comment" id="answer" placeholder="Votre commentaire ici"></textarea></td>
+						<td ><textarea required class="input_body" name="comment" id="answer" placeholder="Votre commentaire ici"></textarea></td>
 					</tr>
 				</table>
 				<div class="bloc_register_button">

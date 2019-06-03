@@ -25,7 +25,7 @@
 					<div class="inner_button">
 						<button id="button_ajouter_home" name="ajouter_home" onclick="popup_add_home()" >Ajouter Home</button> </td>
 					</div>
-					<li><a href="">Gestion routines</a></li>
+					<!-- <li><a href="">Gestion routines</a></li> -->
 
 				</ul>
 			</div>
