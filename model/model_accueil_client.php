@@ -112,3 +112,12 @@ function get_home_id($address){
 	$values = $req -> fetch();
 	return $values;
 }
+function change_operating_state($equipment_id){
+	db_connect();
+	global $db;
+	$req0 =$db->prepare(('UPDATE  SET orating_state = ? WHERE orating_state =? and equipment_id=?');
+	$req0->execute(array(0,1,$equipment_id));
+	$req1 =$db->prepare(('UPDATE  SET orating_state = ? WHERE orating_state =? and equipment_id=?');
+	$req1->execute(array(1,0,$equipment_id));
+
+}
