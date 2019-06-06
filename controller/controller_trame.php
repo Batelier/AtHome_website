@@ -1,6 +1,8 @@
 <?php
+require('C:/wamp64/www/AtHome/model/model_trame.php');
+
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_URL,"http://projets-tomcat.isep.fr:8080/appService/?ACTION=GETLOG&TEAM=009D");
+curl_setopt($ch, CURLOPT_URL,"http://projets-tomcat.isep.fr:8080/appService/?ACTION=GETLOG&TEAM=009E");
 curl_setopt($ch, CURLOPT_HEADER, FALSE);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 $data = curl_exec($ch);
@@ -19,8 +21,9 @@ for($i=0, $size=count($data_tab); $i<$size; $i++){
 	// décodage avec sscanf
 	list($t, $o, $r, $c, $n, $v, $a, $x, $year, $month, $day, $hour, $min, $sec) =
 	sscanf($trame,"%1s%4s%1s%1s%2s%4s%4s%2s%4s%2s%2s%2s%2s%2s");
+	if (!exists($year, $month, $day, $hour, $min, $sec)){
+		add_trame($t, $o, $r, $c, $n, $v, $a, $x, $year, $month, $day, $hour, $min, $sec);
+	}
 	echo("<br />Trame $i: $t $o $r $c $n $v $a $x $year $month $day $hour $min $sec<br />");
 }
-
-
-
+?>
