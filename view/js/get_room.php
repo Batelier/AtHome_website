@@ -65,10 +65,12 @@ while ($donnees3 = $req->fetch()){ ?>
 							<p> <?php echo ($donnees['model'])?> </p>
 							<?php if ($donnees['model']=='RTY'){?>
 								<input class="echelle" type="range"><?php } else{ ?>
+								<form action="" method="post">
 									<label class="switch">
 										<input type="checkbox">
 										<span class="slider round"></span>
 									</label>
+								</form>
 								<?php } ?>
 								<form method="post">
 									<input name="ident_room" type="hidden" value=" <?php echo ($donnees3['room_id'])?>">

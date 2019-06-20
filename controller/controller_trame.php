@@ -22,8 +22,17 @@ for($i=0, $size=count($data_tab); $i<$size; $i++){
 	list($t, $o, $r, $c, $n, $v, $a, $x, $year, $month, $day, $hour, $min, $sec) =
 	sscanf($trame,"%1s%4s%1s%1s%2s%4s%4s%2s%4s%2s%2s%2s%2s%2s");
 	if (!exists($year, $month, $day, $hour, $min, $sec)){
-		add_trame($t, $o, $r, $c, $n, $v, $a, $x, $year, $month, $day, $hour, $min, $sec);
+		try{
+			add_trame($t, $o, $r, $c, $n, hexdec($v), $a, $x, $year, $month, $day, $hour, $min, $sec);
+		}
+		catch(Exception $e){
+
+		}
 	}
 	echo("<br />Trame $i: $t $o $r $c $n $v $a $x $year $month $day $hour $min $sec<br />");
+
+
 }
+delay(10);
+echo "<script> window.location.replace('routeur.php?cible=controller_trame');</script>";
 ?>

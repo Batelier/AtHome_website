@@ -6,7 +6,7 @@ function add_trame($type,$num_objet, $type_requete,$type_capteur, $numero_capteu
 	global $db; //pour pouvoir utiliser l'objet db -> database
 
 	$req = $db-> prepare('INSERT INTO data(type,num_objet, type_requete,type_capteur, numero_capteur,valeur, num_trame, checksum, annee,mois,jour,heure,minutes,secondes)  VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)');
-	$req-> execute([$type,$num_objet, $type_requete,$type_capteur, $numero_capteur,$valeur, $num_trame, $checksum, $annee,$mois,$jour,$heure,$minutes,$secondes]);
+	$req-> execute(array($type,$num_objet, $type_requete,$type_capteur, $numero_capteur,$valeur, $num_trame, $checksum, $annee,$mois,$jour,$heure,$minutes,$secondes));
 }
 
 function exists($annee, $mois,$jour,$heure,$minutes,$secondes){

@@ -37,38 +37,69 @@ function close_popup_mod_piece(){
 
 
 
-function graphique(id){
+function graphique(id, data){
 	var ctx = document.getElementById(id).getContext('2d');
 	var myChart = new Chart(ctx, {
 		type: 'line',
 		data: {
-			labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Ju', 'Jul','Aug','Sept','Oct','Nov','Dec'],
+			labels: ['6h', '10h', '14h', '18h', '22h', '00h'],
 	    datasets: [{
-	      label: 'Consommation d eau',
-	      data: [12, 19, 3, 17, 6, 3, 7,8,15,11,10,8],
+	      label: 'Luminosité',
+	      data: data,
 	      backgroundColor: "rgba(153,255,51,0.4)"
 	    }]
 		}
 	});
 }
 
-function graphique1(id){
+function graphique1(id, data){
 	var ctx = document.getElementById(id).getContext('2d');
 	var myChart = new Chart(ctx, {
 		type: 'line',
 		data: {
-			labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Ju', 'Jul','Aug','Sept','Oct','Nov','Dec'],
+			labels: ['14h10','14h20','14h30','14h40', '14h50', '15h00'],
 	    datasets: [{
-	      label: 'Consommation électrique',
-	      data: [6, 19, 12, 16, 20, 3, 2,8,1,11,15,15],
-	      backgroundColor: "rgba(255,133,10,0.4)"
+	      label: 'Luminosité',
+	      data: data,
+	      backgroundColor: "rgba(153,255,51,0.4)"
 	    }]
 		}
 	});
 }
 
 
+
 function showUser(str){
+    if (str == ""){
+        document.getElementById("txtHint").innerHTML = "";
+        return;
+    }
+    if (window.XMLHttpRequest) {
+        xmlhttp= new XMLHttpRequest();
+    } else {
+    if (window.ActiveXObject)
+		try {
+            xmlhttp= new ActiveXObject("Msxml2.XMLHTTP");
+		}
+		catch (e) {
+            try {
+                xmlhttp= new ActiveXObject("Microsoft.XMLHTTP");
+            } catch (e) {
+                return NULL;
+            }
+        }
+     }
+
+    xmlhttp.onreadystatechange = function (){
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
+             document.getElementById("listeMaison").innerHTML = xmlhttp.responseText;
+        }
+    }
+    xmlhttp.open("GET", "/AtHome/view/js/get_room.php?q=" + str, true);
+    xmlhttp.send();
+}
+
+function showOpS(str){
     if (str == ""){
         document.getElementById("txtHint").innerHTML = "";
         return;

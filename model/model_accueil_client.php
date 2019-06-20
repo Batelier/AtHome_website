@@ -115,9 +115,36 @@ function get_home_id($address){
 function change_operating_state($equipment_id){
 	db_connect();
 	global $db;
-	$req0 =$db->prepare(('UPDATE  SET orating_state = ? WHERE orating_state =? and equipment_id=?');
+	$req0 =$db->prepare('UPDATE  SET orating_state = ? WHERE orating_state =? and equipment_id=?');
 	$req0->execute(array(0,1,$equipment_id));
-	$req1 =$db->prepare(('UPDATE  SET orating_state = ? WHERE orating_state =? and equipment_id=?');
+	$req1 =$db->prepare('UPDATE  SET orating_state = ? WHERE orating_state =? and equipment_id=?');
 	$req1->execute(array(1,0,$equipment_id));
 
+}
+
+function get_data($numero_capteur,$heure, $jour){
+	db_connect();
+	global $db;
+
+	$req = $db->prepare('SELECT valeur FROM data WHERE numero_capteur = ? AND heure= ? AND jour = ?');
+	$req -> execute(array($numero_capteur, $heure, $jour));
+	return $req;
+}
+
+function get_last_day(){
+	db_connect();
+	global $db;
+
+	$req = $db->prepare('SELECT jour FROM data ORDER BY jour DESC LIMIT 1');
+	$req -> execute();
+	return $req;
+}
+
+function get_ops($equipment_id){
+	db_connect();
+	global $db;
+
+	$req = $db->prepare('SELECT orating_state FROM equipment WHERE equipment_id = ?');
+	$req -> execute(array($equipment_id));
+	return $req;
 }

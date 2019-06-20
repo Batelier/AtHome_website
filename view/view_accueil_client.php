@@ -157,8 +157,8 @@
 					<canvas  id="myChart1" ></canvas>
 				</div>
 			</div>
-			<script> graphique('myChart');
-			graphique1('myChart1');</script>
+			<script> graphique('myChart',data);
+			graphique1('myChart1',data14);</script>
 	</div>
 
 
