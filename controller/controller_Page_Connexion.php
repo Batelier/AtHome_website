@@ -2,7 +2,7 @@
 session_start();
 
 $_SESSION = array();
-
+$_SESSION['lum'] = 0;
 
 /*------------------------------------
 - popup javascript -> DONE

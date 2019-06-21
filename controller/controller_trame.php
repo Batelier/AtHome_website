@@ -3,6 +3,7 @@ require('C:/wamp64/www/AtHome/model/model_trame.php');
 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL,"http://projets-tomcat.isep.fr:8080/appService/?ACTION=GETLOG&TEAM=009E");
+//http://projets-tomcat.isep.fr:8080/appService/?ACTION=COMMAND&TEAM=009C&TRAME=1009C2102
 curl_setopt($ch, CURLOPT_HEADER, FALSE);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 $data = curl_exec($ch);
