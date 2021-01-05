@@ -1,2 +1,2 @@
 # AtHome
-On dab plus vite que nos ombres
+First year engineering project - website to control a home automation system.
